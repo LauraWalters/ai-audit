@@ -1,0 +1,352 @@
+<h2 id="crossreference" class="list">Cross-reference for AuditOps – Workflow Core Module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by AuditOps – Workflow Core Module.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AuditBundle" title="https://w3id.org/auditops#AuditBundle">Audit Bundle</a></li>
+  <li><a href="#AuditableAISystem" title="https://w3id.org/auditops#AuditableAISystem">Auditable AI System</a></li>
+  <li><a href="#Confidence" title="https://w3id.org/auditops#Confidence">Confidence</a></li>
+  <li><a href="#DataInstance" title="https://w3id.org/auditops#DataInstance">Data Instance</a></li>
+  <li><a href="#Dataset" title="https://w3id.org/auditops#Dataset">Dataset</a></li>
+  <li><a href="#Engineering" title="https://w3id.org/auditops#Engineering">Engineering Activity</a></li>
+  <li><a href="#ExecutionStatus" title="https://w3id.org/auditops#ExecutionStatus">Execution status</a></li>
+  <li><a href="#Inference" title="https://w3id.org/auditops#Inference">Inference Activity</a></li>
+  <li><a href="#Model" title="https://w3id.org/auditops#Model">Model</a></li>
+  <li><a href="#ResultData" title="https://w3id.org/auditops#ResultData">Result Data</a></li>
+  <li><a href="#ResultElement" title="https://w3id.org/auditops#ResultElement">Result Element</a></li>
+  <li><a href="#Software" title="https://w3id.org/auditops#Software">Software</a></li>
+  <li><a href="#StatisticalModel" title="https://w3id.org/auditops#StatisticalModel">Statistical Model</a></li>
+  <li><a href="#http://purl.org/net/p-plan#Step" title="http://purl.org/net/p-plan#Step"> <span>Step</span> </a></li>
+  <li><a href="#SymbolicModel" title="https://w3id.org/auditops#SymbolicModel">Symbolic Model</a></li>
+  <li><a href="#Training" title="https://w3id.org/auditops#Training">Training Activity</a></li>
+  <li><a href="#Transformation" title="https://w3id.org/auditops#Transformation">Transformation Activity</a></li>
+ </ul>
+ <div class="entity" id="AuditBundle">
+  <h3>Audit Bundle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#AuditBundle</p>
+  <div class="comment">
+   <span class="markdown">Container for a single execution run (e.g., one workflow run). Typically aligned with prov:Bundle in runtime traces.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Bundle" target="_blank" title="http://www.w3.org/ns/prov#Bundle">Bundle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#executionStatus" title="https://w3id.org/auditops#executionStatus">execution status</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAuditBundle" title="https://w3id.org/auditops#hasAuditBundle">has audit bundle</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AuditableAISystem">
+  <h3>Auditable AI System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#AuditableAISystem</p>
+  <div class="comment">
+   <span class="markdown">A software system (or deployed AI service) for which audit evidence (traces) is collected.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAuditBundle" title="https://w3id.org/auditops#hasAuditBundle">has audit bundle</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Confidence">
+  <h3>Confidence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#Confidence</p>
+  <div class="comment">
+   <span class="markdown">A quality node (typically linked via mls:hasQuality) holding confidence values.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/mls#ModelEvaluation" target="_blank" title="http://www.w3.org/ns/mls#ModelEvaluation">Model Evaluation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataInstance">
+  <h3>Data Instance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#DataInstance</p>
+  <div class="comment">
+   <span class="markdown">A data artifact used/produced by workflow steps (can be a single document, batch, or dataset).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Dataset" title="https://w3id.org/auditops#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>, <a href="#ResultData" title="https://w3id.org/auditops#ResultData">Result Data</a> <sup class="type-c" title="class">c</sup>, <a href="#ResultElement" title="https://w3id.org/auditops#ResultElement">Result Element</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Dataset">
+  <h3>Dataset<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#Dataset</p>
+  <div class="comment">
+   <span class="markdown">A dataset (typically multi-row or multi-item collection) used for training/evaluation.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DataInstance" title="https://w3id.org/auditops#DataInstance">Data Instance</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/mls#Dataset" target="_blank" title="http://www.w3.org/ns/mls#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Engineering">
+  <h3>Engineering Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#Engineering</p>
+  <div class="comment">
+   <span class="markdown">Non-learning engineering activity (e.g., KG/ontology/rules/software engineering).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExecutionStatus">
+  <h3>Execution status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#ExecutionStatus</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#executionStatus" title="https://w3id.org/auditops#executionStatus">execution status</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Inference">
+  <h3>Inference Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#Inference</p>
+  <div class="comment">
+   <span class="markdown">Activity producing outputs/predictions from a model given input data.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Model">
+  <h3>Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#Model</p>
+  <div class="comment">
+   <span class="markdown">A model artifact used for inference or produced by training.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#StatisticalModel" title="https://w3id.org/auditops#StatisticalModel">Statistical Model</a> <sup class="type-c" title="class">c</sup>, <a href="#SymbolicModel" title="https://w3id.org/auditops#SymbolicModel">Symbolic Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ResultData">
+  <h3>Result Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#ResultData</p>
+  <div class="comment">
+   <span class="markdown">A collection of result elements (e.g., all predictions for one input document).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DataInstance" title="https://w3id.org/auditops#DataInstance">Data Instance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ResultElement">
+  <h3>Result Element<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#ResultElement</p>
+  <div class="comment">
+   <span class="markdown">A granular output item relevant for auditing (e.g., a predicted entity, a row-level decision, a ranked hit).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DataInstance" title="https://w3id.org/auditops#DataInstance">Data Instance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Software">
+  <h3>Software<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#Software</p>
+  <div class="comment">
+   <span class="markdown">Software component used in or produced by a workflow step.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StatisticalModel">
+  <h3>Statistical Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#StatisticalModel</p>
+  <div class="comment">
+   <span class="markdown">A statistical/ML model (e.g., neural network) used for training/inference.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Model" title="https://w3id.org/auditops#Model">Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/net/p-plan#Step">
+  <h3>Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/p-plan#Step</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/net/p-plan#Entity" target="_blank" title="http://purl.org/net/p-plan#Entity">Entity</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/prov#Plan" target="_blank" title="http://www.w3.org/ns/prov#Plan">Plan</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SymbolicModel">
+  <h3>Symbolic Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#SymbolicModel</p>
+  <div class="comment">
+   <span class="markdown">A non-statistical model (e.g., rules, KG, ontology).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Model" title="https://w3id.org/auditops#Model">Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Training">
+  <h3>Training Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#Training</p>
+  <div class="comment">
+   <span class="markdown">Learning activity that fits model parameters (training/fine-tuning).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Transformation">
+  <h3>Transformation Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#Transformation</p>
+  <div class="comment">
+   <span class="markdown">Deterministic data transformation without learning (e.g., parsing, normalization).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#executionStatus" title="https://w3id.org/auditops#executionStatus">execution status</a></li>
+  <li><a href="#hasAuditBundle" title="https://w3id.org/auditops#hasAuditBundle">has audit bundle</a></li>
+ </ul>
+ <div class="entity" id="executionStatus">
+  <h3>execution status<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#executionStatus</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AuditBundle" title="https://w3id.org/auditops#AuditBundle">Audit Bundle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ExecutionStatus" title="https://w3id.org/auditops#ExecutionStatus">Execution status</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAuditBundle">
+  <h3>has audit bundle<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/auditops#hasAuditBundle</p>
+  <div class="comment">
+   <span class="markdown">Links an auditable AI system to a bundle representing one execution run.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AuditableAISystem" title="https://w3id.org/auditops#AuditableAISystem">Auditable AI System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuditBundle" title="https://w3id.org/auditops#AuditBundle">Audit Bundle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
