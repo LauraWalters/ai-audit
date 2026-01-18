@@ -1,0 +1,186 @@
+<https://w3id.org/auditops#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/auditops#> <http://purl.org/dc/terms/contributor> "Fajar J. Ekaputra" .
+<https://w3id.org/auditops#> <http://purl.org/dc/terms/contributor> "Gregor Käfer" .
+<https://w3id.org/auditops#> <http://purl.org/dc/terms/contributor> "Marta Sabou" .
+<https://w3id.org/auditops#> <http://purl.org/dc/terms/contributor> "Tomasz Miksa" .
+<https://w3id.org/auditops#> <http://purl.org/dc/terms/creator> "Laura Waltersdorfer" .
+<https://w3id.org/auditops#> <http://purl.org/dc/terms/description> "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan, and ML-Schema."@en .
+<https://w3id.org/auditops#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/auditops#> <http://purl.org/dc/terms/title> "AuditOps – Workflow Core Module"@en .
+<https://w3id.org/auditops#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/auditops#executionStatus
+<https://w3id.org/auditops#executionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/auditops#executionStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/auditops#AuditBundle> .
+<https://w3id.org/auditops#executionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/auditops#ExecutionStatus> .
+<https://w3id.org/auditops#executionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "execution status"@en .
+# 
+# https://w3id.org/auditops#hasAuditBundle
+<https://w3id.org/auditops#hasAuditBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/auditops#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/auditops#AuditableAISystem> .
+<https://w3id.org/auditops#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/auditops#AuditBundle> .
+<https://w3id.org/auditops#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an auditable AI system to a bundle representing one execution run."@en .
+<https://w3id.org/auditops#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#label> "has audit bundle"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/p-plan#Entity
+<http://purl.org/net/p-plan#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/net/p-plan#Step
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Entity> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<http://www.w3.org/ns/prov#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/mls#Dataset
+<http://www.w3.org/ns/mls#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/mls#ModelEvaluation
+<http://www.w3.org/ns/mls#ModelEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Bundle
+<http://www.w3.org/ns/prov#Bundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Plan
+# 
+# https://w3id.org/auditops#AuditBundle
+<https://w3id.org/auditops#AuditBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Bundle> .
+<https://w3id.org/auditops#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "Container for a single execution run (e.g., one workflow run). Typically aligned with prov:Bundle in runtime traces."@en .
+<https://w3id.org/auditops#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Audit Bundle"@en .
+# 
+# https://w3id.org/auditops#AuditableAISystem
+<https://w3id.org/auditops#AuditableAISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#AuditableAISystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A software system (or deployed AI service) for which audit evidence (traces) is collected."@en .
+<https://w3id.org/auditops#AuditableAISystem> <http://www.w3.org/2000/01/rdf-schema#label> "Auditable AI System"@en .
+# 
+# https://w3id.org/auditops#Confidence
+<https://w3id.org/auditops#Confidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#Confidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#ModelEvaluation> .
+<https://w3id.org/auditops#Confidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality node (typically linked via mls:hasQuality) holding confidence values."@en .
+<https://w3id.org/auditops#Confidence> <http://www.w3.org/2000/01/rdf-schema#label> "Confidence"@en .
+# 
+# https://w3id.org/auditops#DataInstance
+<https://w3id.org/auditops#DataInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#DataInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/auditops#DataInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "A data artifact used/produced by workflow steps (can be a single document, batch, or dataset)."@en .
+<https://w3id.org/auditops#DataInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Data Instance"@en .
+# 
+# https://w3id.org/auditops#Dataset
+<https://w3id.org/auditops#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#Dataset> .
+<https://w3id.org/auditops#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/auditops#DataInstance> .
+<https://w3id.org/auditops#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A dataset (typically multi-row or multi-item collection) used for training/evaluation."@en .
+<https://w3id.org/auditops#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
+# 
+# https://w3id.org/auditops#Engineering
+<https://w3id.org/auditops#Engineering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#Engineering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/auditops#Engineering> <http://www.w3.org/2000/01/rdf-schema#comment> "Non-learning engineering activity (e.g., KG/ontology/rules/software engineering)."@en .
+<https://w3id.org/auditops#Engineering> <http://www.w3.org/2000/01/rdf-schema#label> "Engineering Activity"@en .
+# 
+# https://w3id.org/auditops#ExecutionStatus
+<https://w3id.org/auditops#ExecutionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#ExecutionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Execution status"@en .
+# 
+# https://w3id.org/auditops#Inference
+<https://w3id.org/auditops#Inference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#Inference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/auditops#Inference> <http://www.w3.org/2000/01/rdf-schema#comment> "Activity producing outputs/predictions from a model given input data."@en .
+<https://w3id.org/auditops#Inference> <http://www.w3.org/2000/01/rdf-schema#label> "Inference Activity"@en .
+# 
+# https://w3id.org/auditops#Model
+<https://w3id.org/auditops#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/auditops#Model> <http://www.w3.org/2000/01/rdf-schema#comment> "A model artifact used for inference or produced by training."@en .
+<https://w3id.org/auditops#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model"@en .
+# 
+# https://w3id.org/auditops#ResultData
+<https://w3id.org/auditops#ResultData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#ResultData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/auditops#DataInstance> .
+<https://w3id.org/auditops#ResultData> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of result elements (e.g., all predictions for one input document)."@en .
+<https://w3id.org/auditops#ResultData> <http://www.w3.org/2000/01/rdf-schema#label> "Result Data"@en .
+# 
+# https://w3id.org/auditops#ResultElement
+<https://w3id.org/auditops#ResultElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#ResultElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/auditops#DataInstance> .
+<https://w3id.org/auditops#ResultElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A granular output item relevant for auditing (e.g., a predicted entity, a row-level decision, a ranked hit)."@en .
+<https://w3id.org/auditops#ResultElement> <http://www.w3.org/2000/01/rdf-schema#label> "Result Element"@en .
+# 
+# https://w3id.org/auditops#Software
+<https://w3id.org/auditops#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/auditops#Software> <http://www.w3.org/2000/01/rdf-schema#comment> "Software component used in or produced by a workflow step."@en .
+<https://w3id.org/auditops#Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software"@en .
+# 
+# https://w3id.org/auditops#StatisticalModel
+<https://w3id.org/auditops#StatisticalModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#StatisticalModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/auditops#Model> .
+<https://w3id.org/auditops#StatisticalModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A statistical/ML model (e.g., neural network) used for training/inference."@en .
+<https://w3id.org/auditops#StatisticalModel> <http://www.w3.org/2000/01/rdf-schema#label> "Statistical Model"@en .
+# 
+# https://w3id.org/auditops#SymbolicModel
+<https://w3id.org/auditops#SymbolicModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#SymbolicModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/auditops#Model> .
+<https://w3id.org/auditops#SymbolicModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-statistical model (e.g., rules, KG, ontology)."@en .
+<https://w3id.org/auditops#SymbolicModel> <http://www.w3.org/2000/01/rdf-schema#label> "Symbolic Model"@en .
+# 
+# https://w3id.org/auditops#Training
+<https://w3id.org/auditops#Training> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#Training> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/auditops#Training> <http://www.w3.org/2000/01/rdf-schema#comment> "Learning activity that fits model parameters (training/fine-tuning)."@en .
+<https://w3id.org/auditops#Training> <http://www.w3.org/2000/01/rdf-schema#label> "Training Activity"@en .
+# 
+# https://w3id.org/auditops#Transformation
+<https://w3id.org/auditops#Transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/auditops#Transformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/auditops#Transformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Deterministic data transformation without learning (e.g., parsing, normalization)."@en .
+<https://w3id.org/auditops#Transformation> <http://www.w3.org/2000/01/rdf-schema#label> "Transformation Activity"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
