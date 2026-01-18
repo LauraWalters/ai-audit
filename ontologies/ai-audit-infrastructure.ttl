@@ -1,5 +1,5 @@
-@prefix audit: <https://w3id.org/auditops#> .
-@prefix infra: <https://w3id.org/auditops/infrastructure#> .
+@prefix audit: <https://w3id.org/ai-audit#> .
+@prefix infra: <https://w3id.org/ai-audit/infrastructure#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,7 +8,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
-@base <https://w3id.org/auditops/infrastructure#> .
+@base <https://w3id.org/ai-audit/infrastructure#> .
 
 
 infra: a owl:Ontology ;
@@ -26,65 +26,65 @@ infra: a owl:Ontology ;
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/auditops/infrastructure#hasCorrespondingFetch
-<https://w3id.org/auditops/infrastructure#hasCorrespondingFetch> rdf:type owl:ObjectProperty ;
-                                                          rdfs:domain <https://w3id.org/auditops/infrastructure#Receive> ;
-                                                          rdfs:range <https://w3id.org/auditops/infrastructure#Fetch> ;
+###  https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch
+<https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://w3id.org/ai-audit/infrastructure#Receive> ;
+                                                          rdfs:range <https://w3id.org/ai-audit/infrastructure#Fetch> ;
                                                           rdfs:comment "Relation between Receive and Fetch, a Receive can have 0..N Fetch" ;
                                                           rdfs:label "hasCorrespondingFetch" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasCorrespondingPlan
-<https://w3id.org/auditops/infrastructure#hasCorrespondingPlan> rdf:type owl:ObjectProperty ;
-                                                         rdfs:domain <https://w3id.org/auditops/infrastructure#AuditBoxService> ;
+###  https://w3id.org/ai-audit/infrastructure#hasCorrespondingPlan
+<https://w3id.org/ai-audit/infrastructure#hasCorrespondingPlan> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://w3id.org/ai-audit/infrastructure#AuditBoxService> ;
                                                          rdfs:range <http://purl.org/net/p-plan#Plan> ;
                                                          rdfs:comment "Relation between Service and Plan, a Service can have 1..1 Plan" ;
                                                          rdfs:label "hasCorrespondingPlan" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasParameter
-<https://w3id.org/auditops/infrastructure#hasParameter> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain <https://w3id.org/auditops/infrastructure#ParameterizedQuery> ;
-                                                 rdfs:range <https://w3id.org/auditops/infrastructure#Parameter> ;
+###  https://w3id.org/ai-audit/infrastructure#hasParameter
+<https://w3id.org/ai-audit/infrastructure#hasParameter> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/ai-audit/infrastructure#ParameterizedQuery> ;
+                                                 rdfs:range <https://w3id.org/ai-audit/infrastructure#Parameter> ;
                                                  rdfs:comment "Relation between ParameterizedQuery and Parameter, to describe the filter inside a query. ParameterizedQuery can have 1..N Parameter" ;
                                                  rdfs:label "hasParameter" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasPlan
-<https://w3id.org/auditops/infrastructure#hasPlan> rdf:type owl:ObjectProperty ;
-                                            rdfs:domain <https://w3id.org/auditops#AuditableAISystem> ;
+###  https://w3id.org/ai-audit/infrastructure#hasPlan
+<https://w3id.org/ai-audit/infrastructure#hasPlan> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
                                             rdfs:range <http://purl.org/net/p-plan#Pla> ;
                                             rdfs:comment "Relation between Auditable AI System and Plan, a System can have 1..N Plan" ;
                                             rdfs:label "hasPlan" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasService
-<https://w3id.org/auditops/infrastructure#hasService> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain <https://w3id.org/auditops#AuditableAISystem> ;
-                                               rdfs:range <https://w3id.org/auditops/infrastructure#AuditBoxService> ;
+###  https://w3id.org/ai-audit/infrastructure#hasService
+<https://w3id.org/ai-audit/infrastructure#hasService> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
+                                               rdfs:range <https://w3id.org/ai-audit/infrastructure#AuditBoxService> ;
                                                rdfs:comment "Relation between Auditable AI System and Service, a System can have 1..N Service" ;
                                                rdfs:label "hasService" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasTransformationFunction
-<https://w3id.org/auditops/infrastructure#hasTransformationFunction> rdf:type owl:ObjectProperty ;
-                                                              rdfs:domain <https://w3id.org/auditops/infrastructure#Acquire> ;
-                                                              rdfs:range <https://w3id.org/auditops/infrastructure#TransformationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasTransformationFunction
+<https://w3id.org/ai-audit/infrastructure#hasTransformationFunction> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <https://w3id.org/ai-audit/infrastructure#Acquire> ;
+                                                              rdfs:range <https://w3id.org/ai-audit/infrastructure#TransformationFunction> ;
                                                               rdfs:comment "Relation between Acquire and TransformationFunction, an Acquire can have 1..1 TransformationFunction" ;
                                                               rdfs:label "hasTransformationFunction" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasValidationFunction
-<https://w3id.org/auditops/infrastructure#hasValidationFunction> rdf:type owl:ObjectProperty ;
-                                                          rdfs:domain <https://w3id.org/auditops/infrastructure#Acquire> ;
-                                                          rdfs:range <https://w3id.org/auditops/infrastructure#ValidationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasValidationFunction
+<https://w3id.org/ai-audit/infrastructure#hasValidationFunction> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://w3id.org/ai-audit/infrastructure#Acquire> ;
+                                                          rdfs:range <https://w3id.org/ai-audit/infrastructure#ValidationFunction> ;
                                                           rdfs:comment "Relation between Acquire and Validation, an Acquire can have 0..1 Validation" ;
                                                           rdfs:label "hasValidationFunction" .
 
 
-###  https://w3id.org/auditops/infrastructure#isBasedOnStep
-<https://w3id.org/auditops/infrastructure#isBasedOnStep> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain <https://w3id.org/auditops/infrastructure#Acquire> ;
+###  https://w3id.org/ai-audit/infrastructure#isBasedOnStep
+<https://w3id.org/ai-audit/infrastructure#isBasedOnStep> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <https://w3id.org/ai-audit/infrastructure#Acquire> ;
                                                   rdfs:range <http://purl.org/net/p-plan#Step> ;
                                                   rdfs:comment "Relation between Acquire and Step, an Acquire correspond to 1..1 Step" ;
                                                   rdfs:label "isBasedOnStep" .
@@ -92,7 +92,7 @@ infra: a owl:Ontology ;
 
 ###  https://w3id.org/ep-plan#hasTraceElement
 <https://w3id.org/ep-plan#hasTraceElement> rdf:type owl:ObjectProperty ;
-                                           rdfs:domain <https://w3id.org/auditops#AuditableAISystem> ;
+                                           rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
                                            rdfs:range audit:AuditBundle ;
                                            rdfs:comment "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle" ;
                                            rdfs:label "hasTraceElement" .
@@ -102,194 +102,194 @@ infra: a owl:Ontology ;
 #    Data properties
 #################################################################
 
-###  https://w3id.org/auditops/infrastructure#description
-<https://w3id.org/auditops/infrastructure#description> rdf:type owl:DatatypeProperty ;
-                                                rdfs:domain <https://w3id.org/auditops/infrastructure#ServiceFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#description
+<https://w3id.org/ai-audit/infrastructure#description> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://w3id.org/ai-audit/infrastructure#ServiceFunction> ;
                                                 rdfs:range xsd:string ;
                                                 rdfs:comment "description of a service function" ;
                                                 rdfs:label "description" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasBackupTimer
-<https://w3id.org/auditops/infrastructure#hasBackupTimer> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <https://w3id.org/auditops#AuditableAISystem> ;
+###  https://w3id.org/ai-audit/infrastructure#hasBackupTimer
+<https://w3id.org/ai-audit/infrastructure#hasBackupTimer> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
                                                    rdfs:range xsd:integer ;
                                                    rdfs:comment "Datatype properties to set a timer for system backup" ;
                                                    rdfs:label "hasBackupTimer" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasBackupType
-<https://w3id.org/auditops/infrastructure#hasBackupType> rdf:type owl:DatatypeProperty ;
-                                                  rdfs:domain <https://w3id.org/auditops#AuditableAISystem> ;
+###  https://w3id.org/ai-audit/infrastructure#hasBackupType
+<https://w3id.org/ai-audit/infrastructure#hasBackupType> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
                                                   rdfs:range xsd:string ;
                                                   rdfs:comment "Datatype property to set the type of the system backup" ;
                                                   rdfs:label "hasBackupType" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasConstraintLocalPath
-<https://w3id.org/auditops/infrastructure#hasConstraintLocalPath> rdf:type owl:DatatypeProperty ;
-                                                           rdfs:domain <https://w3id.org/auditops/infrastructure#ValidationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasConstraintLocalPath
+<https://w3id.org/ai-audit/infrastructure#hasConstraintLocalPath> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <https://w3id.org/ai-audit/infrastructure#ValidationFunction> ;
                                                            rdfs:range xsd:string ;
                                                            rdfs:comment "Datatype properties to link validation with the saved local constraint" ;
                                                            rdfs:label "hasContraintLocalPath" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasConstraintString
-<https://w3id.org/auditops/infrastructure#hasConstraintString> rdf:type owl:DatatypeProperty ;
-                                                        rdfs:domain <https://w3id.org/auditops/infrastructure#ValidationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasConstraintString
+<https://w3id.org/ai-audit/infrastructure#hasConstraintString> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://w3id.org/ai-audit/infrastructure#ValidationFunction> ;
                                                         rdfs:range xsd:string ;
                                                         rdfs:comment "Datatype properties to set constraint string of a validation" ;
                                                         rdfs:label "hasConstraintString" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasConstraintType
-<https://w3id.org/auditops/infrastructure#hasConstraintType> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:domain <https://w3id.org/auditops/infrastructure#ValidationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasConstraintType
+<https://w3id.org/ai-audit/infrastructure#hasConstraintType> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://w3id.org/ai-audit/infrastructure#ValidationFunction> ;
                                                       rdfs:range xsd:string ;
                                                       rdfs:comment "Datatype properties to set the type of validation" ;
                                                       rdfs:label "hasConstraintType" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasConstraintUriPath
-<https://w3id.org/auditops/infrastructure#hasConstraintUriPath> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:domain <https://w3id.org/auditops/infrastructure#ValidationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath
+<https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <https://w3id.org/ai-audit/infrastructure#ValidationFunction> ;
                                                          rdfs:range xsd:string ;
                                                          rdfs:comment "Datatype properties to retrieve constraint from external sources" ;
                                                          rdfs:label "hasConstraintUriPath" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasJsonSchemaLocalPath
-<https://w3id.org/auditops/infrastructure#hasJsonSchemaLocalPath> rdf:type owl:DatatypeProperty ;
-                                                           rdfs:domain <https://w3id.org/auditops/infrastructure#TransformationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath
+<https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <https://w3id.org/ai-audit/infrastructure#TransformationFunction> ;
                                                            rdfs:range xsd:string ;
                                                            rdfs:comment "Datatype properties to retrieve json schema from local file" ;
                                                            rdfs:label "hasJsonSchemaLocalPath" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasMappingLocalPath
-<https://w3id.org/auditops/infrastructure#hasMappingLocalPath> rdf:type owl:DatatypeProperty ;
-                                                        rdfs:domain <https://w3id.org/auditops/infrastructure#TransformationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasMappingLocalPath
+<https://w3id.org/ai-audit/infrastructure#hasMappingLocalPath> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://w3id.org/ai-audit/infrastructure#TransformationFunction> ;
                                                         rdfs:range xsd:string ;
                                                         rdfs:comment "Datatype properties to retrieve mapping that already saved in a local file" ;
                                                         rdfs:label "hasMappingLocalPath" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasMappingString
-<https://w3id.org/auditops/infrastructure#hasMappingString> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:domain <https://w3id.org/auditops/infrastructure#TransformationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasMappingString
+<https://w3id.org/ai-audit/infrastructure#hasMappingString> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://w3id.org/ai-audit/infrastructure#TransformationFunction> ;
                                                      rdfs:range xsd:string ;
                                                      rdfs:comment "Datatype properties to save the actual mapping value" ;
                                                      rdfs:label "hasMappingString" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasMappingType
-<https://w3id.org/auditops/infrastructure#hasMappingType> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <https://w3id.org/auditops/infrastructure#TransformationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasMappingType
+<https://w3id.org/ai-audit/infrastructure#hasMappingType> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://w3id.org/ai-audit/infrastructure#TransformationFunction> ;
                                                    rdfs:range xsd:string ;
                                                    rdfs:comment "Datatype properties to set mapping type" ;
                                                    rdfs:label "hasMappingType" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasMappingUriPath
-<https://w3id.org/auditops/infrastructure#hasMappingUriPath> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:domain <https://w3id.org/auditops/infrastructure#TransformationFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#hasMappingUriPath
+<https://w3id.org/ai-audit/infrastructure#hasMappingUriPath> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://w3id.org/ai-audit/infrastructure#TransformationFunction> ;
                                                       rdfs:range xsd:string ;
                                                       rdfs:comment "Datatype properties to retrieve mapping from external sources" ;
                                                       rdfs:label "hasMappingUriPath" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasQueryBinding
-<https://w3id.org/auditops/infrastructure#hasQueryBinding> rdf:type owl:DatatypeProperty ;
-                                                    rdfs:domain <https://w3id.org/auditops/infrastructure#Query> ;
+###  https://w3id.org/ai-audit/infrastructure#hasQueryBinding
+<https://w3id.org/ai-audit/infrastructure#hasQueryBinding> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <https://w3id.org/ai-audit/infrastructure#Query> ;
                                                     rdfs:range xsd:string ;
                                                     rdfs:comment "Datatype properties to set query binding" ;
                                                     rdfs:label "hasQueryBinding" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasQueryLocalPath
-<https://w3id.org/auditops/infrastructure#hasQueryLocalPath> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:domain <https://w3id.org/auditops/infrastructure#Query> ;
+###  https://w3id.org/ai-audit/infrastructure#hasQueryLocalPath
+<https://w3id.org/ai-audit/infrastructure#hasQueryLocalPath> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://w3id.org/ai-audit/infrastructure#Query> ;
                                                       rdfs:range xsd:string ;
                                                       rdfs:comment "Datatype properties to link query into its local file form" ;
                                                       rdfs:label "hasQueryLocalPath" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasQueryString
-<https://w3id.org/auditops/infrastructure#hasQueryString> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <https://w3id.org/auditops/infrastructure#Query> ;
+###  https://w3id.org/ai-audit/infrastructure#hasQueryString
+<https://w3id.org/ai-audit/infrastructure#hasQueryString> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://w3id.org/ai-audit/infrastructure#Query> ;
                                                    rdfs:range xsd:string ;
                                                    rdfs:comment "Datatype properties for query value" ;
                                                    rdfs:label "hasQueryString" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasReceiveApiPath
-<https://w3id.org/auditops/infrastructure#hasReceiveApiPath> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:domain <https://w3id.org/auditops/infrastructure#Receive> ;
+###  https://w3id.org/ai-audit/infrastructure#hasReceiveApiPath
+<https://w3id.org/ai-audit/infrastructure#hasReceiveApiPath> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://w3id.org/ai-audit/infrastructure#Receive> ;
                                                       rdfs:range xsd:string ;
                                                       rdfs:comment "Datatype properties to set api path where the post receive can be found" ;
                                                       rdfs:label "hasReceiveApiPath" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasSourceType
-<https://w3id.org/auditops/infrastructure#hasSourceType> rdf:type owl:DatatypeProperty ;
+###  https://w3id.org/ai-audit/infrastructure#hasSourceType
+<https://w3id.org/ai-audit/infrastructure#hasSourceType> rdf:type owl:DatatypeProperty ;
                                                   rdfs:subPropertyOf owl:topDataProperty ;
-                                                  rdfs:domain <https://w3id.org/auditops/infrastructure#Acquire> ;
+                                                  rdfs:domain <https://w3id.org/ai-audit/infrastructure#Acquire> ;
                                                   rdfs:range xsd:string ;
                                                   rdfs:comment "Datatype properties to set what type of data can be expected for the post api" ;
                                                   rdfs:label "hasSourceType" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasTimePeriod
-<https://w3id.org/auditops/infrastructure#hasTimePeriod> rdf:type owl:DatatypeProperty ;
-                                                  rdfs:domain <https://w3id.org/auditops/infrastructure#TimerFetch> ;
+###  https://w3id.org/ai-audit/infrastructure#hasTimePeriod
+<https://w3id.org/ai-audit/infrastructure#hasTimePeriod> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://w3id.org/ai-audit/infrastructure#TimerFetch> ;
                                                   rdfs:range xsd:integer ;
                                                   rdfs:comment "Datatype properties to set a timer to fetch data from external sources" ;
                                                   rdfs:label "hasTimePeriod" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasType
-<https://w3id.org/auditops/infrastructure#hasType> rdf:type owl:DatatypeProperty ;
-                                            rdfs:domain <https://w3id.org/auditops/infrastructure#Fetch> ;
+###  https://w3id.org/ai-audit/infrastructure#hasType
+<https://w3id.org/ai-audit/infrastructure#hasType> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <https://w3id.org/ai-audit/infrastructure#Fetch> ;
                                             rdfs:range xsd:string ;
                                             rdfs:comment "Datatype properties to set fetch type" ;
                                             rdfs:label "hasType" .
 
 
-###  https://w3id.org/auditops/infrastructure#hasURI
-<https://w3id.org/auditops/infrastructure#hasURI> rdf:type owl:DatatypeProperty ;
-                                           rdfs:domain <https://w3id.org/auditops/infrastructure#Fetch> ;
+###  https://w3id.org/ai-audit/infrastructure#hasURI
+<https://w3id.org/ai-audit/infrastructure#hasURI> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <https://w3id.org/ai-audit/infrastructure#Fetch> ;
                                            rdfs:range xsd:string ;
                                            rdfs:comment "Datatype properties to set the location of the data to be fetched on" ;
                                            rdfs:label "hasURI" .
 
 
-###  https://w3id.org/auditops/infrastructure#name
-<https://w3id.org/auditops/infrastructure#name> rdf:type owl:DatatypeProperty ;
-                                         rdfs:domain <https://w3id.org/auditops/infrastructure#ServiceFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#name
+<https://w3id.org/ai-audit/infrastructure#name> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/ai-audit/infrastructure#ServiceFunction> ;
                                          rdfs:range xsd:string ;
                                          rdfs:comment "Datatype properties to name the service function" ;
                                          rdfs:label "name" .
 
 
-###  https://w3id.org/auditops/infrastructure#position
-<https://w3id.org/auditops/infrastructure#position> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <https://w3id.org/auditops/infrastructure#Parameter> ;
+###  https://w3id.org/ai-audit/infrastructure#position
+<https://w3id.org/ai-audit/infrastructure#position> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <https://w3id.org/ai-audit/infrastructure#Parameter> ;
                                              rdfs:range xsd:integer ;
                                              rdfs:comment "Datatype properties to set the position for the filter query" ;
                                              rdfs:label "position" .
 
 
-###  https://w3id.org/auditops/infrastructure#type
-<https://w3id.org/auditops/infrastructure#type> rdf:type owl:DatatypeProperty ;
-                                         rdfs:domain <https://w3id.org/auditops/infrastructure#Parameter> ;
+###  https://w3id.org/ai-audit/infrastructure#type
+<https://w3id.org/ai-audit/infrastructure#type> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/ai-audit/infrastructure#Parameter> ;
                                          rdfs:range xsd:string ;
                                          rdfs:comment "Datatype properties to set query filter type" ;
                                          rdfs:label "type" .
 
 
-###   https://w3id.org/auditops/infrastructure#hasQueryApiPath
-<h https://w3id.org/auditops/infrastructure#hasQueryApiPath> rdf:type owl:DatatypeProperty ;
-                                                                rdfs:domain <https://w3id.org/auditops/infrastructure#Query> ;
+###   https://w3id.org/ai-audit/infrastructure#hasQueryApiPath
+<h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <https://w3id.org/ai-audit/infrastructure#Query> ;
                                                                 rdfs:range xsd:string ;
                                                                 rdfs:comment "Datatype properties to set where the query can be found" ;
                                                                 rdfs:label "hasQueryApiPath" .
@@ -297,7 +297,7 @@ infra: a owl:Ontology ;
 
 ###  urn:absolute:h/hasQueryUriPath
 <urn:absolute:h/hasQueryUriPath> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain <https://w3id.org/auditops/infrastructure#Query> ;
+                                 rdfs:domain <https://w3id.org/ai-audit/infrastructure#Query> ;
                                  rdfs:range xsd:string ;
                                  rdfs:comment "Datatype value to get query value from external sources" ;
                                  rdfs:label "hasQueryUriPath" .
@@ -324,55 +324,55 @@ audit:AuditBundle a owl:Class ;
   rdfs:comment "Container for a single execution run (e.g., one workflow run). Typically aligned with prov:Bundle in runtime traces."@en ;
   rdfs:subClassOf prov:Bundle .
 
-###  https://w3id.org/auditops/infrastructure#Acquire
-<https://w3id.org/auditops/infrastructure#Acquire> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/auditops/infrastructure#AuditBoxService> ;
+###  https://w3id.org/ai-audit/infrastructure#Acquire
+<https://w3id.org/ai-audit/infrastructure#Acquire> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/ai-audit/infrastructure#AuditBoxService> ;
                                             rdfs:comment "Service with the purpose to retrieve data from another program or application" ;
                                             rdfs:label "Acquire" .
 
 
-###  https://w3id.org/auditops/infrastructure#AuditBoxService
-<https://w3id.org/auditops/infrastructure#AuditBoxService> rdf:type owl:Class ;
+###  https://w3id.org/ai-audit/infrastructure#AuditBoxService
+<https://w3id.org/ai-audit/infrastructure#AuditBoxService> rdf:type owl:Class ;
                                                     rdfs:comment "Service inside a program or application" ;
                                                     rdfs:label "AuditboxService" .
 
 
-###  https://w3id.org/auditops/infrastructure#Fetch
-<https://w3id.org/auditops/infrastructure#Fetch> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/auditops/infrastructure#Acquire> ;
+###  https://w3id.org/ai-audit/infrastructure#Fetch
+<https://w3id.org/ai-audit/infrastructure#Fetch> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/ai-audit/infrastructure#Acquire> ;
                                           rdfs:comment "Service to get data from another program or application" ;
                                           rdfs:label "Fetch" .
 
 
-###  https://w3id.org/auditops/infrastructure#Parameter
-<https://w3id.org/auditops/infrastructure#Parameter> rdf:type owl:Class ;
+###  https://w3id.org/ai-audit/infrastructure#Parameter
+<https://w3id.org/ai-audit/infrastructure#Parameter> rdf:type owl:Class ;
                                               rdfs:comment "Parameter to define filter in a query" ;
                                               rdfs:label "Parameter" .
 
 
-###  https://w3id.org/auditops/infrastructure#ParameterizedQuery
-<https://w3id.org/auditops/infrastructure#ParameterizedQuery> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <https://w3id.org/auditops/infrastructure#Query> ;
+###  https://w3id.org/ai-audit/infrastructure#ParameterizedQuery
+<https://w3id.org/ai-audit/infrastructure#ParameterizedQuery> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://w3id.org/ai-audit/infrastructure#Query> ;
                                                        rdfs:comment "Service to query data from database with input" ;
                                                        rdfs:label "ParameterizedQuery" .
 
 
-###  https://w3id.org/auditops/infrastructure#Query
-<https://w3id.org/auditops/infrastructure#Query> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/auditops/infrastructure#AuditBoxService> ;
+###  https://w3id.org/ai-audit/infrastructure#Query
+<https://w3id.org/ai-audit/infrastructure#Query> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/ai-audit/infrastructure#AuditBoxService> ;
                                           rdfs:comment "Service to query data from a database" ;
                                           rdfs:label "Query" .
 
 
-###  https://w3id.org/auditops/infrastructure#Receive
-<https://w3id.org/auditops/infrastructure#Receive> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/auditops/infrastructure#Acquire> ;
+###  https://w3id.org/ai-audit/infrastructure#Receive
+<https://w3id.org/ai-audit/infrastructure#Receive> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/ai-audit/infrastructure#Acquire> ;
                                             rdfs:comment "Service to receive data from another program or application" ;
                                             rdfs:label "Receive" .
 
 
-###  https://w3id.org/auditops/infrastructure#ServiceFunction
-<https://w3id.org/auditops/infrastructure#ServiceFunction> rdf:type owl:Class ;
+###  https://w3id.org/ai-audit/infrastructure#ServiceFunction
+<https://w3id.org/ai-audit/infrastructure#ServiceFunction> rdf:type owl:Class ;
                                                     rdfs:comment "Function inside a program or application" ;
                                                     rdfs:label "ServiceFunction" .
 
@@ -382,23 +382,23 @@ audit:AuditableAISystem a owl:Class ;
   rdfs:comment "A software system (or deployed AI service) for which audit evidence (traces) is collected."@en.
 
 
-###  https://w3id.org/auditops/infrastructure#TimerFetch
-<https://w3id.org/auditops/infrastructure#TimerFetch> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/auditops/infrastructure#Fetch> ;
+###  https://w3id.org/ai-audit/infrastructure#TimerFetch
+<https://w3id.org/ai-audit/infrastructure#TimerFetch> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/ai-audit/infrastructure#Fetch> ;
                                                rdfs:comment "Service to continously get data from another program or application" ;
                                                rdfs:label "TimerFetch" .
 
 
-###  https://w3id.org/auditops/infrastructure#TransformationFunction
-<https://w3id.org/auditops/infrastructure#TransformationFunction> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/auditops/infrastructure#ServiceFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#TransformationFunction
+<https://w3id.org/ai-audit/infrastructure#TransformationFunction> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/ai-audit/infrastructure#ServiceFunction> ;
                                                    rdfs:comment "Transform data that comes in into triples" ;
                                                    rdfs:label "Transformation" .
 
 
-###  https://w3id.org/auditops/infrastructure#ValidationFunction
-<https://w3id.org/auditops/infrastructure#ValidationFunction> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/auditops/infrastructure#ServiceFunction> ;
+###  https://w3id.org/ai-audit/infrastructure#ValidationFunction
+<https://w3id.org/ai-audit/infrastructure#ValidationFunction> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/ai-audit/infrastructure#ServiceFunction> ;
                                                rdfs:comment "Validation for the data that comes in" ;
                                                rdfs:label "Validation" .
 
