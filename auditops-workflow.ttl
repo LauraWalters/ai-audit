@@ -1,0 +1,228 @@
+@prefix audit: <https://w3id.org/auditops#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix pplan: <http://purl.org/net/p-plan#> .
+@prefix mls:   <http://www.w3.org/ns/mls#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@base <https://w3id.org/auditops#>.
+
+
+audit: a owl:Ontology ;
+  dcterms:title "AuditOps – Workflow Module"@en ;
+  dcterms:description "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan, and ML-Schema."@en ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:creator "Laura Waltersdorfer" ;
+  dcterms:contributor "Gregor Käfer", "Fajar J. Ekaputra", "Marta Sabou", "Tomasz Miksa";
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;  owl:versionInfo "1.0.0" .
+
+### Classes #################################################
+
+###  https://w3id.org/auditops#AuditableAISystem
+<https://w3id.org/auditops#AuditableAISystem> a owl:Class ;
+  rdfs:label "Auditable AI System"@en ;
+  rdfs:comment "A software system (or deployed AI service) for which audit evidence (traces) is collected."@en.
+
+###  https://w3id.org/auditops#AuditBundle
+<https://w3id.org/auditops#AuditBundle> a owl:Class ;
+  rdfs:label "Audit Bundle"@en ;
+  rdfs:comment "Container for a single execution run (e.g., one workflow run). Typically aligned with prov:Bundle in runtime traces."@en ;
+  rdfs:subClassOf prov:Bundle .
+
+###  https://w3id.org/auditops#hasAuditBundle
+<https://w3id.org/auditops#hasAuditBundle> a owl:ObjectProperty ;
+  rdfs:label "has audit bundle"@en ;
+  rdfs:comment "Links an auditable AI system to a bundle representing one execution run."@en ;
+  rdfs:domain audit:AuditableAISystem ;
+  rdfs:range audit:AuditBundle .
+
+###  https://w3id.org/auditops#ExecutionStatus
+<https://w3id.org/auditops#ExecutionStatus> a owl:Class ;
+  rdfs:label "Execution status"@en .
+
+###  https://w3id.org/auditops#executionStatus
+<https://w3id.org/auditops#executionStatus> a owl:ObjectProperty ;
+  rdfs:label "execution status"@en ;
+  rdfs:domain audit:AuditBundle ;
+  rdfs:range audit:ExecutionStatus .
+
+###  https://w3id.org/auditops#Engineering
+<https://w3id.org/auditops#Engineering> a owl:Class ;
+  rdfs:label "Engineering Activity"@en ;
+  rdfs:comment "Non-learning engineering activity (e.g., KG/ontology/rules/software engineering)."@en ;
+  rdfs:subClassOf prov:Activity .
+
+###  https://w3id.org/auditops#Training
+<https://w3id.org/auditops#Training> a owl:Class ;
+  rdfs:label "Training Activity"@en ;
+  rdfs:comment "Learning activity that fits model parameters (training/fine-tuning)."@en ;
+  rdfs:subClassOf prov:Activity .
+
+###  https://w3id.org/auditops#Inference
+<https://w3id.org/auditops#Inference> a owl:Class ;
+  rdfs:label "Inference Activity"@en ;
+  rdfs:comment "Activity producing outputs/predictions from a model given input data."@en ;
+  rdfs:subClassOf prov:Activity .
+
+###  https://w3id.org/auditops#Transformation
+<https://w3id.org/auditops#Transformation> a owl:Class ;
+  rdfs:label "Transformation Activity"@en ;
+  rdfs:comment "Deterministic data transformation without learning (e.g., parsing, normalization)."@en ;
+  rdfs:subClassOf prov:Activity .
+
+###  https://w3id.org/auditops#Software
+<https://w3id.org/auditops#Software> a owl:Class ;
+  rdfs:label "Software"@en ;
+  rdfs:comment "Software component used in or produced by a workflow step."@en ;
+  rdfs:subClassOf prov:Entity .
+
+###  https://w3id.org/auditops#Model
+<https://w3id.org/auditops#Model> a owl:Class ;
+  rdfs:label "Model"@en ;
+  rdfs:comment "A model artifact used for inference or produced by training."@en ;
+  rdfs:subClassOf prov:Entity .
+
+###  https://w3id.org/auditops#SymbolicModel
+<https://w3id.org/auditops#SymbolicModel> a owl:Class ;
+  rdfs:label "Symbolic Model"@en ;
+  rdfs:comment "A non-statistical model (e.g., rules, KG, ontology)."@en ;
+  rdfs:subClassOf audit:Model .
+
+###  https://w3id.org/auditops#StatisticalModel
+<https://w3id.org/auditops#StatisticalModel>  a owl:Class ;
+  rdfs:label "Statistical Model"@en ;
+  rdfs:comment "A statistical/ML model (e.g., neural network) used for training/inference."@en ;
+  rdfs:subClassOf audit:Model .
+
+###  https://w3id.org/auditops#DataInstance
+<https://w3id.org/auditops#DataInstance> a owl:Class ;
+  rdfs:label "Data Instance"@en ;
+  rdfs:comment "A data artifact used/produced by workflow steps (can be a single document, batch, or dataset)."@en ;
+  rdfs:subClassOf prov:Entity .
+
+
+###  https://w3id.org/auditops#Dataset
+<https://w3id.org/auditops#Dataset> a owl:Class ;
+  rdfs:label "Dataset"@en ;
+  rdfs:comment "A dataset (typically multi-row or multi-item collection) used for training/evaluation."@en ;
+  rdfs:subClassOf audit:DataInstance.
+
+###  https://w3id.org/auditops#ResultElement
+<https://w3id.org/auditops#ResultElement> a owl:Class ;
+  rdfs:label "Result Element"@en ;
+  rdfs:comment "A granular output item relevant for auditing (e.g., a predicted entity, a row-level decision, a ranked hit)."@en ;
+  rdfs:subClassOf audit:DataInstance .
+
+###  https://w3id.org/auditops#Metric
+audit:Metric a owl:Class ;
+  rdfs:label "Metric"@en ;
+  rdfs:comment "A reusable definition of an evaluation method (e.g., hits@K-lenient, accuracy, calibration error)."@en .
+
+###  https://w3id.org/auditops#EvaluationMetric
+
+audit:EvaluationMetric a owl:Class ;
+  rdfs:subClassOf audit:Metric ;
+  rdfs:label "Evaluation metric"@en ;
+  rdfs:comment "A metric used specifically for evaluation in an audit context."@en .
+
+###  https://w3id.org/auditops#Score
+audit:Score a owl:Class ;
+  rdfs:label "Score"@en ;
+  rdfs:comment "A concrete value produced for a specific subject/context, typically the output of applying a metric."@en .
+
+###  https://w3id.org/auditops#ScoreType
+audit:ScoreType a owl:Class ;
+  rdfs:label "Score type"@en ;
+  rdfs:comment "The meaning/semantics of a score value (e.g., confidence, risk, uncertainty, probability)."@en .
+
+###  https://w3id.org/auditops#Hyperparameter
+audit:Hyperparameter a owl:Class ;
+  rdfs:label "Hyperparameter" ;
+  rdfs:comment "An abstract parameter that controls some aspect of model training or optimization." .
+
+
+###  https://w3id.org/auditops#HyperparameterSetting
+audit:HyperparameterSetting a owl:Class ;
+  rdfs:label "Hyperparameter Setting" ;
+  rdfs:comment "A specific assignment of a value to a named hyperparameter used in a training run." .
+
+
+###  https://w3id.org/auditops#HyperparameterConfiguration
+audit:HyperparameterConfiguration a owl:Class ;
+  rdfs:label "Hyperparameter Configuration" ;
+  rdfs:comment "A reusable collection of hyperparameter settings used in a training activity." .
+
+###  https://w3id.org/auditops#hyperparameter
+audit:hyperparameter a owl:ObjectProperty ;
+  rdfs:domain audit:HyperparameterConfiguration ;
+  rdfs:range audit:HyperparameterSetting ;
+  rdfs:label "hyperparameter" ;
+  rdfs:comment "Links a configuration to one of its hyperparameter settings." .
+
+###  https://w3id.org/auditops#paramName
+audit:paramName a owl:DatatypeProperty ;
+  rdfs:domain audit:HyperparameterSetting ;
+  rdfs:range xsd:string ;
+  rdfs:label "parameter name" ;
+  rdfs:comment "The name or key of the hyperparameter being set." .
+
+###  https://w3id.org/auditops#paramValue
+audit:paramValue a owl:DatatypeProperty ;
+  rdfs:domain audit:HyperparameterSetting ;
+  rdfs:range xsd:string ;  # or xsd:anySimpleType, see note below
+  rdfs:label "parameter value" ;
+  rdfs:comment "The value assigned to the hyperparameter." .
+
+###  https://w3id.org/auditops#paramFor
+audit:paramFor a owl:ObjectProperty ;
+  rdfs:domain audit:HyperparameterSetting ;
+  rdfs:range audit:Hyperparameter ;
+  rdfs:label "parameter for" ;
+  rdfs:comment "Links the setting to the abstract hyperparameter it assigns a value to." .
+
+###  https://w3id.org/auditops#LifecyclePhase
+<https://w3id.org/auditops#LifecyclePhase> a owl:Class ;
+  rdfs:label "Lifecycle Phase"@en ;
+  rdfs:comment "A lifecycle phase of an AI system (e.g. design, evaluation, operation)."@en .
+
+
+###  http://purl.org/net/p-plan#Step
+<http://purl.org/net/p-plan#Step> rdf:type owl:Class .
+
+
+###  http://purl.org/net/p-plan#Plan
+<http://purl.org/net/p-plan#Step>  rdf:type owl:Class ;
+      rdfs:subClassOf pplan:Entity, prov:Plan.  
+
+###  https://w3id.org/auditops#lifecyclePhase
+audit:lifecyclePhase a owl:ObjectProperty ;
+  rdfs:domain prov:Activity, pplan:Step;
+  rdfs:range audit:LifecyclePhase .
+
+###  https://w3id.org/auditops#hasScore
+audit:hasScore a owl:ObjectProperty ;
+  rdfs:label "has score"@en ;
+  rdfs:comment "Links a result (or result element) to one or more score nodes."@en ;
+  rdfs:domain audit:ResultElement ;
+  rdfs:range audit:Score .
+
+###  https://w3id.org/auditops#scoreType
+audit:scoreType a owl:ObjectProperty ;
+  rdfs:label "score type"@en ;
+  rdfs:comment "Links a score to its semantic type (e.g., Confidence, RiskScore)."@en ;
+  rdfs:domain audit:Score ;
+  rdfs:range audit:ScoreType .
+
+###  https://w3id.org/auditops#usesMetric
+audit:usesMetric a owl:ObjectProperty ;
+  rdfs:label "uses metric"@en ;
+  rdfs:comment "Links a result (or result element) to the metric definition used to produce some evaluation/score."@en ;
+  rdfs:domain audit:ResultElement ;
+  rdfs:range audit:Metric .  
+
+audit:Evaluation a audit:LifecyclePhase .
+audit:Operation a audit:LifecyclePhase .
+audit:Design a audit:LifecyclePhase .
