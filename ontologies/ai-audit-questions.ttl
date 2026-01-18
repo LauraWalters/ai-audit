@@ -1,5 +1,5 @@
-@prefix audit: <https://w3id.org/auditops#>.
-@prefix : <https://w3id.org/auditops/question#> .
+@prefix audit: <https://w3id.org/ai-audit#>.
+@prefix : <https://w3id.org/ai-audit/question#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,7 +7,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
-@base <https://w3id.org/auditops/question#> .
+@base <https://w3id.org/ai-audit/question#> .
 
 : a owl:Ontology ;
   dcterms:title "AuditOps – Questions Module"@en ;
@@ -19,18 +19,18 @@
 
 ### Audit questions #############################################################
 
-###  https://w3id.org/auditops/question#AuditQuestion
-<https://w3id.org/auditops/question#AuditQuestion> a owl:Class ;
+###  https://w3id.org/ai-audit/question#AuditQuestion
+<https://w3id.org/ai-audit/question#AuditQuestion> a owl:Class ;
   rdfs:label "Audit Question"@en ;
   rdfs:comment "A natural-language audit question represented as a node to enable mapping to steps and trace templates."@en .
 
-###  https://w3id.org/auditops/question#AuditQuestionType
-<https://w3id.org/auditops/question#AuditQuestionType> a owl:Class ;
+###  https://w3id.org/ai-audit/question#AuditQuestionType
+<https://w3id.org/ai-audit/question#AuditQuestionType> a owl:Class ;
   rdfs:label "Audit Question Type"@en ;
   rdfs:comment "Audit question categories (e.g., lineage, temporal, location, attribute/property, aggregation)."@en .
 
-###  https://w3id.org/auditops/question#questionType
-<https://w3id.org/auditops/question#questionType> a owl:ObjectProperty ;
+###  https://w3id.org/ai-audit/question#questionType
+<https://w3id.org/ai-audit/question#questionType> a owl:ObjectProperty ;
   rdfs:label "question type"@en ;
   rdfs:comment "Assigns a question to a question type."@en ;
   rdfs:domain :AuditQuestion ;
@@ -38,82 +38,82 @@
 
 
 
-###  https://w3id.org/auditops/question#appliesToStep
-<https://w3id.org/auditops/question#appliesToStep> a owl:ObjectProperty ;
+###  https://w3id.org/ai-audit/question#appliesToStep
+<https://w3id.org/ai-audit/question#appliesToStep> a owl:ObjectProperty ;
   rdfs:label "applies to step"@en ;
   rdfs:comment "Indicates which workflow steps can provide evidence for answering the question."@en ;
   rdfs:domain :AuditQuestion ;
   rdfs:range pplan:Step .
 
-###  https://w3id.org/auditops/question#appliesToPlan
-<https://w3id.org/auditops/question#appliesToPlan> a owl:ObjectProperty ;
+###  https://w3id.org/ai-audit/question#appliesToPlan
+<https://w3id.org/ai-audit/question#appliesToPlan> a owl:ObjectProperty ;
   rdfs:label "applies to plan"@en ;
   rdfs:comment "Link from a question to a workflow plan."@en ;
   rdfs:domain :AuditQuestion ;
   rdfs:range pplan:Plan .
 
-###  https://w3id.org/auditops/question#hasQuestion
-<https://w3id.org/auditops/question#hasQuestion> a owl:ObjectProperty ;
+###  https://w3id.org/ai-audit/question#hasQuestion
+<https://w3id.org/ai-audit/question#hasQuestion> a owl:ObjectProperty ;
   rdfs:label "has Question"@en ;
   rdfs:comment "Link from System to Question ."@en ;
   rdfs:domain audit:AuditableAISystem ;
   rdfs:range :AuditQuestion .
 
 
-###  https://w3id.org/auditops/question#TraceTemplate
-<https://w3id.org/auditops/question#TraceTemplate> a owl:Class ;
+###  https://w3id.org/ai-audit/question#TraceTemplate
+<https://w3id.org/ai-audit/question#TraceTemplate> a owl:Class ;
   rdfs:label "Trace Template"@en ;
   rdfs:comment "Template describing which evidence fields and relations are captured for a given activity/step type."@en .
 
-###  https://w3id.org/auditops/question#requiresTraceTemplate
-<https://w3id.org/auditops/question#requiresTraceTemplate> a owl:ObjectProperty ;
+###  https://w3id.org/ai-audit/question#requiresTraceTemplate
+<https://w3id.org/ai-audit/question#requiresTraceTemplate> a owl:ObjectProperty ;
   rdfs:label "requires trace template"@en ;
   rdfs:comment "Binds an audit question to the trace template required to answer it."@en ;
   rdfs:domain :AuditQuestion ;
   rdfs:range :TraceTemplate .
 
-###  https://w3id.org/auditops/question#queryLocalPath
-  <https://w3id.org/auditops/question#queryLocalPath> a owl:DatatypeProperty ;
+###  https://w3id.org/ai-audit/question#queryLocalPath
+  <https://w3id.org/ai-audit/question#queryLocalPath> a owl:DatatypeProperty ;
   rdfs:domain :AuditQuestion ;
   rdfs:range xsd:anyURI .
 
-###  https://w3id.org/auditops/question#path
-  <https://w3id.org/auditops/question#path> a owl:DatatypeProperty ;
+###  https://w3id.org/ai-audit/question#path
+  <https://w3id.org/ai-audit/question#path> a owl:DatatypeProperty ;
   rdfs:domain :TraceTemplate ;
   rdfs:range xsd:anyURI .
 
 ### Question Types #############################################################
 
-###  https://w3id.org/auditops/question#Lineage_Input
-<https://w3id.org/auditops/question#Lineage_Input> a :AuditQuestionType ;
+###  https://w3id.org/ai-audit/question#Lineage_Input
+<https://w3id.org/ai-audit/question#Lineage_Input> a :AuditQuestionType ;
   rdfs:label "Input Lineage" .
 
-###  https://w3id.org/auditops/question#Accountability
-<https://w3id.org/auditops/question#Accountability> a :AuditQuestionType ;
+###  https://w3id.org/ai-audit/question#Accountability
+<https://w3id.org/ai-audit/question#Accountability> a :AuditQuestionType ;
   rdfs:label "Accountability" .
 
-###  https://w3id.org/auditops/question#Lineage_Output
-<https://w3id.org/auditops/question#Lineage_Output> a :AuditQuestionType ;
+###  https://w3id.org/ai-audit/question#Lineage_Output
+<https://w3id.org/ai-audit/question#Lineage_Output> a :AuditQuestionType ;
   rdfs:label "Output Lineage" .  
 
-###  https://w3id.org/auditops/question#TraceTemplate
-<https://w3id.org/auditops/question#Temporal> a :AuditQuestionType ;
+###  https://w3id.org/ai-audit/question#TraceTemplate
+<https://w3id.org/ai-audit/question#Temporal> a :AuditQuestionType ;
   rdfs:label "Temporal" .  
 
-###  https://w3id.org/auditops/question#Location
-<https://w3id.org/auditops/question#Location> a :AuditQuestionType ;
+###  https://w3id.org/ai-audit/question#Location
+<https://w3id.org/ai-audit/question#Location> a :AuditQuestionType ;
     rdfs:label "Location" .
 
-###  https://w3id.org/auditops/question#Attribute_Activity
-<https://w3id.org/auditops/question#Attribute_Activity> a :AuditQuestionType ;
+###  https://w3id.org/ai-audit/question#Attribute_Activity
+<https://w3id.org/ai-audit/question#Attribute_Activity> a :AuditQuestionType ;
       rdfs:label "Attribute Activity" .
 
-###  https://w3id.org/auditops/question#Attribute_Entity
-<https://w3id.org/auditops/question#Attribute_Entity> a :AuditQuestionType ;
+###  https://w3id.org/ai-audit/question#Attribute_Entity
+<https://w3id.org/ai-audit/question#Attribute_Entity> a :AuditQuestionType ;
   rdfs:label "Attribute Entity" .
 
-###  https://w3id.org/auditops/question#Aggregation
-<https://w3id.org/auditops/question#Aggregation> a :AuditQuestionType ;
+###  https://w3id.org/ai-audit/question#Aggregation
+<https://w3id.org/ai-audit/question#Aggregation> a :AuditQuestionType ;
   rdfs:label "Aggregation Entity" .  
 
 
