@@ -1,10 +1,13 @@
 name: Build WIDOCO documentation
 
 on:
-  workflow_dispatch:        # allows manual trigger from GitHub UI
+  workflow_dispatch:
   push:
     branches:
-      - main                # optional: also run on every push
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -23,7 +26,13 @@ jobs:
       - name: Download WIDOCO
         run: |
           mkdir -p tools
-          curl -L -o tools/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.20/widoco-1.4.20-jar-with-dependencies.jar
+          curl -fL -o tools/widoco.jar \
+            https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar
+
+          echo "Downloaded:"
+          ls -lah tools/widoco.jar
+          file tools/widoco.jar || true
+          unzip -t tools/widoco.jar >/dev/null
 
       - name: Build documentation
         run: |
