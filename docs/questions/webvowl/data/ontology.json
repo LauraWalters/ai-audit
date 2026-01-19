@@ -1,0 +1,337 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://purl.org/net/p-plan", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/ai-audit/question", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/ai-audit" ],
+    "title" : {
+      "en" : "AuditOps – Questions Module"
+    },
+    "iri" : "https://w3id.org/ai-audit/question#",
+    "version" : "1.0.0",
+    "author" : [ "Laura Waltersdorfer" ],
+    "description" : {
+      "en" : "Vocabulary for representing audit questions, their types, and mappings to workflow steps and trace templates. "
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Laura Waltersdorfer",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Fajar J. Ekaputra",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Tomasz Miksa",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Gregor Käfer",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Marta Sabou",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "AuditOps – Questions Module",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/ai-audit#AuditableAISystem",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuditableAISystem"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#TraceTemplate",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TraceTemplate",
+      "en" : "Trace Template"
+    },
+    "comment" : {
+      "en" : "Template describing which evidence fields and relations are captured for a given activity/step type."
+    },
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#AuditQuestionType",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuditQuestionType",
+      "en" : "Audit Question Type"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ai-audit/question#Lineage_Output",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Lineage_Output",
+        "undefined" : "Output Lineage"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Location",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Location",
+        "undefined" : "Location"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Aggregation",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Aggregation",
+        "undefined" : "Aggregation Entity"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Accountability",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Accountability",
+        "undefined" : "Accountability"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Temporal",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Temporal",
+        "undefined" : "Temporal"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Attribute_Entity",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Attribute_Entity",
+        "undefined" : "Attribute Entity"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Lineage_Input",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Lineage_Input",
+        "undefined" : "Input Lineage"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Attribute_Activity",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Attribute_Activity",
+        "undefined" : "Attribute Activity"
+      }
+    } ],
+    "comment" : {
+      "en" : "Audit question categories (e.g., lineage, temporal, location, attribute/property, aggregation)."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Step",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Step"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Plan",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Plan"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#AuditQuestion",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuditQuestion",
+      "en" : "Audit Question"
+    },
+    "comment" : {
+      "en" : "A natural-language audit question represented as a node to enable mapping to steps and trace templates."
+    },
+    "id" : "2"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/ai-audit/question#hasQuestion",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasQuestion",
+      "en" : "has Question"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Link from System to Question ."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#questionType",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "questionType",
+      "en" : "question type"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Assigns a question to a question type."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#path",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "path"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#requiresTraceTemplate",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "requiresTraceTemplate",
+      "en" : "requires trace template"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Binds an audit question to the trace template required to answer it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#appliesToPlan",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "appliesToPlan",
+      "en" : "applies to plan"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Link from a question to a workflow plan."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#queryLocalPath",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "queryLocalPath"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#appliesToStep",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "appliesToStep",
+      "en" : "applies to step"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Indicates which workflow steps can provide evidence for answering the question."
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  } ]
+}

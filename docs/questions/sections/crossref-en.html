@@ -1,0 +1,359 @@
+<h2 id="crossreference" class="list">Cross-reference for  classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by .
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/ai-audit/question#AuditQuestion" title="https://w3id.org/ai-audit/question#AuditQuestion">Audit Question</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#TraceTemplate" title="https://w3id.org/ai-audit/question#TraceTemplate">Trace Template</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/ai-audit/question#AuditQuestion">
+  <h3>Audit Question<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#AuditQuestion</p>
+  <div class="comment">
+   <span class="markdown">A natural-language audit question represented as a node to enable mapping to steps and trace templates.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#appliesToPlan" title="https://w3id.org/ai-audit/question#appliesToPlan">applies to plan</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/ai-audit/question#appliesToStep" title="https://w3id.org/ai-audit/question#appliesToStep">applies to step</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/ai-audit/question#queryLocalPath" title="https://w3id.org/ai-audit/question#queryLocalPath">query Local Path</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/ai-audit/question#questionType" title="https://w3id.org/ai-audit/question#questionType">question type</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/ai-audit/question#requiresTraceTemplate" title="https://w3id.org/ai-audit/question#requiresTraceTemplate">requires trace template</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#hasQuestion" title="https://w3id.org/ai-audit/question#hasQuestion">has Question</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#AuditQuestionType">
+  <h3>Audit Question Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#AuditQuestionType</p>
+  <div class="comment">
+   <span class="markdown">Audit question categories (e.g., lineage, temporal, location, attribute/property, aggregation).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#questionType" title="https://w3id.org/ai-audit/question#questionType">question type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#Accountability" title="https://w3id.org/ai-audit/question#Accountability">Accountability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/ai-audit/question#Aggregation" title="https://w3id.org/ai-audit/question#Aggregation">Aggregation Entity</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/ai-audit/question#Attribute_Activity" title="https://w3id.org/ai-audit/question#Attribute_Activity">Attribute Activity</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/ai-audit/question#Attribute_Entity" title="https://w3id.org/ai-audit/question#Attribute_Entity">Attribute Entity</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/ai-audit/question#Lineage_Input" title="https://w3id.org/ai-audit/question#Lineage_Input">Input Lineage</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/ai-audit/question#Location" title="https://w3id.org/ai-audit/question#Location">Location</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/ai-audit/question#Lineage_Output" title="https://w3id.org/ai-audit/question#Lineage_Output">Output Lineage</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/ai-audit/question#Temporal" title="https://w3id.org/ai-audit/question#Temporal">Temporal</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#TraceTemplate">
+  <h3>Trace Template<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#TraceTemplate</p>
+  <div class="comment">
+   <span class="markdown">Template describing which evidence fields and relations are captured for a given activity/step type.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#path" title="https://w3id.org/ai-audit/question#path">path</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#requiresTraceTemplate" title="https://w3id.org/ai-audit/question#requiresTraceTemplate">requires trace template</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/ai-audit/question#appliesToPlan" title="https://w3id.org/ai-audit/question#appliesToPlan">applies to plan</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#appliesToStep" title="https://w3id.org/ai-audit/question#appliesToStep">applies to step</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#hasQuestion" title="https://w3id.org/ai-audit/question#hasQuestion">has Question</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#questionType" title="https://w3id.org/ai-audit/question#questionType">question type</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#requiresTraceTemplate" title="https://w3id.org/ai-audit/question#requiresTraceTemplate">requires trace template</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/ai-audit/question#appliesToPlan">
+  <h3>applies to plan<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#appliesToPlan</p>
+  <div class="comment">
+   <span class="markdown">Link from a question to a workflow plan.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#AuditQuestion" title="https://w3id.org/ai-audit/question#AuditQuestion">Audit Question</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/p-plan#Plan" target="_blank" title="http://purl.org/net/p-plan#Plan">Plan</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#appliesToStep">
+  <h3>applies to step<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#appliesToStep</p>
+  <div class="comment">
+   <span class="markdown">Indicates which workflow steps can provide evidence for answering the question.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#AuditQuestion" title="https://w3id.org/ai-audit/question#AuditQuestion">Audit Question</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/p-plan#Step" target="_blank" title="http://purl.org/net/p-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#hasQuestion">
+  <h3>has Question<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#hasQuestion</p>
+  <div class="comment">
+   <span class="markdown">Link from System to Question .</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/ai-audit#AuditableAISystem" target="_blank" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable A I System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#AuditQuestion" title="https://w3id.org/ai-audit/question#AuditQuestion">Audit Question</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#questionType">
+  <h3>question type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#questionType</p>
+  <div class="comment">
+   <span class="markdown">Assigns a question to a question type.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#AuditQuestion" title="https://w3id.org/ai-audit/question#AuditQuestion">Audit Question</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#requiresTraceTemplate">
+  <h3>requires trace template<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#requiresTraceTemplate</p>
+  <div class="comment">
+   <span class="markdown">Binds an audit question to the trace template required to answer it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#AuditQuestion" title="https://w3id.org/ai-audit/question#AuditQuestion">Audit Question</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#TraceTemplate" title="https://w3id.org/ai-audit/question#TraceTemplate">Trace Template</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/ai-audit/question#path" title="https://w3id.org/ai-audit/question#path"> <span>path</span> </a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#queryLocalPath" title="https://w3id.org/ai-audit/question#queryLocalPath"> <span>query Local Path</span> </a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/ai-audit/question#path">
+  <h3>path<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#path</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#TraceTemplate" title="https://w3id.org/ai-audit/question#TraceTemplate">Trace Template</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#queryLocalPath">
+  <h3>query Local Path<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#queryLocalPath</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit/question#AuditQuestion" title="https://w3id.org/ai-audit/question#AuditQuestion">Audit Question</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/ai-audit/question#Accountability" title="https://w3id.org/ai-audit/question#Accountability">Accountability</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#Aggregation" title="https://w3id.org/ai-audit/question#Aggregation">Aggregation Entity</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#Attribute_Activity" title="https://w3id.org/ai-audit/question#Attribute_Activity">Attribute Activity</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#Attribute_Entity" title="https://w3id.org/ai-audit/question#Attribute_Entity">Attribute Entity</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#Lineage_Input" title="https://w3id.org/ai-audit/question#Lineage_Input">Input Lineage</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#Location" title="https://w3id.org/ai-audit/question#Location">Location</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#Lineage_Output" title="https://w3id.org/ai-audit/question#Lineage_Output">Output Lineage</a></li>
+  <li><a href="#https://w3id.org/ai-audit/question#Temporal" title="https://w3id.org/ai-audit/question#Temporal">Temporal</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/ai-audit/question#Accountability">
+  <h3>Accountability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#Accountability</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#Aggregation">
+  <h3>Aggregation Entity<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#Aggregation</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#Attribute_Activity">
+  <h3>Attribute Activity<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#Attribute_Activity</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#Attribute_Entity">
+  <h3>Attribute Entity<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#Attribute_Entity</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#Lineage_Input">
+  <h3>Input Lineage<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#Lineage_Input</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#Location">
+  <h3>Location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#Location</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#Lineage_Output">
+  <h3>Output Lineage<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#Lineage_Output</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit/question#Temporal">
+  <h3>Temporal<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/question#Temporal</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit/question#AuditQuestionType" title="https://w3id.org/ai-audit/question#AuditQuestionType">Audit Question Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>

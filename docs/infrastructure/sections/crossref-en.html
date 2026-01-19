@@ -1,0 +1,1204 @@
+<h2 id="crossreference" class="list">Cross-reference for null classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by null.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Acquire" title="https://w3id.org/ai-audit/infrastructure#Acquire">Acquire</a></li>
+  <li><a href="#https://w3id.org/ai-audit#AuditBundle" title="https://w3id.org/ai-audit#AuditBundle">Audit Bundle</a></li>
+  <li><a href="#https://w3id.org/ai-audit#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a></li>
+  <li><a href="#AuditBoxService" title="https://w3id.org/ai-audit/infrastructure#AuditBoxService">AuditboxService</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#Bundle" title="http://www.w3.org/ns/prov#Bundle"> <span>Bundle</span> </a></li>
+  <li><a href="#Fetch" title="https://w3id.org/ai-audit/infrastructure#Fetch">Fetch</a></li>
+  <li><a href="#Parameter" title="https://w3id.org/ai-audit/infrastructure#Parameter">Parameter</a></li>
+  <li><a href="#ParameterizedQuery" title="https://w3id.org/ai-audit/infrastructure#ParameterizedQuery">ParameterizedQuery</a></li>
+  <li><a href="#Query" title="https://w3id.org/ai-audit/infrastructure#Query">Query</a></li>
+  <li><a href="#Receive" title="https://w3id.org/ai-audit/infrastructure#Receive">Receive</a></li>
+  <li><a href="#ServiceFunction" title="https://w3id.org/ai-audit/infrastructure#ServiceFunction">ServiceFunction</a></li>
+  <li><a href="#http://purl.org/net/p-plan#Step" title="http://purl.org/net/p-plan#Step"> <span>Step</span> </a></li>
+  <li><a href="#TimerFetch" title="https://w3id.org/ai-audit/infrastructure#TimerFetch">TimerFetch</a></li>
+  <li><a href="#TransformationFunction" title="https://w3id.org/ai-audit/infrastructure#TransformationFunction">Transformation</a></li>
+  <li><a href="#ValidationFunction" title="https://w3id.org/ai-audit/infrastructure#ValidationFunction">Validation</a></li>
+ </ul>
+ <div class="entity" id="Acquire">
+  <h3>Acquire<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#Acquire</p>
+  <div class="comment">
+   <span class="markdown">Service with the purpose to retrieve data from another program or application</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AuditBoxService" title="https://w3id.org/ai-audit/infrastructure#AuditBoxService">AuditboxService</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Fetch" title="https://w3id.org/ai-audit/infrastructure#Fetch">Fetch</a> <sup class="type-c" title="class">c</sup>, <a href="#Receive" title="https://w3id.org/ai-audit/infrastructure#Receive">Receive</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSourceType" title="https://w3id.org/ai-audit/infrastructure#hasSourceType">hasSourceType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTransformationFunction" title="https://w3id.org/ai-audit/infrastructure#hasTransformationFunction">hasTransformationFunction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasValidationFunction" title="https://w3id.org/ai-audit/infrastructure#hasValidationFunction">hasValidationFunction</a> <sup class="type-op" title="object property">op</sup>, <a href="#isBasedOnStep" title="https://w3id.org/ai-audit/infrastructure#isBasedOnStep">isBasedOnStep</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit#AuditBundle">
+  <h3>Audit Bundle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit#AuditBundle</p>
+  <div class="comment">
+   <span class="markdown">Container for a single execution run (e.g., one workflow run). Typically aligned with prov:Bundle in runtime traces.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#Bundle" title="http://www.w3.org/ns/prov#Bundle">Bundle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ep-plan#hasTraceElement" title="https://w3id.org/ep-plan#hasTraceElement">hasTraceElement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ai-audit#AuditableAISystem">
+  <h3>Auditable AI System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit#AuditableAISystem</p>
+  <div class="comment">
+   <span class="markdown">A software system (or deployed AI service) for which audit evidence (traces) is collected.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasBackupTimer" title="https://w3id.org/ai-audit/infrastructure#hasBackupTimer">hasBackupTimer</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasBackupType" title="https://w3id.org/ai-audit/infrastructure#hasBackupType">hasBackupType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPlan" title="https://w3id.org/ai-audit/infrastructure#hasPlan">hasPlan</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasService" title="https://w3id.org/ai-audit/infrastructure#hasService">hasService</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/ep-plan#hasTraceElement" title="https://w3id.org/ep-plan#hasTraceElement">hasTraceElement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AuditBoxService">
+  <h3>AuditboxService<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#AuditBoxService</p>
+  <div class="comment">
+   <span class="markdown">Service inside a program or application</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Acquire" title="https://w3id.org/ai-audit/infrastructure#Acquire">Acquire</a> <sup class="type-c" title="class">c</sup>, <a href="#Query" title="https://w3id.org/ai-audit/infrastructure#Query">Query</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasCorrespondingPlan" title="https://w3id.org/ai-audit/infrastructure#hasCorrespondingPlan">hasCorrespondingPlan</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasService" title="https://w3id.org/ai-audit/infrastructure#hasService">hasService</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#Bundle">
+  <h3>Bundle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Bundle</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/ai-audit#AuditBundle" title="https://w3id.org/ai-audit#AuditBundle">Audit Bundle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Fetch">
+  <h3>Fetch<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#Fetch</p>
+  <div class="comment">
+   <span class="markdown">Service to get data from another program or application</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Acquire" title="https://w3id.org/ai-audit/infrastructure#Acquire">Acquire</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TimerFetch" title="https://w3id.org/ai-audit/infrastructure#TimerFetch">TimerFetch</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasType" title="https://w3id.org/ai-audit/infrastructure#hasType">hasType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasURI" title="https://w3id.org/ai-audit/infrastructure#hasURI">hasURI</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasCorrespondingFetch" title="https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch">hasCorrespondingFetch</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Parameter">
+  <h3>Parameter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#Parameter</p>
+  <div class="comment">
+   <span class="markdown">Parameter to define filter in a query</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#position" title="https://w3id.org/ai-audit/infrastructure#position">position</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#type" title="https://w3id.org/ai-audit/infrastructure#type">type</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasParameter" title="https://w3id.org/ai-audit/infrastructure#hasParameter">hasParameter</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ParameterizedQuery">
+  <h3>ParameterizedQuery<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#ParameterizedQuery</p>
+  <div class="comment">
+   <span class="markdown">Service to query data from database with input</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Query" title="https://w3id.org/ai-audit/infrastructure#Query">Query</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasParameter" title="https://w3id.org/ai-audit/infrastructure#hasParameter">hasParameter</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Query">
+  <h3>Query<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#Query</p>
+  <div class="comment">
+   <span class="markdown">Service to query data from a database</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AuditBoxService" title="https://w3id.org/ai-audit/infrastructure#AuditBoxService">AuditboxService</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ParameterizedQuery" title="https://w3id.org/ai-audit/infrastructure#ParameterizedQuery">ParameterizedQuery</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#h hasQueryApiPath" title="h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath">hasQueryApiPath</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasQueryBinding" title="https://w3id.org/ai-audit/infrastructure#hasQueryBinding">hasQueryBinding</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasQueryLocalPath" title="https://w3id.org/ai-audit/infrastructure#hasQueryLocalPath">hasQueryLocalPath</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasQueryString" title="https://w3id.org/ai-audit/infrastructure#hasQueryString">hasQueryString</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#urn:absolute:h/hasQueryUriPath" title="urn:absolute:h/hasQueryUriPath">hasQueryUriPath</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Receive">
+  <h3>Receive<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#Receive</p>
+  <div class="comment">
+   <span class="markdown">Service to receive data from another program or application</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Acquire" title="https://w3id.org/ai-audit/infrastructure#Acquire">Acquire</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasCorrespondingFetch" title="https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch">hasCorrespondingFetch</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReceiveApiPath" title="https://w3id.org/ai-audit/infrastructure#hasReceiveApiPath">hasReceiveApiPath</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceFunction">
+  <h3>ServiceFunction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#ServiceFunction</p>
+  <div class="comment">
+   <span class="markdown">Function inside a program or application</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TransformationFunction" title="https://w3id.org/ai-audit/infrastructure#TransformationFunction">Transformation</a> <sup class="type-c" title="class">c</sup>, <a href="#ValidationFunction" title="https://w3id.org/ai-audit/infrastructure#ValidationFunction">Validation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#description" title="https://w3id.org/ai-audit/infrastructure#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#name" title="https://w3id.org/ai-audit/infrastructure#name">name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/net/p-plan#Step">
+  <h3>Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/p-plan#Step</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/net/p-plan#Entity" target="_blank" title="http://purl.org/net/p-plan#Entity">Entity</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/prov#Plan" target="_blank" title="http://www.w3.org/ns/prov#Plan">Plan</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isBasedOnStep" title="https://w3id.org/ai-audit/infrastructure#isBasedOnStep">isBasedOnStep</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TimerFetch">
+  <h3>TimerFetch<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#TimerFetch</p>
+  <div class="comment">
+   <span class="markdown">Service to continously get data from another program or application</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Fetch" title="https://w3id.org/ai-audit/infrastructure#Fetch">Fetch</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasTimePeriod" title="https://w3id.org/ai-audit/infrastructure#hasTimePeriod">hasTimePeriod</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransformationFunction">
+  <h3>Transformation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#TransformationFunction</p>
+  <div class="comment">
+   <span class="markdown">Transform data that comes in into triples</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ServiceFunction" title="https://w3id.org/ai-audit/infrastructure#ServiceFunction">ServiceFunction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasJsonSchemaLocalPath" title="https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath">hasJsonSchemaLocalPath</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMappingLocalPath" title="https://w3id.org/ai-audit/infrastructure#hasMappingLocalPath">hasMappingLocalPath</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMappingString" title="https://w3id.org/ai-audit/infrastructure#hasMappingString">hasMappingString</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMappingType" title="https://w3id.org/ai-audit/infrastructure#hasMappingType">hasMappingType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMappingUriPath" title="https://w3id.org/ai-audit/infrastructure#hasMappingUriPath">hasMappingUriPath</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTransformationFunction" title="https://w3id.org/ai-audit/infrastructure#hasTransformationFunction">hasTransformationFunction</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ValidationFunction">
+  <h3>Validation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#ValidationFunction</p>
+  <div class="comment">
+   <span class="markdown">Validation for the data that comes in</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ServiceFunction" title="https://w3id.org/ai-audit/infrastructure#ServiceFunction">ServiceFunction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasConstraintString" title="https://w3id.org/ai-audit/infrastructure#hasConstraintString">hasConstraintString</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConstraintType" title="https://w3id.org/ai-audit/infrastructure#hasConstraintType">hasConstraintType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConstraintUriPath" title="https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath">hasConstraintUriPath</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConstraintLocalPath" title="https://w3id.org/ai-audit/infrastructure#hasConstraintLocalPath">hasContraintLocalPath</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasValidationFunction" title="https://w3id.org/ai-audit/infrastructure#hasValidationFunction">hasValidationFunction</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasCorrespondingFetch" title="https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch">hasCorrespondingFetch</a></li>
+  <li><a href="#hasCorrespondingPlan" title="https://w3id.org/ai-audit/infrastructure#hasCorrespondingPlan">hasCorrespondingPlan</a></li>
+  <li><a href="#hasParameter" title="https://w3id.org/ai-audit/infrastructure#hasParameter">hasParameter</a></li>
+  <li><a href="#hasPlan" title="https://w3id.org/ai-audit/infrastructure#hasPlan">hasPlan</a></li>
+  <li><a href="#hasService" title="https://w3id.org/ai-audit/infrastructure#hasService">hasService</a></li>
+  <li><a href="#https://w3id.org/ep-plan#hasTraceElement" title="https://w3id.org/ep-plan#hasTraceElement">hasTraceElement</a></li>
+  <li><a href="#hasTransformationFunction" title="https://w3id.org/ai-audit/infrastructure#hasTransformationFunction">hasTransformationFunction</a></li>
+  <li><a href="#hasValidationFunction" title="https://w3id.org/ai-audit/infrastructure#hasValidationFunction">hasValidationFunction</a></li>
+  <li><a href="#isBasedOnStep" title="https://w3id.org/ai-audit/infrastructure#isBasedOnStep">isBasedOnStep</a></li>
+ </ul>
+ <div class="entity" id="hasCorrespondingFetch">
+  <h3>hasCorrespondingFetch<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch</p>
+  <div class="comment">
+   <span class="markdown">Relation between Receive and Fetch, a Receive can have 0..N Fetch</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Receive" title="https://w3id.org/ai-audit/infrastructure#Receive">Receive</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Fetch" title="https://w3id.org/ai-audit/infrastructure#Fetch">Fetch</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCorrespondingPlan">
+  <h3>hasCorrespondingPlan<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasCorrespondingPlan</p>
+  <div class="comment">
+   <span class="markdown">Relation between Service and Plan, a Service can have 1..1 Plan</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AuditBoxService" title="https://w3id.org/ai-audit/infrastructure#AuditBoxService">AuditboxService</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/p-plan#Plan" target="_blank" title="http://purl.org/net/p-plan#Plan">Plan</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasParameter">
+  <h3>hasParameter<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasParameter</p>
+  <div class="comment">
+   <span class="markdown">Relation between ParameterizedQuery and Parameter, to describe the filter inside a query. ParameterizedQuery can have 1..N Parameter</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ParameterizedQuery" title="https://w3id.org/ai-audit/infrastructure#ParameterizedQuery">ParameterizedQuery</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Parameter" title="https://w3id.org/ai-audit/infrastructure#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPlan">
+  <h3>hasPlan<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasPlan</p>
+  <div class="comment">
+   <span class="markdown">Relation between Auditable AI System and Plan, a System can have 1..N Plan</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/p-plan#Pla" target="_blank" title="http://purl.org/net/p-plan#Pla">Pla</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasService">
+  <h3>hasService<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasService</p>
+  <div class="comment">
+   <span class="markdown">Relation between Auditable AI System and Service, a System can have 1..N Service</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuditBoxService" title="https://w3id.org/ai-audit/infrastructure#AuditBoxService">AuditboxService</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/ep-plan#hasTraceElement">
+  <h3>hasTraceElement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ep-plan#hasTraceElement</p>
+  <div class="comment">
+   <span class="markdown">Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit#AuditBundle" title="https://w3id.org/ai-audit#AuditBundle">Audit Bundle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTransformationFunction">
+  <h3>hasTransformationFunction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasTransformationFunction</p>
+  <div class="comment">
+   <span class="markdown">Relation between Acquire and TransformationFunction, an Acquire can have 1..1 TransformationFunction</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Acquire" title="https://w3id.org/ai-audit/infrastructure#Acquire">Acquire</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TransformationFunction" title="https://w3id.org/ai-audit/infrastructure#TransformationFunction">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasValidationFunction">
+  <h3>hasValidationFunction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasValidationFunction</p>
+  <div class="comment">
+   <span class="markdown">Relation between Acquire and Validation, an Acquire can have 0..1 Validation</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Acquire" title="https://w3id.org/ai-audit/infrastructure#Acquire">Acquire</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ValidationFunction" title="https://w3id.org/ai-audit/infrastructure#ValidationFunction">Validation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isBasedOnStep">
+  <h3>isBasedOnStep<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#isBasedOnStep</p>
+  <div class="comment">
+   <span class="markdown">Relation between Acquire and Step, an Acquire correspond to 1..1 Step</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Acquire" title="https://w3id.org/ai-audit/infrastructure#Acquire">Acquire</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://purl.org/net/p-plan#Step" title="http://purl.org/net/p-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#description" title="https://w3id.org/ai-audit/infrastructure#description">description</a></li>
+  <li><a href="#hasBackupTimer" title="https://w3id.org/ai-audit/infrastructure#hasBackupTimer">hasBackupTimer</a></li>
+  <li><a href="#hasBackupType" title="https://w3id.org/ai-audit/infrastructure#hasBackupType">hasBackupType</a></li>
+  <li><a href="#hasConstraintString" title="https://w3id.org/ai-audit/infrastructure#hasConstraintString">hasConstraintString</a></li>
+  <li><a href="#hasConstraintType" title="https://w3id.org/ai-audit/infrastructure#hasConstraintType">hasConstraintType</a></li>
+  <li><a href="#hasConstraintUriPath" title="https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath">hasConstraintUriPath</a></li>
+  <li><a href="#hasConstraintLocalPath" title="https://w3id.org/ai-audit/infrastructure#hasConstraintLocalPath">hasContraintLocalPath</a></li>
+  <li><a href="#hasJsonSchemaLocalPath" title="https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath">hasJsonSchemaLocalPath</a></li>
+  <li><a href="#hasMappingLocalPath" title="https://w3id.org/ai-audit/infrastructure#hasMappingLocalPath">hasMappingLocalPath</a></li>
+  <li><a href="#hasMappingString" title="https://w3id.org/ai-audit/infrastructure#hasMappingString">hasMappingString</a></li>
+  <li><a href="#hasMappingType" title="https://w3id.org/ai-audit/infrastructure#hasMappingType">hasMappingType</a></li>
+  <li><a href="#hasMappingUriPath" title="https://w3id.org/ai-audit/infrastructure#hasMappingUriPath">hasMappingUriPath</a></li>
+  <li><a href="#h hasQueryApiPath" title="h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath">hasQueryApiPath</a></li>
+  <li><a href="#hasQueryBinding" title="https://w3id.org/ai-audit/infrastructure#hasQueryBinding">hasQueryBinding</a></li>
+  <li><a href="#hasQueryLocalPath" title="https://w3id.org/ai-audit/infrastructure#hasQueryLocalPath">hasQueryLocalPath</a></li>
+  <li><a href="#hasQueryString" title="https://w3id.org/ai-audit/infrastructure#hasQueryString">hasQueryString</a></li>
+  <li><a href="#urn:absolute:h/hasQueryUriPath" title="urn:absolute:h/hasQueryUriPath">hasQueryUriPath</a></li>
+  <li><a href="#hasReceiveApiPath" title="https://w3id.org/ai-audit/infrastructure#hasReceiveApiPath">hasReceiveApiPath</a></li>
+  <li><a href="#hasSourceType" title="https://w3id.org/ai-audit/infrastructure#hasSourceType">hasSourceType</a></li>
+  <li><a href="#hasTimePeriod" title="https://w3id.org/ai-audit/infrastructure#hasTimePeriod">hasTimePeriod</a></li>
+  <li><a href="#hasType" title="https://w3id.org/ai-audit/infrastructure#hasType">hasType</a></li>
+  <li><a href="#hasURI" title="https://w3id.org/ai-audit/infrastructure#hasURI">hasURI</a></li>
+  <li><a href="#name" title="https://w3id.org/ai-audit/infrastructure#name">name</a></li>
+  <li><a href="#position" title="https://w3id.org/ai-audit/infrastructure#position">position</a></li>
+  <li><a href="#type" title="https://w3id.org/ai-audit/infrastructure#type">type</a></li>
+ </ul>
+ <div class="entity" id="description">
+  <h3>description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#description</p>
+  <div class="comment">
+   <span class="markdown">description of a service function</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceFunction" title="https://w3id.org/ai-audit/infrastructure#ServiceFunction">ServiceFunction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasBackupTimer">
+  <h3>hasBackupTimer<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasBackupTimer</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set a timer for system backup</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasBackupType">
+  <h3>hasBackupType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasBackupType</p>
+  <div class="comment">
+   <span class="markdown">Datatype property to set the type of the system backup</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasConstraintString">
+  <h3>hasConstraintString<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasConstraintString</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set constraint string of a validation</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ValidationFunction" title="https://w3id.org/ai-audit/infrastructure#ValidationFunction">Validation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasConstraintType">
+  <h3>hasConstraintType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasConstraintType</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set the type of validation</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ValidationFunction" title="https://w3id.org/ai-audit/infrastructure#ValidationFunction">Validation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasConstraintUriPath">
+  <h3>hasConstraintUriPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to retrieve constraint from external sources</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ValidationFunction" title="https://w3id.org/ai-audit/infrastructure#ValidationFunction">Validation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasConstraintLocalPath">
+  <h3>hasContraintLocalPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasConstraintLocalPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to link validation with the saved local constraint</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ValidationFunction" title="https://w3id.org/ai-audit/infrastructure#ValidationFunction">Validation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasJsonSchemaLocalPath">
+  <h3>hasJsonSchemaLocalPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to retrieve json schema from local file</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TransformationFunction" title="https://w3id.org/ai-audit/infrastructure#TransformationFunction">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMappingLocalPath">
+  <h3>hasMappingLocalPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasMappingLocalPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to retrieve mapping that already saved in a local file</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TransformationFunction" title="https://w3id.org/ai-audit/infrastructure#TransformationFunction">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMappingString">
+  <h3>hasMappingString<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasMappingString</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to save the actual mapping value</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TransformationFunction" title="https://w3id.org/ai-audit/infrastructure#TransformationFunction">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMappingType">
+  <h3>hasMappingType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasMappingType</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set mapping type</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TransformationFunction" title="https://w3id.org/ai-audit/infrastructure#TransformationFunction">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMappingUriPath">
+  <h3>hasMappingUriPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasMappingUriPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to retrieve mapping from external sources</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TransformationFunction" title="https://w3id.org/ai-audit/infrastructure#TransformationFunction">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="h hasQueryApiPath">
+  <h3>hasQueryApiPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set where the query can be found</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Query" title="https://w3id.org/ai-audit/infrastructure#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasQueryBinding">
+  <h3>hasQueryBinding<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasQueryBinding</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set query binding</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Query" title="https://w3id.org/ai-audit/infrastructure#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasQueryLocalPath">
+  <h3>hasQueryLocalPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasQueryLocalPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to link query into its local file form</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Query" title="https://w3id.org/ai-audit/infrastructure#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasQueryString">
+  <h3>hasQueryString<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasQueryString</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties for query value</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Query" title="https://w3id.org/ai-audit/infrastructure#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="urn:absolute:h/hasQueryUriPath">
+  <h3>hasQueryUriPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:absolute:h/hasQueryUriPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype value to get query value from external sources</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Query" title="https://w3id.org/ai-audit/infrastructure#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasReceiveApiPath">
+  <h3>hasReceiveApiPath<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasReceiveApiPath</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set api path where the post receive can be found</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Receive" title="https://w3id.org/ai-audit/infrastructure#Receive">Receive</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSourceType">
+  <h3>hasSourceType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasSourceType</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set what type of data can be expected for the post api</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Acquire" title="https://w3id.org/ai-audit/infrastructure#Acquire">Acquire</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTimePeriod">
+  <h3>hasTimePeriod<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasTimePeriod</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set a timer to fetch data from external sources</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TimerFetch" title="https://w3id.org/ai-audit/infrastructure#TimerFetch">TimerFetch</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasType">
+  <h3>hasType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasType</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set fetch type</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Fetch" title="https://w3id.org/ai-audit/infrastructure#Fetch">Fetch</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasURI">
+  <h3>hasURI<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasURI</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set the location of the data to be fetched on</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Fetch" title="https://w3id.org/ai-audit/infrastructure#Fetch">Fetch</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="name">
+  <h3>name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#name</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to name the service function</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceFunction" title="https://w3id.org/ai-audit/infrastructure#ServiceFunction">ServiceFunction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="position">
+  <h3>position<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#position</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set the position for the filter query</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Parameter" title="https://w3id.org/ai-audit/infrastructure#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="type">
+  <h3>type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#type</p>
+  <div class="comment">
+   <span class="markdown">Datatype properties to set query filter type</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Parameter" title="https://w3id.org/ai-audit/infrastructure#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>

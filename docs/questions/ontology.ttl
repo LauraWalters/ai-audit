@@ -1,0 +1,190 @@
+@prefix : <https://w3id.org/ai-audit/question#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/ai-audit/question#> .
+
+<https://w3id.org/ai-audit/question#> rdf:type owl:Ontology ;
+                                       <http://purl.org/dc/terms/contributor> "Fajar J. Ekaputra" ,
+                                                                              "Gregor Käfer" ,
+                                                                              "Marta Sabou" ,
+                                                                              "Tomasz Miksa" ;
+                                       <http://purl.org/dc/terms/creator> "Laura Waltersdorfer" ;
+                                       <http://purl.org/dc/terms/description> "Vocabulary for representing audit questions, their types, and mappings to workflow steps and trace templates. "@en ;
+                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                       <http://purl.org/dc/terms/title> "AuditOps – Questions Module"@en ;
+                                       owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/ai-audit/question#appliesToPlan
+:appliesToPlan rdf:type owl:ObjectProperty ;
+               rdfs:domain :AuditQuestion ;
+               rdfs:range <http://purl.org/net/p-plan#Plan> ;
+               rdfs:comment "Link from a question to a workflow plan."@en ;
+               rdfs:label "applies to plan"@en .
+
+
+###  https://w3id.org/ai-audit/question#appliesToStep
+:appliesToStep rdf:type owl:ObjectProperty ;
+               rdfs:domain :AuditQuestion ;
+               rdfs:range <http://purl.org/net/p-plan#Step> ;
+               rdfs:comment "Indicates which workflow steps can provide evidence for answering the question."@en ;
+               rdfs:label "applies to step"@en .
+
+
+###  https://w3id.org/ai-audit/question#hasQuestion
+:hasQuestion rdf:type owl:ObjectProperty ;
+             rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
+             rdfs:range :AuditQuestion ;
+             rdfs:comment "Link from System to Question ."@en ;
+             rdfs:label "has Question"@en .
+
+
+###  https://w3id.org/ai-audit/question#questionType
+:questionType rdf:type owl:ObjectProperty ;
+              rdfs:domain :AuditQuestion ;
+              rdfs:range :AuditQuestionType ;
+              rdfs:comment "Assigns a question to a question type."@en ;
+              rdfs:label "question type"@en .
+
+
+###  https://w3id.org/ai-audit/question#requiresTraceTemplate
+:requiresTraceTemplate rdf:type owl:ObjectProperty ;
+                       rdfs:domain :AuditQuestion ;
+                       rdfs:range :TraceTemplate ;
+                       rdfs:comment "Binds an audit question to the trace template required to answer it."@en ;
+                       rdfs:label "requires trace template"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/ai-audit/question#path
+:path rdf:type owl:DatatypeProperty ;
+      rdfs:domain :TraceTemplate ;
+      rdfs:range xsd:anyURI .
+
+
+###  https://w3id.org/ai-audit/question#queryLocalPath
+:queryLocalPath rdf:type owl:DatatypeProperty ;
+                rdfs:domain :AuditQuestion ;
+                rdfs:range xsd:anyURI .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/net/p-plan#Plan
+<http://purl.org/net/p-plan#Plan> rdf:type owl:Class .
+
+
+###  http://purl.org/net/p-plan#Step
+<http://purl.org/net/p-plan#Step> rdf:type owl:Class .
+
+
+###  https://w3id.org/ai-audit#AuditableAISystem
+<https://w3id.org/ai-audit#AuditableAISystem> rdf:type owl:Class .
+
+
+###  https://w3id.org/ai-audit/question#AuditQuestion
+:AuditQuestion rdf:type owl:Class ;
+               rdfs:comment "A natural-language audit question represented as a node to enable mapping to steps and trace templates."@en ;
+               rdfs:label "Audit Question"@en .
+
+
+###  https://w3id.org/ai-audit/question#AuditQuestionType
+:AuditQuestionType rdf:type owl:Class ;
+                   rdfs:comment "Audit question categories (e.g., lineage, temporal, location, attribute/property, aggregation)."@en ;
+                   rdfs:label "Audit Question Type"@en .
+
+
+###  https://w3id.org/ai-audit/question#TraceTemplate
+:TraceTemplate rdf:type owl:Class ;
+               rdfs:comment "Template describing which evidence fields and relations are captured for a given activity/step type."@en ;
+               rdfs:label "Trace Template"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ai-audit/question#Accountability
+:Accountability rdf:type owl:NamedIndividual ,
+                         :AuditQuestionType ;
+                rdfs:label "Accountability" .
+
+
+###  https://w3id.org/ai-audit/question#Aggregation
+:Aggregation rdf:type owl:NamedIndividual ,
+                      :AuditQuestionType ;
+             rdfs:label "Aggregation Entity" .
+
+
+###  https://w3id.org/ai-audit/question#Attribute_Activity
+:Attribute_Activity rdf:type owl:NamedIndividual ,
+                             :AuditQuestionType ;
+                    rdfs:label "Attribute Activity" .
+
+
+###  https://w3id.org/ai-audit/question#Attribute_Entity
+:Attribute_Entity rdf:type owl:NamedIndividual ,
+                           :AuditQuestionType ;
+                  rdfs:label "Attribute Entity" .
+
+
+###  https://w3id.org/ai-audit/question#Lineage_Input
+:Lineage_Input rdf:type owl:NamedIndividual ,
+                        :AuditQuestionType ;
+               rdfs:label "Input Lineage" .
+
+
+###  https://w3id.org/ai-audit/question#Lineage_Output
+:Lineage_Output rdf:type owl:NamedIndividual ,
+                         :AuditQuestionType ;
+                rdfs:label "Output Lineage" .
+
+
+###  https://w3id.org/ai-audit/question#Location
+:Location rdf:type owl:NamedIndividual ,
+                   :AuditQuestionType ;
+          rdfs:label "Location" .
+
+
+###  https://w3id.org/ai-audit/question#Temporal
+:Temporal rdf:type owl:NamedIndividual ,
+                   :AuditQuestionType ;
+          rdfs:label "Temporal" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

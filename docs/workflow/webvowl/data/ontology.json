@@ -1,0 +1,819 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://purl.org/net/p-plan", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/ai-audit" ],
+    "title" : {
+      "en" : "AuditOps – Workflow Module"
+    },
+    "iri" : "https://w3id.org/ai-audit#",
+    "version" : "1.0.0",
+    "author" : [ "Laura Waltersdorfer" ],
+    "description" : {
+      "en" : "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan, and ML-Schema."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Laura Waltersdorfer",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Fajar J. Ekaputra",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Tomasz Miksa",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Gregor Käfer",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Marta Sabou",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "AuditOps – Workflow Module",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/ai-audit#HyperparameterSetting",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HyperparameterSetting",
+      "undefined" : "Hyperparameter Setting"
+    },
+    "comment" : {
+      "undefined" : "A specific assignment of a value to a named hyperparameter used in a training run."
+    },
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Training",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Training",
+      "en" : "Training Activity"
+    },
+    "comment" : {
+      "en" : "Learning activity that fits model parameters (training/fine-tuning)."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "subClasses" : [ "3", "1", "4", "5" ],
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#SymbolicModel",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SymbolicModel",
+      "en" : "Symbolic Model"
+    },
+    "comment" : {
+      "en" : "A non-statistical model (e.g., rules, KG, ontology)."
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#AuditableAISystem",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuditableAISystem",
+      "en" : "Auditable AI System"
+    },
+    "comment" : {
+      "en" : "A software system (or deployed AI service) for which audit evidence (traces) is collected."
+    },
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#ResultElement",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResultElement",
+      "en" : "Result Element"
+    },
+    "comment" : {
+      "en" : "A granular output item relevant for auditing (e.g., a predicted entity, a row-level decision, a ranked hit)."
+    },
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Transformation",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transformation",
+      "en" : "Transformation Activity"
+    },
+    "comment" : {
+      "en" : "Deterministic data transformation without learning (e.g., parsing, normalization)."
+    },
+    "id" : "4",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "12", "14", "7" ],
+    "attributes" : [ "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Entity",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "16" ],
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Dataset",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset",
+      "en" : "Dataset"
+    },
+    "comment" : {
+      "en" : "A dataset (typically multi-row or multi-item collection) used for training/evaluation."
+    },
+    "id" : "20",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#EvaluationMetric",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EvaluationMetric",
+      "en" : "Evaluation metric"
+    },
+    "comment" : {
+      "en" : "A metric used specifically for evaluation in an audit context."
+    },
+    "id" : "21",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#DataInstance",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataInstance",
+      "en" : "Data Instance"
+    },
+    "subClasses" : [ "11", "20" ],
+    "comment" : {
+      "en" : "A data artifact used/produced by workflow steps (can be a single document, batch, or dataset)."
+    },
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Metric",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Metric",
+      "en" : "Metric"
+    },
+    "subClasses" : [ "21" ],
+    "comment" : {
+      "en" : "A reusable definition of an evaluation method (e.g., hits@K-lenient, accuracy, calibration error)."
+    },
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Model",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Model",
+      "en" : "Model"
+    },
+    "subClasses" : [ "33", "6" ],
+    "comment" : {
+      "en" : "A model artifact used for inference or produced by training."
+    },
+    "id" : "7",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Engineering",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Engineering",
+      "en" : "Engineering Activity"
+    },
+    "comment" : {
+      "en" : "Non-learning engineering activity (e.g., KG/ontology/rules/software engineering)."
+    },
+    "id" : "3",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#LifecyclePhase",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LifecyclePhase",
+      "en" : "Lifecycle Phase"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ai-audit#Design",
+      "baseIri" : "https://w3id.org/ai-audit",
+      "labels" : {
+        "IRI-based" : "Design"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit#Operation",
+      "baseIri" : "https://w3id.org/ai-audit",
+      "labels" : {
+        "IRI-based" : "Operation"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit#Evaluation",
+      "baseIri" : "https://w3id.org/ai-audit",
+      "labels" : {
+        "IRI-based" : "Evaluation"
+      }
+    } ],
+    "comment" : {
+      "en" : "A lifecycle phase of an AI system (e.g. design, evaluation, operation)."
+    },
+    "id" : "25"
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "16" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Software",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Software",
+      "en" : "Software"
+    },
+    "comment" : {
+      "en" : "Software component used in or produced by a workflow step."
+    },
+    "id" : "14",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#AuditBundle",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuditBundle",
+      "en" : "Audit Bundle"
+    },
+    "comment" : {
+      "en" : "Container for a single execution run (e.g., one workflow run). Typically aligned with prov:Bundle in runtime traces."
+    },
+    "id" : "30",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#HyperparameterConfiguration",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HyperparameterConfiguration",
+      "undefined" : "Hyperparameter Configuration"
+    },
+    "comment" : {
+      "undefined" : "A reusable collection of hyperparameter settings used in a training activity."
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Step",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Step"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "15", "28" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#StatisticalModel",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StatisticalModel",
+      "en" : "Statistical Model"
+    },
+    "comment" : {
+      "en" : "A statistical/ML model (e.g., neural network) used for training/inference."
+    },
+    "id" : "33",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#ScoreType",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ScoreType",
+      "en" : "Score type"
+    },
+    "comment" : {
+      "en" : "The meaning/semantics of a score value (e.g., confidence, risk, uncertainty, probability)."
+    },
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Score",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Score",
+      "en" : "Score"
+    },
+    "comment" : {
+      "en" : "A concrete value produced for a specific subject/context, typically the output of applying a metric."
+    },
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Hyperparameter",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hyperparameter",
+      "undefined" : "Hyperparameter"
+    },
+    "comment" : {
+      "undefined" : "An abstract parameter that controls some aspect of model training or optimization."
+    },
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Inference",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Inference",
+      "en" : "Inference Activity"
+    },
+    "comment" : {
+      "en" : "Activity producing outputs/predictions from a model given input data."
+    },
+    "id" : "5",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#ExecutionStatus",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExecutionStatus",
+      "en" : "Execution status"
+    },
+    "id" : "54"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Bundle",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bundle"
+    },
+    "subClasses" : [ "30" ],
+    "attributes" : [ "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Plan",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Plan"
+    },
+    "subClasses" : [ "16" ],
+    "attributes" : [ "external" ],
+    "id" : "28"
+  } ],
+  "property" : [ {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/ai-audit#hyperparameter",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hyperparameter",
+      "undefined" : "hyperparameter"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Links a configuration to one of its hyperparameter settings."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#scoreType",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "scoreType",
+      "en" : "score type"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Links a score to its semantic type (e.g., Confidence, RiskScore)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#lifecyclePhase",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "lifecyclePhase"
+    },
+    "domain" : "24",
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "28",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "7",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "15",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "range" : "12",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "2",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "2",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#paramName",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "paramName",
+      "undefined" : "parameter name"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "The name or key of the hyperparameter being set."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "42"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "13",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "range" : "13",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#usesMetric",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "usesMetric",
+      "en" : "uses metric"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Links a result (or result element) to the metric definition used to produce some evaluation/score."
+    },
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#paramValue",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "paramValue",
+      "undefined" : "parameter value"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "The value assigned to the hyperparameter."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#hasAuditBundle",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasAuditBundle",
+      "en" : "has audit bundle"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Links an auditable AI system to a bundle representing one execution run."
+    },
+    "attributes" : [ "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#paramFor",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "paramFor",
+      "undefined" : "parameter for"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "Links the setting to the abstract hyperparameter it assigns a value to."
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#hasScore",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasScore",
+      "en" : "has score"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Links a result (or result element) to one or more score nodes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#executionStatus",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "executionStatus",
+      "en" : "execution status"
+    },
+    "domain" : "30",
+    "attributes" : [ "object" ],
+    "id" : "55"
+  } ]
+}

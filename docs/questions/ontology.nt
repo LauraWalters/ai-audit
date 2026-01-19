@@ -1,0 +1,180 @@
+<https://w3id.org/ai-audit/question#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/contributor> "Fajar J. Ekaputra" .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/contributor> "Gregor Käfer" .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/contributor> "Marta Sabou" .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/contributor> "Tomasz Miksa" .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/creator> "Laura Waltersdorfer" .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/description> "Vocabulary for representing audit questions, their types, and mappings to workflow steps and trace templates. "@en .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/title> "AuditOps – Questions Module"@en .
+<https://w3id.org/ai-audit/question#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ai-audit/question#appliesToPlan
+<https://w3id.org/ai-audit/question#appliesToPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit/question#appliesToPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/question#AuditQuestion> .
+<https://w3id.org/ai-audit/question#appliesToPlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Plan> .
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit/question#appliesToPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from a question to a workflow plan."@en .
+<https://w3id.org/ai-audit/question#appliesToPlan> <http://www.w3.org/2000/01/rdf-schema#label> "applies to plan"@en .
+# 
+# https://w3id.org/ai-audit/question#appliesToStep
+<https://w3id.org/ai-audit/question#appliesToStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit/question#appliesToStep> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/question#AuditQuestion> .
+<https://w3id.org/ai-audit/question#appliesToStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Step> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit/question#appliesToStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which workflow steps can provide evidence for answering the question."@en .
+<https://w3id.org/ai-audit/question#appliesToStep> <http://www.w3.org/2000/01/rdf-schema#label> "applies to step"@en .
+# 
+# https://w3id.org/ai-audit/question#hasQuestion
+<https://w3id.org/ai-audit/question#hasQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit/question#hasQuestion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#AuditableAISystem> .
+<https://w3id.org/ai-audit#AuditableAISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit/question#hasQuestion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit/question#AuditQuestion> .
+<https://w3id.org/ai-audit/question#hasQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from System to Question ."@en .
+<https://w3id.org/ai-audit/question#hasQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "has Question"@en .
+# 
+# https://w3id.org/ai-audit/question#questionType
+<https://w3id.org/ai-audit/question#questionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit/question#questionType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/question#AuditQuestion> .
+<https://w3id.org/ai-audit/question#questionType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#questionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Assigns a question to a question type."@en .
+<https://w3id.org/ai-audit/question#questionType> <http://www.w3.org/2000/01/rdf-schema#label> "question type"@en .
+# 
+# https://w3id.org/ai-audit/question#requiresTraceTemplate
+<https://w3id.org/ai-audit/question#requiresTraceTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit/question#requiresTraceTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/question#AuditQuestion> .
+<https://w3id.org/ai-audit/question#requiresTraceTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit/question#TraceTemplate> .
+<https://w3id.org/ai-audit/question#requiresTraceTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "Binds an audit question to the trace template required to answer it."@en .
+<https://w3id.org/ai-audit/question#requiresTraceTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "requires trace template"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ai-audit/question#path
+<https://w3id.org/ai-audit/question#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ai-audit/question#path> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/question#TraceTemplate> .
+<https://w3id.org/ai-audit/question#path> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://w3id.org/ai-audit/question#queryLocalPath
+<https://w3id.org/ai-audit/question#queryLocalPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ai-audit/question#queryLocalPath> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/question#AuditQuestion> .
+<https://w3id.org/ai-audit/question#queryLocalPath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/p-plan#Plan
+# 
+# http://purl.org/net/p-plan#Step
+# 
+# https://w3id.org/ai-audit#AuditableAISystem
+# 
+# https://w3id.org/ai-audit/question#AuditQuestion
+<https://w3id.org/ai-audit/question#AuditQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit/question#AuditQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "A natural-language audit question represented as a node to enable mapping to steps and trace templates."@en .
+<https://w3id.org/ai-audit/question#AuditQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "Audit Question"@en .
+# 
+# https://w3id.org/ai-audit/question#AuditQuestionType
+<https://w3id.org/ai-audit/question#AuditQuestionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit/question#AuditQuestionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Audit question categories (e.g., lineage, temporal, location, attribute/property, aggregation)."@en .
+<https://w3id.org/ai-audit/question#AuditQuestionType> <http://www.w3.org/2000/01/rdf-schema#label> "Audit Question Type"@en .
+# 
+# https://w3id.org/ai-audit/question#TraceTemplate
+<https://w3id.org/ai-audit/question#TraceTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit/question#TraceTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "Template describing which evidence fields and relations are captured for a given activity/step type."@en .
+<https://w3id.org/ai-audit/question#TraceTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "Trace Template"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ai-audit/question#Accountability
+<https://w3id.org/ai-audit/question#Accountability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit/question#Accountability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#Accountability> <http://www.w3.org/2000/01/rdf-schema#label> "Accountability" .
+# 
+# https://w3id.org/ai-audit/question#Aggregation
+<https://w3id.org/ai-audit/question#Aggregation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit/question#Aggregation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#Aggregation> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Entity" .
+# 
+# https://w3id.org/ai-audit/question#Attribute_Activity
+<https://w3id.org/ai-audit/question#Attribute_Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit/question#Attribute_Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#Attribute_Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Attribute Activity" .
+# 
+# https://w3id.org/ai-audit/question#Attribute_Entity
+<https://w3id.org/ai-audit/question#Attribute_Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit/question#Attribute_Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#Attribute_Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Attribute Entity" .
+# 
+# https://w3id.org/ai-audit/question#Lineage_Input
+<https://w3id.org/ai-audit/question#Lineage_Input> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit/question#Lineage_Input> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#Lineage_Input> <http://www.w3.org/2000/01/rdf-schema#label> "Input Lineage" .
+# 
+# https://w3id.org/ai-audit/question#Lineage_Output
+<https://w3id.org/ai-audit/question#Lineage_Output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit/question#Lineage_Output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#Lineage_Output> <http://www.w3.org/2000/01/rdf-schema#label> "Output Lineage" .
+# 
+# https://w3id.org/ai-audit/question#Location
+<https://w3id.org/ai-audit/question#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit/question#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
+# 
+# https://w3id.org/ai-audit/question#Temporal
+<https://w3id.org/ai-audit/question#Temporal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit/question#Temporal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit/question#AuditQuestionType> .
+<https://w3id.org/ai-audit/question#Temporal> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

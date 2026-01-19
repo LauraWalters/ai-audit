@@ -1,0 +1,293 @@
+<https://w3id.org/ai-audit#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Fajar J. Ekaputra" .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Gregor Käfer" .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Marta Sabou" .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Tomasz Miksa" .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/creator> "Laura Waltersdorfer" .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/description> "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan, and ML-Schema."@en .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/title> "AuditOps – Workflow Module"@en .
+<https://w3id.org/ai-audit#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ai-audit#executionStatus
+<https://w3id.org/ai-audit#executionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#executionStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#AuditBundle> .
+<https://w3id.org/ai-audit#executionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#ExecutionStatus> .
+<https://w3id.org/ai-audit#executionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "execution status"@en .
+# 
+# https://w3id.org/ai-audit#hasAuditBundle
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#AuditableAISystem> .
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#AuditBundle> .
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an auditable AI system to a bundle representing one execution run."@en .
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#label> "has audit bundle"@en .
+# 
+# https://w3id.org/ai-audit#hasScore
+<https://w3id.org/ai-audit#hasScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#hasScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#ResultElement> .
+<https://w3id.org/ai-audit#hasScore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#Score> .
+<https://w3id.org/ai-audit#hasScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a result (or result element) to one or more score nodes."@en .
+<https://w3id.org/ai-audit#hasScore> <http://www.w3.org/2000/01/rdf-schema#label> "has score"@en .
+# 
+# https://w3id.org/ai-audit#hyperparameter
+<https://w3id.org/ai-audit#hyperparameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#hyperparameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#HyperparameterConfiguration> .
+<https://w3id.org/ai-audit#hyperparameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#HyperparameterSetting> .
+<https://w3id.org/ai-audit#hyperparameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a configuration to one of its hyperparameter settings." .
+<https://w3id.org/ai-audit#hyperparameter> <http://www.w3.org/2000/01/rdf-schema#label> "hyperparameter" .
+# 
+# https://w3id.org/ai-audit#lifecyclePhase
+<https://w3id.org/ai-audit#lifecyclePhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#lifecyclePhase> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
+<https://w3id.org/ai-audit#lifecyclePhase> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Activity> .
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#lifecyclePhase> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#LifecyclePhase> .
+# 
+# https://w3id.org/ai-audit#paramFor
+<https://w3id.org/ai-audit#paramFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#paramFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#HyperparameterSetting> .
+<https://w3id.org/ai-audit#paramFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#Hyperparameter> .
+<https://w3id.org/ai-audit#paramFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the setting to the abstract hyperparameter it assigns a value to." .
+<https://w3id.org/ai-audit#paramFor> <http://www.w3.org/2000/01/rdf-schema#label> "parameter for" .
+# 
+# https://w3id.org/ai-audit#scoreType
+<https://w3id.org/ai-audit#scoreType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#scoreType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#Score> .
+<https://w3id.org/ai-audit#scoreType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#ScoreType> .
+<https://w3id.org/ai-audit#scoreType> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a score to its semantic type (e.g., Confidence, RiskScore)."@en .
+<https://w3id.org/ai-audit#scoreType> <http://www.w3.org/2000/01/rdf-schema#label> "score type"@en .
+# 
+# https://w3id.org/ai-audit#usesMetric
+<https://w3id.org/ai-audit#usesMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#usesMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#ResultElement> .
+<https://w3id.org/ai-audit#usesMetric> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#Metric> .
+<https://w3id.org/ai-audit#usesMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a result (or result element) to the metric definition used to produce some evaluation/score."@en .
+<https://w3id.org/ai-audit#usesMetric> <http://www.w3.org/2000/01/rdf-schema#label> "uses metric"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ai-audit#paramName
+<https://w3id.org/ai-audit#paramName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ai-audit#paramName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#HyperparameterSetting> .
+<https://w3id.org/ai-audit#paramName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/ai-audit#paramName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name or key of the hyperparameter being set." .
+<https://w3id.org/ai-audit#paramName> <http://www.w3.org/2000/01/rdf-schema#label> "parameter name" .
+# 
+# https://w3id.org/ai-audit#paramValue
+<https://w3id.org/ai-audit#paramValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ai-audit#paramValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#HyperparameterSetting> .
+<https://w3id.org/ai-audit#paramValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/ai-audit#paramValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value assigned to the hyperparameter." .
+<https://w3id.org/ai-audit#paramValue> <http://www.w3.org/2000/01/rdf-schema#label> "parameter value" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/p-plan#Entity
+<http://purl.org/net/p-plan#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/net/p-plan#Step
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Entity> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<http://www.w3.org/ns/prov#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Activity
+# 
+# http://www.w3.org/ns/prov#Bundle
+<http://www.w3.org/ns/prov#Bundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Plan
+# 
+# https://w3id.org/ai-audit#AuditBundle
+<https://w3id.org/ai-audit#AuditBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Bundle> .
+<https://w3id.org/ai-audit#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "Container for a single execution run (e.g., one workflow run). Typically aligned with prov:Bundle in runtime traces."@en .
+<https://w3id.org/ai-audit#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Audit Bundle"@en .
+# 
+# https://w3id.org/ai-audit#AuditableAISystem
+<https://w3id.org/ai-audit#AuditableAISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#AuditableAISystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A software system (or deployed AI service) for which audit evidence (traces) is collected."@en .
+<https://w3id.org/ai-audit#AuditableAISystem> <http://www.w3.org/2000/01/rdf-schema#label> "Auditable AI System"@en .
+# 
+# https://w3id.org/ai-audit#DataInstance
+<https://w3id.org/ai-audit#DataInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#DataInstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/ai-audit#DataInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "A data artifact used/produced by workflow steps (can be a single document, batch, or dataset)."@en .
+<https://w3id.org/ai-audit#DataInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Data Instance"@en .
+# 
+# https://w3id.org/ai-audit#Dataset
+<https://w3id.org/ai-audit#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ai-audit#DataInstance> .
+<https://w3id.org/ai-audit#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A dataset (typically multi-row or multi-item collection) used for training/evaluation."@en .
+<https://w3id.org/ai-audit#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
+# 
+# https://w3id.org/ai-audit#Engineering
+<https://w3id.org/ai-audit#Engineering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Engineering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/ai-audit#Engineering> <http://www.w3.org/2000/01/rdf-schema#comment> "Non-learning engineering activity (e.g., KG/ontology/rules/software engineering)."@en .
+<https://w3id.org/ai-audit#Engineering> <http://www.w3.org/2000/01/rdf-schema#label> "Engineering Activity"@en .
+# 
+# https://w3id.org/ai-audit#EvaluationMetric
+<https://w3id.org/ai-audit#EvaluationMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ai-audit#Metric> .
+<https://w3id.org/ai-audit#EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "A metric used specifically for evaluation in an audit context."@en .
+<https://w3id.org/ai-audit#EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation metric"@en .
+# 
+# https://w3id.org/ai-audit#ExecutionStatus
+<https://w3id.org/ai-audit#ExecutionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#ExecutionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Execution status"@en .
+# 
+# https://w3id.org/ai-audit#Hyperparameter
+<https://w3id.org/ai-audit#Hyperparameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Hyperparameter> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract parameter that controls some aspect of model training or optimization." .
+<https://w3id.org/ai-audit#Hyperparameter> <http://www.w3.org/2000/01/rdf-schema#label> "Hyperparameter" .
+# 
+# https://w3id.org/ai-audit#HyperparameterConfiguration
+<https://w3id.org/ai-audit#HyperparameterConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#HyperparameterConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "A reusable collection of hyperparameter settings used in a training activity." .
+<https://w3id.org/ai-audit#HyperparameterConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Hyperparameter Configuration" .
+# 
+# https://w3id.org/ai-audit#HyperparameterSetting
+<https://w3id.org/ai-audit#HyperparameterSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#HyperparameterSetting> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific assignment of a value to a named hyperparameter used in a training run." .
+<https://w3id.org/ai-audit#HyperparameterSetting> <http://www.w3.org/2000/01/rdf-schema#label> "Hyperparameter Setting" .
+# 
+# https://w3id.org/ai-audit#Inference
+<https://w3id.org/ai-audit#Inference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Inference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/ai-audit#Inference> <http://www.w3.org/2000/01/rdf-schema#comment> "Activity producing outputs/predictions from a model given input data."@en .
+<https://w3id.org/ai-audit#Inference> <http://www.w3.org/2000/01/rdf-schema#label> "Inference Activity"@en .
+# 
+# https://w3id.org/ai-audit#LifecyclePhase
+<https://w3id.org/ai-audit#LifecyclePhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#LifecyclePhase> <http://www.w3.org/2000/01/rdf-schema#comment> "A lifecycle phase of an AI system (e.g. design, evaluation, operation)."@en .
+<https://w3id.org/ai-audit#LifecyclePhase> <http://www.w3.org/2000/01/rdf-schema#label> "Lifecycle Phase"@en .
+# 
+# https://w3id.org/ai-audit#Metric
+<https://w3id.org/ai-audit#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "A reusable definition of an evaluation method (e.g., hits@K-lenient, accuracy, calibration error)."@en .
+<https://w3id.org/ai-audit#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
+# 
+# https://w3id.org/ai-audit#Model
+<https://w3id.org/ai-audit#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/ai-audit#Model> <http://www.w3.org/2000/01/rdf-schema#comment> "A model artifact used for inference or produced by training."@en .
+<https://w3id.org/ai-audit#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model"@en .
+# 
+# https://w3id.org/ai-audit#ResultElement
+<https://w3id.org/ai-audit#ResultElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#ResultElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ai-audit#DataInstance> .
+<https://w3id.org/ai-audit#ResultElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A granular output item relevant for auditing (e.g., a predicted entity, a row-level decision, a ranked hit)."@en .
+<https://w3id.org/ai-audit#ResultElement> <http://www.w3.org/2000/01/rdf-schema#label> "Result Element"@en .
+# 
+# https://w3id.org/ai-audit#Score
+<https://w3id.org/ai-audit#Score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Score> <http://www.w3.org/2000/01/rdf-schema#comment> "A concrete value produced for a specific subject/context, typically the output of applying a metric."@en .
+<https://w3id.org/ai-audit#Score> <http://www.w3.org/2000/01/rdf-schema#label> "Score"@en .
+# 
+# https://w3id.org/ai-audit#ScoreType
+<https://w3id.org/ai-audit#ScoreType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#ScoreType> <http://www.w3.org/2000/01/rdf-schema#comment> "The meaning/semantics of a score value (e.g., confidence, risk, uncertainty, probability)."@en .
+<https://w3id.org/ai-audit#ScoreType> <http://www.w3.org/2000/01/rdf-schema#label> "Score type"@en .
+# 
+# https://w3id.org/ai-audit#Software
+<https://w3id.org/ai-audit#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/ai-audit#Software> <http://www.w3.org/2000/01/rdf-schema#comment> "Software component used in or produced by a workflow step."@en .
+<https://w3id.org/ai-audit#Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software"@en .
+# 
+# https://w3id.org/ai-audit#StatisticalModel
+<https://w3id.org/ai-audit#StatisticalModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#StatisticalModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ai-audit#Model> .
+<https://w3id.org/ai-audit#StatisticalModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A statistical/ML model (e.g., neural network) used for training/inference."@en .
+<https://w3id.org/ai-audit#StatisticalModel> <http://www.w3.org/2000/01/rdf-schema#label> "Statistical Model"@en .
+# 
+# https://w3id.org/ai-audit#SymbolicModel
+<https://w3id.org/ai-audit#SymbolicModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#SymbolicModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ai-audit#Model> .
+<https://w3id.org/ai-audit#SymbolicModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-statistical model (e.g., rules, KG, ontology)."@en .
+<https://w3id.org/ai-audit#SymbolicModel> <http://www.w3.org/2000/01/rdf-schema#label> "Symbolic Model"@en .
+# 
+# https://w3id.org/ai-audit#Training
+<https://w3id.org/ai-audit#Training> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Training> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/ai-audit#Training> <http://www.w3.org/2000/01/rdf-schema#comment> "Learning activity that fits model parameters (training/fine-tuning)."@en .
+<https://w3id.org/ai-audit#Training> <http://www.w3.org/2000/01/rdf-schema#label> "Training Activity"@en .
+# 
+# https://w3id.org/ai-audit#Transformation
+<https://w3id.org/ai-audit#Transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#Transformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/ai-audit#Transformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Deterministic data transformation without learning (e.g., parsing, normalization)."@en .
+<https://w3id.org/ai-audit#Transformation> <http://www.w3.org/2000/01/rdf-schema#label> "Transformation Activity"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ai-audit#Design
+<https://w3id.org/ai-audit#Design> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit#Design> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit#LifecyclePhase> .
+# 
+# https://w3id.org/ai-audit#Evaluation
+<https://w3id.org/ai-audit#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit#LifecyclePhase> .
+# 
+# https://w3id.org/ai-audit#Operation
+<https://w3id.org/ai-audit#Operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ai-audit#Operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ai-audit#LifecyclePhase> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
