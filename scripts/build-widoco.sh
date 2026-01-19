@@ -2,11 +2,11 @@
 set -euo pipefail
 
 WIDOCO_JAR="tools/widoco.jar"
-REPO="ai-audit"   # your GitHub repo name (used for Pages base path)
+REPO="ai-audit"   # GitHub repo name (used for Pages base path)
 
 build_module () {
   local module="$1"
-  local ont="ontologies/${module}/ai-audit-${module}.ttl"
+  local ont="ontologies/ai-audit-${module}.ttl"
   local conf="widoco/${module}/widoco.conf"
   local out="docs/${module}"
   local base="/${REPO}/${module}/"
@@ -24,7 +24,7 @@ build_module () {
 }
 
 build_module workflow
-build_module question
+build_module questions
 build_module infrastructure
 
-echo "WIDOCO docs generated into docs/{workflow,question,infrastructure}"
+echo "WIDOCO docs generated into docs/{workflow,questions,infrastructure}"
