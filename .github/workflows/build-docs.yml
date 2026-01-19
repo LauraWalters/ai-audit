@@ -1,0 +1,39 @@
+name: Build WIDOCO documentation
+
+on:
+  workflow_dispatch:        # allows manual trigger from GitHub UI
+  push:
+    branches:
+      - main                # optional: also run on every push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Download WIDOCO
+        run: |
+          mkdir -p tools
+          curl -L -o tools/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.20/widoco-1.4.20-jar-with-dependencies.jar
+
+      - name: Build documentation
+        run: |
+          chmod +x scripts/build-widoco.sh
+          ./scripts/build-widoco.sh
+
+      - name: Commit and push generated docs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/
+          git commit -m "Regenerate WIDOCO documentation" || echo "No changes"
+          git push
