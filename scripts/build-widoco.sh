@@ -2,7 +2,7 @@
 set -euo pipefail
 
 WIDOCO_JAR="tools/widoco.jar"
-REPO="ai-audit"   # GitHub repo name (used for Pages base path)
+REPO="ai-audit"
 
 build_module () {
   local module="$1"
@@ -21,9 +21,8 @@ build_module () {
     -webVowl \
     -rewriteAll \
     -rewriteBase "${base}"
-}
 
-# Add index.html redirect for GitHub Pages
+  # Add index.html redirect for GitHub Pages
   if [[ -f "${out}/index-en.html" && ! -f "${out}/index.html" ]]; then
     cat > "${out}/index.html" <<'HTML'
 <!doctype html>
