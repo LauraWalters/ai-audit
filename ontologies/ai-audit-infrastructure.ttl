@@ -291,7 +291,7 @@ infra: a owl:Ontology ;
 
 
 ###   https://w3id.org/ai-audit/infrastructure#hasQueryApiPath
-<h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> rdf:type owl:DatatypeProperty ;
                                                                 rdfs:domain <https://w3id.org/ai-audit/infrastructure#Query> ;
                                                                 rdfs:range xsd:string ;
                                                                 rdfs:comment "Datatype properties to set where the query can be found" ;
