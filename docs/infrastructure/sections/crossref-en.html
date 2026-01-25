@@ -63,7 +63,7 @@ This section provides details for each class and property defined by null.
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/ep-plan#hasTraceElement" title="https://w3id.org/ep-plan#hasTraceElement">hasTraceElement</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/ai-audit#hasAuditBundle" title="https://w3id.org/ai-audit#hasAuditBundle">hasAuditBundle</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -78,7 +78,7 @@ This section provides details for each class and property defined by null.
     is in domain of
    </dt>
    <dd>
-    <a href="#hasBackupTimer" title="https://w3id.org/ai-audit/infrastructure#hasBackupTimer">hasBackupTimer</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasBackupType" title="https://w3id.org/ai-audit/infrastructure#hasBackupType">hasBackupType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPlan" title="https://w3id.org/ai-audit/infrastructure#hasPlan">hasPlan</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasService" title="https://w3id.org/ai-audit/infrastructure#hasService">hasService</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/ep-plan#hasTraceElement" title="https://w3id.org/ep-plan#hasTraceElement">hasTraceElement</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/ai-audit#hasAuditBundle" title="https://w3id.org/ai-audit#hasAuditBundle">hasAuditBundle</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasBackupTimer" title="https://w3id.org/ai-audit/infrastructure#hasBackupTimer">hasBackupTimer</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasBackupType" title="https://w3id.org/ai-audit/infrastructure#hasBackupType">hasBackupType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPlan" title="https://w3id.org/ai-audit/infrastructure#hasPlan">hasPlan</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasService" title="https://w3id.org/ai-audit/infrastructure#hasService">hasService</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -367,16 +367,39 @@ This section provides details for each class and property defined by null.
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
+  <li><a href="#https://w3id.org/ai-audit#hasAuditBundle" title="https://w3id.org/ai-audit#hasAuditBundle">hasAuditBundle</a></li>
   <li><a href="#hasCorrespondingFetch" title="https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch">hasCorrespondingFetch</a></li>
   <li><a href="#hasCorrespondingPlan" title="https://w3id.org/ai-audit/infrastructure#hasCorrespondingPlan">hasCorrespondingPlan</a></li>
   <li><a href="#hasParameter" title="https://w3id.org/ai-audit/infrastructure#hasParameter">hasParameter</a></li>
   <li><a href="#hasPlan" title="https://w3id.org/ai-audit/infrastructure#hasPlan">hasPlan</a></li>
   <li><a href="#hasService" title="https://w3id.org/ai-audit/infrastructure#hasService">hasService</a></li>
-  <li><a href="#https://w3id.org/ep-plan#hasTraceElement" title="https://w3id.org/ep-plan#hasTraceElement">hasTraceElement</a></li>
   <li><a href="#hasTransformationFunction" title="https://w3id.org/ai-audit/infrastructure#hasTransformationFunction">hasTransformationFunction</a></li>
   <li><a href="#hasValidationFunction" title="https://w3id.org/ai-audit/infrastructure#hasValidationFunction">hasValidationFunction</a></li>
   <li><a href="#isBasedOnStep" title="https://w3id.org/ai-audit/infrastructure#isBasedOnStep">isBasedOnStep</a></li>
  </ul>
+ <div class="entity" id="https://w3id.org/ai-audit#hasAuditBundle">
+  <h3>hasAuditBundle<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit#hasAuditBundle</p>
+  <div class="comment">
+   <span class="markdown">Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ai-audit#AuditBundle" title="https://w3id.org/ai-audit#AuditBundle">Audit Bundle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasCorrespondingFetch">
   <h3>hasCorrespondingFetch<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch</p>
@@ -488,29 +511,6 @@ This section provides details for each class and property defined by null.
     </dt>
     <dd>
      <a href="#AuditBoxService" title="https://w3id.org/ai-audit/infrastructure#AuditBoxService">AuditboxService</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/ep-plan#hasTraceElement">
-  <h3>hasTraceElement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ep-plan#hasTraceElement</p>
-  <div class="comment">
-   <span class="markdown">Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/ai-audit#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/ai-audit#AuditBundle" title="https://w3id.org/ai-audit#AuditBundle">Audit Bundle</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

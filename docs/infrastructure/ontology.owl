@@ -80,6 +80,18 @@
     
 
 
+    <!-- https://w3id.org/ai-audit#hasAuditBundle -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ai-audit#hasAuditBundle">
+        <rdfs:domain rdf:resource="https://w3id.org/ai-audit#AuditableAISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/ai-audit#AuditBundle"/>
+        <rdfs:comment>Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle</rdfs:comment>
+        <rdfs:label>hasAuditBundle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch -->
 
 
@@ -172,18 +184,6 @@
         <rdfs:range rdf:resource="http://purl.org/net/p-plan#Step"/>
         <rdfs:comment>Relation between Acquire and Step, an Acquire correspond to 1..1 Step</rdfs:comment>
         <rdfs:label>isBasedOnStep</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/ep-plan#hasTraceElement -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/ep-plan#hasTraceElement">
-        <rdfs:domain rdf:resource="https://w3id.org/ai-audit#AuditableAISystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/ai-audit#AuditBundle"/>
-        <rdfs:comment>Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle</rdfs:comment>
-        <rdfs:label>hasTraceElement</rdfs:label>
     </owl:ObjectProperty>
     
 

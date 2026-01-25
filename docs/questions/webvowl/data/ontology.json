@@ -125,18 +125,18 @@
         "undefined" : "Aggregation Entity"
       }
     }, {
-      "iri" : "https://w3id.org/ai-audit/question#Temporal",
-      "baseIri" : "https://w3id.org/ai-audit/question",
-      "labels" : {
-        "IRI-based" : "Temporal",
-        "undefined" : "Temporal"
-      }
-    }, {
       "iri" : "https://w3id.org/ai-audit/question#Accountability",
       "baseIri" : "https://w3id.org/ai-audit/question",
       "labels" : {
         "IRI-based" : "Accountability",
         "undefined" : "Accountability"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Temporal",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Temporal",
+        "undefined" : "Temporal"
       }
     }, {
       "iri" : "https://w3id.org/ai-audit/question#Attribute_Entity",

@@ -45,6 +45,14 @@
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/ai-audit#hasAuditBundle
+<https://w3id.org/ai-audit#hasAuditBundle> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
+                                           rdfs:range <https://w3id.org/ai-audit#AuditBundle> ;
+                                           rdfs:comment "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle" ;
+                                           rdfs:label "hasAuditBundle" .
+
+
 ###  https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch
 :hasCorrespondingFetch rdf:type owl:ObjectProperty ;
                        rdfs:domain :Receive ;
@@ -107,14 +115,6 @@
                rdfs:range <http://purl.org/net/p-plan#Step> ;
                rdfs:comment "Relation between Acquire and Step, an Acquire correspond to 1..1 Step" ;
                rdfs:label "isBasedOnStep" .
-
-
-###  https://w3id.org/ep-plan#hasTraceElement
-<https://w3id.org/ep-plan#hasTraceElement> rdf:type owl:ObjectProperty ;
-                                           rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
-                                           rdfs:range <https://w3id.org/ai-audit#AuditBundle> ;
-                                           rdfs:comment "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle" ;
-                                           rdfs:label "hasTraceElement" .
 
 
 #################################################################

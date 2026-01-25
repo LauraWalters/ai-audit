@@ -68,6 +68,21 @@
     "@value" : "Auditable AI System"
   } ]
 }, {
+  "@id" : "https://w3id.org/ai-audit#hasAuditBundle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ai-audit#AuditableAISystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasAuditBundle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ai-audit#AuditBundle"
+  } ]
+}, {
   "@id" : "https://w3id.org/ai-audit/infrastructure#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/contributor" : [ {
@@ -701,21 +716,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ep-plan#hasTraceElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ai-audit#AuditableAISystem"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasTraceElement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ai-audit#AuditBundle"
   } ]
 }, {
   "@id" : "urn:absolute:h/hasQueryUriPath",

@@ -41,6 +41,13 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/ai-audit#hasAuditBundle
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#AuditableAISystem> .
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#AuditBundle> .
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle" .
+<https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/2000/01/rdf-schema#label> "hasAuditBundle" .
+# 
 # https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch
 <https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/infrastructure#Receive> .
@@ -98,13 +105,6 @@
 <https://w3id.org/ai-audit/infrastructure#isBasedOnStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Step> .
 <https://w3id.org/ai-audit/infrastructure#isBasedOnStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between Acquire and Step, an Acquire correspond to 1..1 Step" .
 <https://w3id.org/ai-audit/infrastructure#isBasedOnStep> <http://www.w3.org/2000/01/rdf-schema#label> "isBasedOnStep" .
-# 
-# https://w3id.org/ep-plan#hasTraceElement
-<https://w3id.org/ep-plan#hasTraceElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/ep-plan#hasTraceElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#AuditableAISystem> .
-<https://w3id.org/ep-plan#hasTraceElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#AuditBundle> .
-<https://w3id.org/ep-plan#hasTraceElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle" .
-<https://w3id.org/ep-plan#hasTraceElement> <http://www.w3.org/2000/01/rdf-schema#label> "hasTraceElement" .
 # 
 # 
 # 
