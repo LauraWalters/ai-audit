@@ -23,8 +23,8 @@ infra: a owl:Ontology ;
   dcterms:contributor "Marta Sabou", "Tomasz Miksa";
   dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
   dcterms:description "An ontology to support AI auditability";
-  vann:preferredNamespacePrefix "infra" ;
-  vann:preferredNamespaceUri <https://w3id.org/ai-audit/infrastructure/> .
+  <http://purl.org/vocab/vann/preferredNamespacePrefix> "infra" ;
+  <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/ai-audit/infrastructure/> .
 
 
 #################################################################
