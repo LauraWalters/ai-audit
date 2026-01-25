@@ -16,13 +16,13 @@ audit: a owl:Ontology ;
   dcterms:description "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan."@en ;
   dcterms:abstract "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. It supports the representation and comparison of different workflow processes."@en;
   widoco:introduction "This section introduces the audit workflow ontology and its scope. "@en ;
+  vann:preferredNamespacePrefix "audit" ;
+  vann:preferredNamespaceUri <https://w3id.org/ai-audit/> ;
+
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:creator "Laura Waltersdorfer" ;
   dcterms:contributor "Gregor Käfer", "Fajar J. Ekaputra", "Marta Sabou", "Tomasz Miksa";
-  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;  owl:versionInfo "1.0.0" ;
- vann:preferredNamespacePrefix "audit" ;
-  vann:preferredNamespaceUri <https://w3id.org/ai-audit/> .
-
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;  owl:versionInfo "1.0.0".
 ### Classes #################################################
 
 ###  https://w3id.org/ai-audit#AuditableAISystem
