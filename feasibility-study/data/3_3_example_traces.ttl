@@ -35,11 +35,10 @@ uc:changeStatus a owl:ObjectProperty ;
 uc:Succeeded a audit:ExecutionStatus .
 uc:Failed    a audit:ExecutionStatus .
 
-uc:Initial a uc:ChangeStatus .
-uc:Pruned a uc:ChangeStatus .
-uc:Corrected a uc:ChangeStatus .
-uc:Unchanged a uc:ChangeStatus .
-
+uc:Initial a uc:ChangeStatus ; rdfs:comment "First output for an element in this trace."@en .
+uc:Pruned a uc:ChangeStatus ; rdfs:comment "Transformation changed content by pruning/normalizing."@en .
+uc:Corrected a uc:ChangeStatus; rdfs:comment "Transformation changed content by correction."@en .
+uc:Unchanged a uc:ChangeStatus ;rdfs:comment "Transformation executed but content stayed the same."@en .
 
 uc:Trace_Batch07 a audit:AuditBundle, prov:Collection .
 uc:Trace_Batch42 a audit:AuditBundle, prov:Collection .
@@ -56,9 +55,6 @@ rdfs:label "Training Step" .
 
 ucplan:Step_Inference_Initial a pplan:Step ;
 rdfs:label "Inference Initial Step" .
-
-ucplan:Step_Transformation a pplan:Step ;
-rdfs:label "Transform Prune Step" .
 
 ucplan:Step_Transformation a pplan:Step ;
 rdfs:label "Transform Prune Step" .
