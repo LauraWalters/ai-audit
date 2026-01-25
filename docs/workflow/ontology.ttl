@@ -12,7 +12,7 @@
                                                                      "Marta Sabou" ,
                                                                      "Tomasz Miksa" ;
                               <http://purl.org/dc/terms/creator> "Laura Waltersdorfer" ;
-                              <http://purl.org/dc/terms/description> "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan, and ML-Schema."@en ;
+                              <http://purl.org/dc/terms/description> "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan."@en ;
                               <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                               <http://purl.org/dc/terms/title> "AuditOps – Workflow Module"@en ;
                               owl:versionInfo "1.0.0" .

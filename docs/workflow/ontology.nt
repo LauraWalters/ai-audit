@@ -4,7 +4,7 @@
 <https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Marta Sabou" .
 <https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Tomasz Miksa" .
 <https://w3id.org/ai-audit#> <http://purl.org/dc/terms/creator> "Laura Waltersdorfer" .
-<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/description> "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan, and ML-Schema."@en .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/description> "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan."@en .
 <https://w3id.org/ai-audit#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/ai-audit#> <http://purl.org/dc/terms/title> "AuditOps – Workflow Module"@en .
 <https://w3id.org/ai-audit#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .

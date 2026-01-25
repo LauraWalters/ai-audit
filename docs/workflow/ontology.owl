@@ -13,7 +13,7 @@
         <terms:contributor>Marta Sabou</terms:contributor>
         <terms:contributor>Tomasz Miksa</terms:contributor>
         <terms:creator>Laura Waltersdorfer</terms:creator>
-        <terms:description xml:lang="en">Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan, and ML-Schema.</terms:description>
+        <terms:description xml:lang="en">Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">AuditOps – Workflow Module</terms:title>
         <owl:versionInfo>1.0.0</owl:versionInfo>
