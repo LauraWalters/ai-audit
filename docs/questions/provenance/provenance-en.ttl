@@ -3,5 +3,16 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
 <..\index-en.html> a prov:Entity;
+	 dc:title "AuditOps – Questions Module";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 .
+:agent0 a prov:Agent; foaf:name "Laura Waltersdorfer".
+:agent1 a prov:Agent; foaf:name "Fajar J. Ekaputra".
+:agent2 a prov:Agent; foaf:name "Gregor Käfer".
+:agent3 a prov:Agent; foaf:name "Marta Sabou".
+:agent4 a prov:Agent; foaf:name "Tomasz Miksa".

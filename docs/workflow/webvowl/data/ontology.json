@@ -28,7 +28,7 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Fajar J. Ekaputra",
+        "value" : "Marta Sabou",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -43,7 +43,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Marta Sabou",
+        "value" : "Fajar J. Ekaputra",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -65,13 +65,13 @@
     "id" : "0",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
     "id" : "8",
@@ -156,19 +156,6 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "https://w3id.org/ai-audit#Training",
-    "baseIri" : "https://w3id.org/ai-audit",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Training",
-      "en" : "Training Activity"
-    },
-    "comment" : {
-      "en" : "Learning activity that fits model parameters (training/fine-tuning)."
-    },
-    "id" : "0",
-    "superClasses" : [ "1" ]
-  }, {
     "iri" : "https://w3id.org/ai-audit#HyperparameterSetting",
     "baseIri" : "https://w3id.org/ai-audit",
     "instances" : 0,
@@ -179,7 +166,20 @@
     "comment" : {
       "undefined" : "A specific assignment of a value to a named hyperparameter used in a training run."
     },
-    "id" : "2"
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/ai-audit#Training",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Training",
+      "en" : "Training Activity"
+    },
+    "comment" : {
+      "en" : "Learning activity that fits model parameters (training/fine-tuning)."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/ai-audit#SymbolicModel",
     "baseIri" : "https://w3id.org/ai-audit",
@@ -200,9 +200,9 @@
     "label" : {
       "IRI-based" : "Activity"
     },
-    "subClasses" : [ "5", "0", "6", "7" ],
+    "subClasses" : [ "5", "1", "6", "7" ],
     "attributes" : [ "external" ],
-    "id" : "1"
+    "id" : "2"
   }, {
     "iri" : "https://w3id.org/ai-audit#AuditableAISystem",
     "baseIri" : "https://w3id.org/ai-audit",
@@ -240,7 +240,7 @@
       "en" : "Deterministic data transformation without learning (e.g., parsing, normalization)."
     },
     "id" : "6",
-    "superClasses" : [ "1" ]
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Entity",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -340,7 +340,7 @@
       "en" : "Non-learning engineering activity (e.g., KG/ontology/rules/software engineering)."
     },
     "id" : "5",
-    "superClasses" : [ "1" ]
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/ai-audit#LifecyclePhase",
     "baseIri" : "https://w3id.org/ai-audit",
@@ -374,7 +374,7 @@
     "id" : "25"
   }, {
     "instances" : 0,
-    "union" : [ "1", "16" ],
+    "union" : [ "2", "16" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "24"
   }, {
@@ -500,7 +500,7 @@
       "en" : "Activity producing outputs/predictions from a model given input data."
     },
     "id" : "7",
-    "superClasses" : [ "1" ]
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/ai-audit#ExecutionStatus",
     "baseIri" : "https://w3id.org/ai-audit",
@@ -610,7 +610,7 @@
   "propertyAttribute" : [ {
     "iri" : "https://w3id.org/ai-audit#hyperparameter",
     "baseIri" : "https://w3id.org/ai-audit",
-    "range" : "2",
+    "range" : "0",
     "label" : {
       "IRI-based" : "hyperparameter",
       "undefined" : "hyperparameter"
@@ -686,22 +686,22 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "37"
   }, {
-    "range" : "1",
+    "range" : "2",
     "domain" : "5",
     "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
-    "range" : "1",
-    "domain" : "0",
+    "range" : "2",
+    "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
-    "range" : "1",
+    "range" : "2",
     "domain" : "6",
     "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
-    "range" : "1",
+    "range" : "2",
     "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "41"
@@ -713,7 +713,7 @@
       "IRI-based" : "paramName",
       "undefined" : "parameter name"
     },
-    "domain" : "2",
+    "domain" : "0",
     "comment" : {
       "undefined" : "The name or key of the hyperparameter being set."
     },
@@ -756,7 +756,7 @@
       "IRI-based" : "paramValue",
       "undefined" : "parameter value"
     },
-    "domain" : "2",
+    "domain" : "0",
     "comment" : {
       "undefined" : "The value assigned to the hyperparameter."
     },
@@ -784,7 +784,7 @@
       "IRI-based" : "paramFor",
       "undefined" : "parameter for"
     },
-    "domain" : "2",
+    "domain" : "0",
     "comment" : {
       "undefined" : "Links the setting to the abstract hyperparameter it assigns a value to."
     },
