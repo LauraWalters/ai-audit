@@ -14,13 +14,14 @@ build_module () {
   rm -rf "${out}"
   mkdir -p "${out}"
 
-  java -jar "${WIDOCO_JAR}" \
-    -ontFile "${ont}" \
-    -outFolder "${out}" \
-    -confFile "${conf}" \
-    -webVowl \
-    -rewriteAll \
-    -rewriteBase "${base}"
+java -jar "${WIDOCO_JAR}" \
+  -ontFile "${ont}" \
+  -outFolder "${out}" \
+  -getOntologyMetadata \
+  -includeAnnotationProperties \
+  -webVowl \
+  -rewriteAll \
+  -rewriteBase "${base}"
 
   # Add index.html redirect for GitHub Pages
   if [[ -f "${out}/index-en.html" && ! -f "${out}/index.html" ]]; then
