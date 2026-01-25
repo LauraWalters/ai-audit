@@ -398,7 +398,7 @@ audit:element uc:operator; prov:value "Muster Mann OG GLN0987654321" ;
 uc:isNull "false"^^xsd:boolean; 
 uc:changeStatus uc:Pruned ;
 prov:wasDerivedFrom uc:B42_e1;
-prov:wasGeneratedBy uc:Transform_B042_prune.
+prov:wasGeneratedBy uc:Transform_B42_prune.
 
 
 uc:B42_f2 a audit:ResultElement ;
@@ -406,7 +406,7 @@ audit:element uc:issuingAuthority;
 uc:isNull "true"^^xsd:boolean ; 
 uc:changeStatus uc:Unchanged;
 prov:wasDerivedFrom uc:B42_e2;
-prov:wasGeneratedBy uc:Transform_B042_prune.
+prov:wasGeneratedBy uc:Transform_B42_prune.
 
 uc:NER_Predictions_Batch42_pruned prov:hadMember uc:B42_f1, uc:B42_f2 .
 
