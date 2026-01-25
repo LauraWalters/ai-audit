@@ -77,10 +77,10 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
     "id" : "7",
@@ -107,18 +107,6 @@
     },
     "attributes" : [ "external" ],
     "id" : "1"
-  }, {
-    "iri" : "https://w3id.org/ai-audit/question#TraceTemplate",
-    "baseIri" : "https://w3id.org/ai-audit/question",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "TraceTemplate",
-      "en" : "Trace Template"
-    },
-    "comment" : {
-      "en" : "Template describing which evidence fields and relations are captured for a given activity/step type."
-    },
-    "id" : "5"
   }, {
     "iri" : "https://w3id.org/ai-audit/question#AuditQuestionType",
     "baseIri" : "https://w3id.org/ai-audit/question",
@@ -149,11 +137,11 @@
         "undefined" : "Aggregation Entity"
       }
     }, {
-      "iri" : "https://w3id.org/ai-audit/question#Attribute_Entity",
+      "iri" : "https://w3id.org/ai-audit/question#Accountability",
       "baseIri" : "https://w3id.org/ai-audit/question",
       "labels" : {
-        "IRI-based" : "Attribute_Entity",
-        "undefined" : "Attribute Entity"
+        "IRI-based" : "Accountability",
+        "undefined" : "Accountability"
       }
     }, {
       "iri" : "https://w3id.org/ai-audit/question#Temporal",
@@ -163,11 +151,11 @@
         "undefined" : "Temporal"
       }
     }, {
-      "iri" : "https://w3id.org/ai-audit/question#Accountability",
+      "iri" : "https://w3id.org/ai-audit/question#Attribute_Entity",
       "baseIri" : "https://w3id.org/ai-audit/question",
       "labels" : {
-        "IRI-based" : "Accountability",
-        "undefined" : "Accountability"
+        "IRI-based" : "Attribute_Entity",
+        "undefined" : "Attribute Entity"
       }
     }, {
       "iri" : "https://w3id.org/ai-audit/question#Lineage_Input",
@@ -188,6 +176,18 @@
       "en" : "Audit question categories (e.g., lineage, temporal, location, attribute/property, aggregation)."
     },
     "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/question#TraceTemplate",
+    "baseIri" : "https://w3id.org/ai-audit/question",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TraceTemplate",
+      "en" : "Trace Template"
+    },
+    "comment" : {
+      "en" : "Template describing which evidence fields and relations are captured for a given activity/step type."
+    },
+    "id" : "5"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
