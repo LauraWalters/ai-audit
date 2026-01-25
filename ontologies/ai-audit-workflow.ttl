@@ -13,8 +13,7 @@
 audit: a owl:Ontology ;
   dcterms:title "AuditOps – Workflow Module"@en ;
   dcterms:description "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan."@en ;
-  dcterms:abstract "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. 
-  It supports the representation and comparison of different workflow processes."@en;
+  dcterms:abstract "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. It supports the representation and comparison of different workflow processes."@en;
   widoco:introduction "This section introduces the audit workflow ontology and its scope. "@en ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:creator "Laura Waltersdorfer" ;
