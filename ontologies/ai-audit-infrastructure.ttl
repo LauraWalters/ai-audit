@@ -22,9 +22,7 @@ infra: a owl:Ontology ;
   dcterms:creator "Gregor Käfer, Laura Waltersdorfer","Fajar J. Ekaputra"  ;
   dcterms:contributor "Marta Sabou", "Tomasz Miksa";
   dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
-  dcterms:description "An ontology to support AI auditability";
-  <http://purl.org/vocab/vann/preferredNamespacePrefix> "infra" ;
-  <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/ai-audit/infrastructure/> .
+  dcterms:description "An ontology to support AI auditability".
 
 
 #################################################################
