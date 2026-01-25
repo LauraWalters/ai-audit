@@ -6,7 +6,6 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
-@prefix vann:  <http://purl.org/vocab/vann/> .
 @base <https://w3id.org/ai-audit/question#> .
 
 : a owl:Ontology ;
