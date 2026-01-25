@@ -18,9 +18,7 @@
   dcterms:creator "Laura Waltersdorfer" ;
   dcterms:contributor "Gregor Käfer", "Fajar J. Ekaputra", "Marta Sabou", "Tomasz Miksa";
   dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
-  owl:versionInfo "1.0.0" ;
-vann:preferredNamespacePrefix "question" ;
-  vann:preferredNamespaceUri <https://w3id.org/ai-audit/question/> .
+  owl:versionInfo "1.0.0" .
 
 ### Audit questions #############################################################
 
