@@ -23,6 +23,12 @@
   "@id" : "http://purl.org/net/p-plan#Step",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/ai-audit#AuditableAISystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -54,6 +60,12 @@
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
     "@value" : "AuditOps – Questions Module"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "question"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/ai-audit/question/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.0.0"
