@@ -7,8 +7,7 @@
 @base <https://w3id.org/ai-audit/infrastructure#> .
 
 <https://w3id.org/ai-audit/infrastructure#> rdf:type owl:Ontology ;
-                                             <http://purl.org/dc/terms/abstract> """   This ontology describes the infrastructure that supports the execution and
-  management of audits, including systems, services, data sources, and artifacts.  """@en ;
+                                             <http://purl.org/dc/terms/abstract> "This ontology describes the infrastructure that supports the execution and management of audits, including systems, services, data sources, and artifacts. "@en ;
                                              <http://purl.org/dc/terms/contributor> "Marta Sabou" ,
                                                                                     "Tomasz Miksa" ;
                                              <http://purl.org/dc/terms/creator> "Fajar J. Ekaputra" ,
@@ -18,8 +17,7 @@
                                              <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                              <http://purl.org/dc/terms/title> "AuditOps – Audit Infrastructure Module"@en ;
                                              owl:versionInfo "1.0.0" ;
-                                             <https://w3id.org/widoco/vocab#introduction> """
-  This section introduces the audit infrastructure ontology and its scope.  """@en .
+                                             <https://w3id.org/widoco/vocab#introduction> "This section introduces the audit infrastructure ontology and its scope. "@en .
 
 #################################################################
 #    Annotation properties

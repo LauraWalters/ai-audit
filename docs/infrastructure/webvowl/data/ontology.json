@@ -51,7 +51,7 @@
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "en",
-        "value" : "   This ontology describes the infrastructure that supports the execution and\n  management of audits, including systems, services, data sources, and artifacts.  ",
+        "value" : "This ontology describes the infrastructure that supports the execution and management of audits, including systems, services, data sources, and artifacts. ",
         "type" : "label"
       } ],
       "title" : [ {
@@ -63,7 +63,7 @@
       "introduction" : [ {
         "identifier" : "introduction",
         "language" : "en",
-        "value" : "\n  This section introduces the audit infrastructure ontology and its scope.  ",
+        "value" : "This section introduces the audit infrastructure ontology and its scope. ",
         "type" : "label"
       } ]
     }
@@ -801,7 +801,7 @@
     "comment" : {
       "undefined" : "Datatype value to get query value from external sources"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "3"
   }, {
     "iri" : "h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath",
@@ -815,7 +815,7 @@
     "comment" : {
       "undefined" : "Datatype properties to set where the query can be found"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "6"
   }, {
     "range" : "8",
@@ -998,7 +998,7 @@
     "comment" : {
       "undefined" : "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "54"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasType",
@@ -1036,7 +1036,7 @@
       "IRI-based" : "topDataProperty"
     },
     "domain" : "15",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "58"
   }, {
     "range" : "9",

@@ -90,7 +90,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
-    "@value" : "   This ontology describes the infrastructure that supports the execution and\n  management of audits, including systems, services, data sources, and artifacts.  "
+    "@value" : "This ontology describes the infrastructure that supports the execution and management of audits, including systems, services, data sources, and artifacts. "
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Marta Sabou"
@@ -120,7 +120,7 @@
   } ],
   "https://w3id.org/widoco/vocab#introduction" : [ {
     "@language" : "en",
-    "@value" : "\n  This section introduces the audit infrastructure ontology and its scope.  "
+    "@value" : "This section introduces the audit infrastructure ontology and its scope. "
   } ]
 }, {
   "@id" : "https://w3id.org/ai-audit/infrastructure#Acquire",

@@ -1,5 +1,5 @@
 <https://w3id.org/ai-audit/infrastructure#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/ai-audit/infrastructure#> <http://purl.org/dc/terms/abstract> "   This ontology describes the infrastructure that supports the execution and\n  management of audits, including systems, services, data sources, and artifacts.  "@en .
+<https://w3id.org/ai-audit/infrastructure#> <http://purl.org/dc/terms/abstract> "This ontology describes the infrastructure that supports the execution and management of audits, including systems, services, data sources, and artifacts. "@en .
 <https://w3id.org/ai-audit/infrastructure#> <http://purl.org/dc/terms/contributor> "Marta Sabou" .
 <https://w3id.org/ai-audit/infrastructure#> <http://purl.org/dc/terms/contributor> "Tomasz Miksa" .
 <https://w3id.org/ai-audit/infrastructure#> <http://purl.org/dc/terms/creator> "Fajar J. Ekaputra" .
@@ -9,7 +9,7 @@
 <https://w3id.org/ai-audit/infrastructure#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/ai-audit/infrastructure#> <http://purl.org/dc/terms/title> "AuditOps – Audit Infrastructure Module"@en .
 <https://w3id.org/ai-audit/infrastructure#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
-<https://w3id.org/ai-audit/infrastructure#> <https://w3id.org/widoco/vocab#introduction> "\n  This section introduces the audit infrastructure ontology and its scope.  "@en .
+<https://w3id.org/ai-audit/infrastructure#> <https://w3id.org/widoco/vocab#introduction> "This section introduces the audit infrastructure ontology and its scope. "@en .
 # 
 # 
 # #################################################################
