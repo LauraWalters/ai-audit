@@ -1,0 +1,231 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix audit: <https://w3id.org/ai-audit#> .
+@prefix infra: <https://w3id.org/ai-audit/infrastructure#> .
+@prefix pplan: <http://purl.org/net/p-plan#> .
+@prefix ucplan: <https://example.org/uc/permit-ner/plan/> .
+@prefix question: <https://w3id.org/ai-audit/question#> .
+@prefix :       <https://example.org/uc/permit-ner/artifacts/> .
+@base <https://example.org/uc/permit-ner/plan/>.
+
+
+:expanded_workflow
+  a prov:Entity ;
+  dcterms:title "Expanded Permit NER workflow"@en ;
+  dcterms:description
+    "This files describes the structural expansion of the initial workflow, introducing p-plan steps, variables, and relationships."@en ;
+  prov:wasDerivedFrom :initial_workflow ;
+  dcterms:created "2026-01-25"^^xsd:date .
+
+ucplan:PermitNERPlan a pplan:Plan. 
+ucplan:ObarisSystem a audit:AuditableAISystem.
+
+
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/net/p-plan#hasInputVar
+pplan:hasInputVar rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/net/p-plan#hasOutputVar
+pplan:hasOutputVar rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/net/p-plan#isPrecededBy
+pplan:isPrecededBy rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/net/p-plan#isStepOfPlan
+pplan:isStepOfPlan rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/net/p-plan#isVariableOfPlan
+pplan:isVariableOfPlan rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ai-audit/infrastructure#hasPlan
+infra:hasPlan rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/net/p-plan#Plan
+pplan:Plan rdf:type owl:Class .
+
+
+###  http://purl.org/net/p-plan#Step
+pplan:Step rdf:type owl:Class .
+
+
+###  http://purl.org/net/p-plan#Variable
+pplan:Variable rdf:type owl:Class .
+
+
+###  https://w3id.org/ai-audit#AuditableAISystem
+audit:AuditableAISystem rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://example.org/uc/permit-ner/plan/BaseOntologies
+ucplan:BaseOntologies rdf:type owl:NamedIndividual ,
+                               pplan:Variable ;
+                      pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                      rdfs:label "Variable: Base Ontologies" .
+
+
+###  https://example.org/uc/permit-ner/plan/Eval_Result
+ucplan:Eval_Result rdf:type owl:NamedIndividual ,
+                            pplan:Variable ;
+                   pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                   rdfs:label "Variable: Evaluation result for fine-tuned LM" .
+
+
+###  https://example.org/uc/permit-ner/plan/ObarisSystem
+ucplan:ObarisSystem rdf:type owl:NamedIndividual ,
+                             audit:AuditableAISystem ;
+                    rdfs:label "System: NER suggestions" ;
+                    infra:hasPlan ucplan:PermitNERPlan .
+
+
+###  https://example.org/uc/permit-ner/plan/PermitNERPlan
+ucplan:PermitNERPlan rdf:type owl:NamedIndividual ,
+                              pplan:Plan ;
+                     rdfs:label "Plan: Permit NER pipeline" .
+
+
+###  https://example.org/uc/permit-ner/plan/SpecificationData
+ucplan:SpecificationData rdf:type owl:NamedIndividual ,
+                                  pplan:Variable ;
+                         pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                         rdfs:label "Variable: Specification Data KG" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Engineering
+ucplan:Step_Engineering rdf:type owl:NamedIndividual ,
+                                 pplan:Step ;
+                        pplan:hasInputVar ucplan:BaseOntologies ,
+                                          ucplan:SpecificationData ;
+                        pplan:hasOutputVar ucplan:Var_EntityKG ;
+                        pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                        rdfs:label "engineer: create KG" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Inference_Eval
+ucplan:Step_Inference_Eval rdf:type owl:NamedIndividual ,
+                                    pplan:Step ;
+                           pplan:hasInputVar ucplan:Var_FineTunedLM ,
+                                             ucplan:Var_ValidationData ;
+                           pplan:hasOutputVar ucplan:Eval_Result ;
+                           pplan:isPrecededBy ucplan:Step_Training ;
+                           pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                           rdfs:label "infer: evaluate (ML model)" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Inference_Initial
+ucplan:Step_Inference_Initial rdf:type owl:NamedIndividual ,
+                                       pplan:Step ;
+                              pplan:hasInputVar ucplan:Var_FineTunedLM ,
+                                                ucplan:Var_PermitApplications ;
+                              pplan:hasOutputVar ucplan:Var_PredictionsInitial ;
+                              pplan:isPrecededBy ucplan:Step_Training ;
+                              pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                              rdfs:label "infer: classify" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Training
+ucplan:Step_Training rdf:type owl:NamedIndividual ,
+                              pplan:Step ;
+                     pplan:hasInputVar ucplan:Var_BaseLM ,
+                                       ucplan:Var_HyperParamSettings ,
+                                       ucplan:Var_TrainingData ;
+                     pplan:hasOutputVar ucplan:Var_FineTunedLM ;
+                     pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                     rdfs:label "train: fine-tune" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Transformation
+ucplan:Step_Transformation rdf:type owl:NamedIndividual ,
+                                    pplan:Step ;
+                           pplan:hasInputVar ucplan:Var_EntityKG ,
+                                             ucplan:Var_PredictionsInitial ;
+                           pplan:hasOutputVar ucplan:Var_PredictionsFinal ;
+                           pplan:isPrecededBy ucplan:Step_Inference_Initial ;
+                           pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                           rdfs:label "transform: prune results (KG-based)" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_BaseLM
+ucplan:Var_BaseLM rdf:type owl:NamedIndividual ,
+                           pplan:Variable ;
+                  pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                  rdfs:label "Variable: Language Model (LM)" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_EntityKG
+ucplan:Var_EntityKG rdf:type owl:NamedIndividual ,
+                             pplan:Variable ;
+                    pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                    rdfs:label "Variable: Entity Knowledge Graph (KG)" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_FineTunedLM
+ucplan:Var_FineTunedLM rdf:type owl:NamedIndividual ,
+                                pplan:Variable ;
+                       pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                       rdfs:label "Variable: Fine-tuned Language Model" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_HyperParamSettings
+ucplan:Var_HyperParamSettings rdf:type owl:NamedIndividual ,
+                                       pplan:Variable ;
+                              pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                              rdfs:label "Variable: Hyperparameter settings" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_PermitApplications
+ucplan:Var_PermitApplications rdf:type owl:NamedIndividual ,
+                                       pplan:Variable ;
+                              pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                              rdfs:label "Variable: Permits (input docs)" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_PredictionsFinal
+ucplan:Var_PredictionsFinal rdf:type owl:NamedIndividual ,
+                                     pplan:Variable ;
+                            pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                            rdfs:label "Variable: Pruned predictions" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_PredictionsInitial
+ucplan:Var_PredictionsInitial rdf:type owl:NamedIndividual ,
+                                       pplan:Variable ;
+                              pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                              rdfs:label "Variable: Initial model predictions" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_TrainingData
+ucplan:Var_TrainingData rdf:type owl:NamedIndividual ,
+                                 pplan:Variable ;
+                        pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                        rdfs:label "Variable: Training data" .
+
+
+###  https://example.org/uc/permit-ner/plan/Var_ValidationData
+ucplan:Var_ValidationData rdf:type owl:NamedIndividual ,
+                                   pplan:Variable ;
+                          pplan:isVariableOfPlan ucplan:PermitNERPlan ;
+                          rdfs:label "Variable: Evaluation data" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

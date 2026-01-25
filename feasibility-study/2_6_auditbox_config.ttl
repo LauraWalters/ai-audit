@@ -1,0 +1,147 @@
+@prefix uc:     <https://example.org/uc/permit-ner#> .
+@prefix ucplan: <https://example.org/uc/permit-ner/plan/> .
+@prefix audit: <https://w3id.org/ai-audit#> .
+@prefix infra: <https://w3id.org/ai-audit/infrastructure#> .
+@prefix pplan: <http://purl.org/net/p-plan#> .
+@prefix question: <https://w3id.org/ai-audit/question#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix :       <https://example.org/uc/permit-ner/artifacts/> .
+@base <https://example.org/uc/permit-ner/plan/>.
+
+
+:auditbox_config
+  a prov:Entity ;
+  dcterms:title "AuditBox configuration for Permit NER"@en ;
+  dcterms:description
+    "This file explains the configuration for AuditBox applied to the Permit NER system and workflow."@en ;
+  dcterms:type "configuration-artifact" ;
+  prov:wasDerivedFrom :enriched_workflow ;
+  dcterms:relation
+    <https://example.org/uc/permit-ner/plan/ObarisSystem>,
+    <https://example.org/uc/permit-ner/plan/PermitNERPlan> ;
+  dcterms:created "2026-01-25"^^xsd:date .
+
+
+#################################################################
+# AuditBox service instance (collection + integration)
+#################################################################
+
+ucplan:PermitNERPlan a pplan:Plan. 
+ucplan:ObarisSystem a audit:AuditableAISystem;
+rdfs:label "Permit NER system"@en ;
+  infra:hasService uc:AuditBox,
+                   uc:Receive_Training,
+                   uc:Receive_Inference_Eval,
+                   uc:Receive_Engineering,
+                   uc:Receive_Inference_Initial,
+                   uc:Receive_Transformation .
+
+uc:AuditBox a infra:AuditBoxService ;
+  rdfs:label "AuditBox (Trace Acquiring & Integration)"@en .
+
+#################################################################
+# Validation functions
+#################################################################
+
+uc:Validate_Training a infra:ValidationFunction;
+  rdfs:label "Training trace validation"@en ;
+  infra:hasConstraintType "SHACL" ;
+  infra:hasConstraintLocalPath "validation/Training.shacl.ttl" .
+
+uc:Validate_Inference_Evaluation a infra:ValidationFunction;
+  rdfs:label "Evaluation ML model trace validation"@en ;
+  infra:hasConstraintType "SHACL" ;
+  infra:hasConstraintLocalPath "validation/Inference_Eval.shacl.ttl" .  
+
+uc:Validate_Engineering a infra:ValidationFunction ;
+  rdfs:label "Engineering trace validation"@en ;
+  infra:hasConstraintType "SHACL" ;
+  infra:hasConstraintLocalPath "validation/Engineering.shacl.ttl" .
+
+uc:Validate_Inference_Initial a infra:ValidationFunction;
+  rdfs:label "Inference trace validation"@en ;
+  infra:hasConstraintType "SHACL" ;
+  infra:hasConstraintLocalPath "validation/Inference_Initial.shacl.ttl" .
+
+uc:Validate_Transformation a infra:ValidationFunction ;
+  rdfs:label "Transformation trace validation"@en ;
+  infra:hasConstraintType "SHACL" ;
+  infra:hasConstraintLocalPath "validation/Transformation.shacl.ttl" .
+
+################################################################
+# Transformation functions
+#################################################################
+
+uc:TrainingTransformation a infra:TransformationFunction ;
+  rdfs:label "TrainingTransformation"@en ;
+  infra:hasMappingType "RML" ;
+  infra:hasMappingLocalPath "mapping/Training.rml" .
+
+uc:EngineeringTransformation a infra:TransformationFunction ;
+  rdfs:label "EngineeringTransformation"@en ;
+  infra:hasMappingType "RML" ;
+  infra:hasMappingLocalPath "mapping/Engineering.rml" .
+
+uc:Inference_Initial_Transformation a infra:TransformationFunction ;
+  rdfs:label "InferenceInitialTransformation"@en ;
+  infra:hasMappingType "RML" ;
+  infra:hasMappingLocalPath "mapping/Inference.rml" .
+
+uc:Inference_Eval_Transformation a infra:TransformationFunction ;
+  rdfs:label "InferenceEvalTransformation"@en ;
+  infra:hasMappingType "RML" ;
+  infra:hasMappingLocalPath "mapping/Inference_Eval.rml" .
+
+uc:Transformation_Transformation a infra:TransformationFunction ;
+  rdfs:label "TransformationTransformation"@en ;
+  infra:hasMappingType "RML" ;
+  infra:hasMappingLocalPath "mapping/Transformation.rml" .
+
+
+#################################################################
+# Receivers
+#################################################################
+
+uc:Receive_Training a infra:Receive ;
+  rdfs:label "Receive training traces"@en ;
+  infra:hasReceiveApiPath "/receive/training" ;
+  infra:hasSourceType "JSON" ;
+  infra:hasTransformationFunction uc:TrainingTransformation ;
+  infra:hasValidationFunction uc:Validate_Training ;
+  infra:isBasedOnStep ucplan:Step_Training .
+
+
+uc:Receive_Engineering a infra:Receive ;
+  rdfs:label "Receive engineering traces"@en ;
+  infra:hasReceiveApiPath "/receive/engineering" ;
+  infra:hasSourceType "JSON" ;
+  infra:hasTransformationFunction uc:EngineeringTransformation ;
+  infra:hasValidationFunction uc:Validate_Engineering ;
+  infra:isBasedOnStep ucplan:Step_Engineering .
+
+uc:Receive_Inference_Initial a infra:Receive ;
+  rdfs:label "Receive initial inference traces"@en ;
+  infra:hasReceiveApiPath "/receive/inference_initial" ;
+  infra:hasSourceType "JSON" ;
+  infra:hasTransformationFunction uc:Inference_Initial_Transformation ;
+  infra:hasValidationFunction uc:Validate_Inference_Initial ;
+  infra:isBasedOnStep ucplan:Step_Inference_Initial .
+
+uc:Receive_Inference_Eval a infra:Receive ;
+  rdfs:label "Receive model evaluation inference traces"@en ;
+  infra:hasReceiveApiPath "/receive/inference_eval" ;
+  infra:hasSourceType "JSON" ;
+  infra:hasTransformationFunction uc:Inference_Eval_Transformation ;
+  infra:hasValidationFunction uc:Validate_Inference_Evaluation ;
+  infra:isBasedOnStep ucplan:Step_Inference_Eval .  
+
+uc:Receive_Transformation a infra:Receive ;
+  rdfs:label "Receive transformation/prune traces"@en ;
+  infra:hasReceiveApiPath "/receive/transformation" ;
+  infra:hasSourceType "JSON" ;
+  infra:hasTransformationFunction uc:Transformation_Transformation ;
+  infra:hasValidationFunction uc:Validate_Transformation ;
+  infra:isBasedOnStep ucplan:Step_Transformation .
+

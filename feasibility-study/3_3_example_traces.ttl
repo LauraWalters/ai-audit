@@ -1,0 +1,426 @@
+@prefix audit: <https://w3id.org/ai-audit#> .
+@prefix infra: <https://w3id.org/ai-audit/infrastructure#> .
+@prefix question: <https://w3id.org/ai-audit/question#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix pplan:  <http://purl.org/net/p-plan#> .
+@prefix uc:    <https://example.org/uc/permit-ner/> .   
+@prefix ucplan: <https://example.org/uc/permit-ner/plan/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix spdx: <http://spdx.org/rdf/terms> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix :       <https://example.org/uc/permit-ner/artifacts/> .
+@base <https://example.org/uc/permit-ner/traces>.
+
+:example_traces
+  a prov:Entity ;
+  dcterms:title "Example execution traces for Permit NER"@en ;
+  dcterms:description
+    "Example provenance traces instantiating the enriched Permit NER workflow, demonstrating execution across training and inference phases."@en ;
+  dcterms:type "execution-traces" ;
+  prov:wasDerivedFrom :enriched_workflow, :auditbox_config ;
+  dcterms:created "2026-01-25"^^xsd:date.
+
+
+ucplan:PermitNERPlan a pplan:Plan. 
+ucplan:ObarisSystem a audit:AuditableAISystem.
+
+uc:isNull       a owl:DatatypeProperty ; rdfs:domain audit:ResultElement ; rdfs:range xsd:boolean .
+uc:changeStatus a owl:DatatypeProperty ; rdfs:domain audit:ResultElement ; rdfs:range xsd:string .
+uc:Succeeded a audit:ExecutionStatus .
+uc:Failed    a audit:ExecutionStatus .
+
+uc:Initial a uc:ChangeStatus .
+uc:Pruned a uc:ChangeStatus .
+uc:Corrected a uc:ChangeStatus .
+uc:Unchanged a uc:ChangeStatus .
+
+
+uc:Trace_Batch07 a audit:AuditBundle, prov:Collection .
+uc:Trace_Batch42 a audit:AuditBundle, prov:Collection .
+uc:Trace_Batch06 a audit:AuditBundle, prov:Collection.
+
+uc:Trace_Batch06 prov:hadMember uc:Inference_B06_initial .
+
+uc:Trace_Batch07 prov:hadMember uc:Inference_B07_initial, uc:Transform_B07_prune .
+
+uc:Trace_Batch42 prov:hadMember uc:Inference_B42_initial, uc:Transform_B42_prune .
+
+ucplan:Step_Training a pplan:Step ; 
+rdfs:label "Training Step" .
+
+ucplan:Step_Inference_Initial a pplan:Step ;
+rdfs:label "Inference Initial Step" .
+
+ucplan:Step_Transformation a pplan:Step ;
+rdfs:label "Transform Prune Step" .
+
+ucplan:Step_Transformation a pplan:Step ;
+rdfs:label "Transform Prune Step" .
+
+ucplan:Step_Engineering a pplan:Step ;
+rdfs:label "Engineering KG Step" .
+
+ucplan:Step_Inference_Eval a pplan:Step ;
+rdfs:label "Evaluation of Statistical Model Step" .
+
+uc:operator a audit:Field ;
+rdfs:label "Operator" .
+
+uc:issuingAuthority a audit:Field ;
+rdfs:label "Issuing Authority" .
+
+
+uc:Trace_Batch06 prov:wasGeneratedBy uc:Inference_B06_initial;
+audit:executionStatus uc:Failed.
+
+uc:Trace_Batch07 prov:wasGeneratedBy   uc:Transform_B07_prune;
+prov:hadMember uc:PermitApplications_Batch07 ,
+                   uc:NER_Predictions_Batch07_initial ,
+                   uc:NER_Predictions_Batch07_pruned ,
+                   uc:B07_e1 , uc:B07_e2,
+                   uc:B07_f1 , uc:B07_f2 ;
+audit:executionStatus uc:Succeeded.
+
+uc:Trace_Batch42 prov:wasGeneratedBy uc:Transform_B42_prune;
+prov:hadMember uc:PermitApplications_Batch42 ,
+                   uc:NER_Predictions_Batch42_initial ,
+                   uc:NER_Predictions_Batch42_pruned ,
+                   uc:B42_e1 , uc:B42_e2 ,
+                   uc:B42_f1 , uc:B42_f2 ;
+audit:executionStatus uc:Succeeded.
+
+uc:KG a audit:SymbolicModel ;
+rdfs:label "KG for Entity Matching" ;
+dcat:version "1.0.0" ;
+prov:wasGeneratedBy uc:Engineering_2025_08_11.
+
+uc:Base_Legal_LM_v0_9_0 a audit:StatisticalModel ;
+rdfs:label "bert-base-german-cased model with token classification head" ;
+dcat:version "0.9.0" .
+
+
+uc:PermitCorpus_Annotated_v1
+a audit:Dataset ;
+rdfs:label "German legal NER dataset" ;
+prov:atLocation <https://huggingface.co/datasets/elenanereiss/german-ler> ;
+prov:wasAttributedTo uc:External_Person;
+dcterms:license <https://spdx.org/licenses/CC-BY-4.0.html> .
+
+<https://huggingface.co/datasets/elenanereiss/german-ler> a prov:Location; 
+rdfs:label "GERMAN NER dataset" .
+
+uc:External_Person a prov:Agent;
+rdfs:label "External Developer".
+
+uc:Engineer_H a prov:Agent;
+rdfs:label "H. A.".
+
+
+uc:Permit_NER_FT_v1_3_0 prov:wasGeneratedBy 
+uc:Training_2025_08_12.
+uc:EvalResults_lenient prov:wasGeneratedBy 
+uc:Infer_eval_2025_08_12.
+uc:EvalResults_strict prov:wasGeneratedBy 
+uc:Infer_eval_2025_08_12.
+
+
+
+uc:GeoDataset
+a audit:Dataset;
+rdfs:label "Geonames";
+dcterms:source "http://www.geonames.org/ontology/documentation.html".
+
+uc:AuthoritiesDataset
+a audit:Dataset;
+rdfs:label "Authorities data".
+
+
+uc:NER_Predictions_Batch07_initial prov:wasGeneratedBy uc:Inference_B07_initial.
+
+uc:NER_Predictions_Batch42_initial prov:wasGeneratedBy 
+uc:Inference_B42_initial.
+
+uc:LegalPersonDataset
+a audit:Dataset;
+rdfs:label "Austrian legal person data".
+
+uc:RegulationsDataset_AT a audit:Dataset;
+rdfs:label "Austrian regulation data".
+
+uc:PermitTypesDataset
+a audit:Dataset;
+rdfs:label "Permit types data".
+
+uc:Engineering_2025_08_11
+a audit:Engineering ;
+rdfs:label "Engineering – KG v1.0" ;
+prov:wasAssociatedWith uc:Engineer_H;
+audit:executionStatus uc:Succeeded;
+audit:lifecyclePhase audit:Design;
+prov:used uc:GeoDataset,
+uc:LegalPersonDataset,
+uc:AuthoritiesDataset,
+uc:RegulationsDataset_AT,
+uc:PermitTypesDataset;
+pplan:correspondsToStep ucplan:Step_Engineering;
+prov:startedAtTime "2025-08-01T08:10:00Z"^^xsd:dateTime ;
+prov:endedAtTime   "2025-08-11T09:05:00Z"^^xsd:dateTime .
+ 
+uc:Training_2025_08_12
+a audit:Training ;
+rdfs:label "Training – Permit NER v1.3.0" ;
+prov:wasAssociatedWith uc:Trainer_A ;
+audit:executionStatus uc:Succeeded;
+audit:lifecyclePhase audit:Design;
+pplan:correspondsToStep ucplan:Step_Training;
+prov:startedAtTime "2025-08-12T08:10:00Z"^^xsd:dateTime ;
+prov:endedAtTime   "2025-08-12T11:05:00Z"^^xsd:dateTime ;
+prov:used uc:Base_Legal_LM_v0_9_0, uc:PermitCorpus_Annotated_v1,
+uc:Training_Config, uc:TrainData_q3.
+
+uc:Infer_eval_2025_08_12 a audit:Inference ;
+rdfs:label "Evaluation Stat Model – Permit NER v1.3.0" ;
+prov:wasAssociatedWith uc:Trainer_A ;
+audit:executionStatus uc:Succeeded;
+audit:lifecyclePhase audit:Evaluation;
+pplan:correspondsToStep ucplan:Step_Inference_Eval;
+prov:startedAtTime "2025-08-12T13:10:00Z"^^xsd:dateTime ;
+prov:endedAtTime   "2025-08-12T13:25:00Z"^^xsd:dateTime ;
+prov:used uc:Permit_NER_FT_v1_3_0, uc:EvalData_q3, uc:EvalProcedure.
+
+uc:Trainer_A a prov:Agent;
+rdfs:label "Trainer A".
+
+
+uc:Training_Config a audit:HyperparameterConfiguration;
+audit:hyperparameter [
+    a audit:HyperparameterSetting ;
+    audit:paramFor uc:learningRate ;
+    audit:paramValue "0.01"^^xsd:float
+  ] ;
+  audit:hyperparameter [
+    a audit:HyperparameterSetting ;
+    audit:paramFor uc:epochs ;
+    audit:paramValue "5"^^xsd:integer
+  ] .
+     
+uc:hits_k_lenient_Measure
+  a audit:Metric ;
+  rdfs:label "hits@K - lenient" .
+
+uc:hits_k_strict_Measure a audit:Metric ;
+rdfs:label "hits@K - strict".  
+
+uc:EvalProcedure a prov:Collection ;
+rdfs:label "NER evaluation hits@k" ;
+prov:hadMember uc:hits_k_lenient_Measure, uc:hits_k_strict_Measure .
+
+
+uc:EvalResults_lenient a audit:ResultElement;
+rdfs:label "hits@k-lenient value for fine-tuned LM";
+prov:wasDerivedFrom uc:Permit_NER_FT_v1_3_0, uc:EvalData_q3, uc:EvalProcedure;
+audit:hasValue "0.77"^^xsd:double;
+prov:wasGeneratedBy uc:Infer_eval_2025_08_12.
+
+uc:EvalResults_strict a audit:ResultElement;
+rdfs:label "hits@k-strict value for fine-tuned LM";
+prov:wasDerivedFrom uc:Permit_NER_FT_v1_3_0, uc:EvalData_q3, uc:EvalProcedure;
+audit:hasValue "0.62"^^xsd:double;
+prov:wasGeneratedBy uc:Infer_eval_2025_08_12.
+
+
+uc:TrainData_q3 a audit:Dataset;
+rdfs:label "Internal training dataset for finetuned-LM";
+prov:wasAttributedTo uc:Trainer_A;
+prov:atLocation <s3://training/data/training_dataLM/> .
+
+<s3://training/data/training_dataLM/> a prov:Location;
+rdfs:label "training data location".
+
+
+
+uc:EvalData_q3 a audit:Dataset;
+rdfs:label "Internal evaluation dataset for finetuned-LM"; 
+prov:wasAttributedTo uc:Trainer_A;
+prov:atLocation <s3://training/data/eval_dataLM/> .
+
+
+<s3://training/data/eval_dataLM/> a prov:Location;
+rdfs:label "evaluation data location".
+
+uc:PermitApplications_Batch07 a audit:Dataset ;
+rdfs:label "Permit Applications – Batch 07" ;
+prov:atLocation <s3://gov-permit-data/raw/batch07/> .
+
+<s3://gov-permit-data/raw/batch07/> a prov:Location;
+rdfs:label "raw data batch 07 location".
+
+uc:NER_Predictions_Batch07_initial a audit:Dataset, prov:Collection ;
+rdfs:label "NER Predictions – Batch 07 (initial)" ;
+prov:atLocation <s3://pred/b07/initial/> ;
+prov:wasGeneratedBy uc:Inference_B07_initial.
+
+<s3://pred/b07/initial/> a prov:Location;
+rdfs:label "NER prediction 07 location".
+
+uc:NER_Predictions_Batch07_pruned a audit:Dataset, prov:Collection ;
+rdfs:label "NER Predictions – Batch 07 (pruned)" ;
+prov:atLocation <s3://pred/b07/pruned/>;
+prov:wasGeneratedBy uc:Transform_B07_prune.
+
+<s3://pred/b07/pruned/> a prov:Location;
+rdfs:label "pruned batch 07 location".
+
+uc:B07_e1 a audit:ResultElement ;
+audit:element uc:operator ;
+prov:value "J. Wurst" ;
+uc:isNull "false"^^xsd:boolean ; 
+audit:hasScore [ a audit:Score ;
+    audit:scoreType audit:Confidence ;
+    audit:scoreValue "0.81"^^xsd:double ] ;
+uc:changeStatus uc:Initial .
+
+uc:B07_e2 a audit:ResultElement ;
+audit:element uc:issuingAuthority ;
+prov:value "BH Salzburg" ;
+uc:isNull "false"^^xsd:boolean ;
+audit:hasScore [
+    a audit:Score ;
+    audit:scoreType audit:Confidence ;
+    audit:scoreValue "0.73"^^xsd:double
+  ] ;
+  uc:changeStatus uc:Initial .
+
+uc:NER_Predictions_Batch07_initial prov:hadMember uc:B07_e1, uc:B07_e2 .
+
+
+uc:B07_f1 a audit:ResultElement ;
+audit:element uc:operator ; prov:value "Johann Wurst GmbH GLN 123456789" ;
+uc:isNull "false"^^xsd:boolean ; 
+uc:changeStatus uc:Pruned; 
+prov:wasDerivedFrom uc:B07_e1;
+prov:wasGeneratedBy uc:Transform_B07_prune.
+
+
+uc:B07_f2 a audit:ResultElement ;
+audit:element uc:issuingAuthority ; prov:value "Magistrate of the City of Salzburg" ;
+uc:isNull "false"^^xsd:boolean ;
+uc:changeStatus uc:Pruned ; 
+prov:wasDerivedFrom uc:B07_e2;
+prov:wasGeneratedBy uc:Transform_B07_prune.
+  
+uc:NER_Predictions_Batch07_pruned prov:hadMember uc:B07_f1, uc:B07_f2 .
+
+uc:NER_Predictions_Batch07_pruned prov:wasGeneratedBy uc:Transform_B07_prune.
+
+uc:NER_Predictions_Batch42_pruned prov:wasGeneratedBy uc:Transform_B42_prune  .
+
+uc:Inference_B06_initial a audit:Inference ;
+rdfs:label "Inference – 06 (initial)" ;
+audit:executionStatus uc:Failed;
+audit:lifecyclePhase audit:Operation;
+pplan:correspondsToStep ucplan:Step_Inference_Initial;
+prov:startedAtTime "2025-08-16T09:30:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-16T09:30:39Z"^^xsd:dateTime ;
+prov:used uc:Permit_NER_FT_v1_3_0, uc:PermitApplications_Batch06 .
+
+uc:PermitApplications_Batch06 a audit:Dataset.
+
+uc:Inference_B07_initial a audit:Inference ;
+rdfs:label "Inference – Batch 07 (initial)" ;
+audit:executionStatus uc:Succeeded;
+audit:lifecyclePhase audit:Operation;
+pplan:correspondsToStep ucplan:Step_Inference_Initial;
+prov:startedAtTime "2025-08-15T09:30:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-15T09:30:39Z"^^xsd:dateTime ;
+prov:used uc:Permit_NER_FT_v1_3_0, uc:PermitApplications_Batch07 .
+  
+
+uc:Transform_B07_prune a audit:Transformation ;
+rdfs:label "Transform – Batch 07 (pruning)" ;
+audit:executionStatus uc:Succeeded;
+audit:lifecyclePhase audit:Operation;
+pplan:correspondsToStep ucplan:Step_Transformation;
+prov:startedAtTime "2025-08-15T09:45:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-15T09:45:08Z"^^xsd:dateTime ;
+prov:used uc:KG ;
+prov:used uc:NER_Predictions_Batch07_initial.
+
+uc:Permit_NER_FT_v1_3_0 a audit:StatisticalModel ;
+rdfs:label "Permit NER – Fine-tuned v1.3.0" ;
+dcat:version "1.3.0" ;
+prov:wasGeneratedBy uc:Training_2025_08_12.
+
+uc:PermitApplications_Batch42 a audit:Dataset ;
+rdfs:label "Permit Applications – Batch 42" ;
+prov:atLocation <s3://gov-permit-data/raw/batch42/> .
+
+<s3://gov-permit-data/raw/batch42/> a prov:Location;
+rdfs:label "raw batch 42 location".
+
+uc:NER_Predictions_Batch42_initial a audit:Dataset, prov:Collection ;
+rdfs:label "NER Predictions – Batch 42 (initial)" ;
+prov:atLocation <s3://pred/b42/initial/>;
+prov:wasGeneratedBy uc:Inference_B42_initial.
+
+<s3://pred/b42/initial/> a prov:Location;
+rdfs:label "initial batch 42 location".
+
+uc:NER_Predictions_Batch42_pruned a audit:Dataset, prov:Collection ;
+rdfs:label "NER Predictions – Batch 42 (pruned)" ;
+prov:atLocation <s3://pred/b42/pruned/> ;
+prov:wasGeneratedBy uc:Transform_B42_prune.
+
+<s3://pred/b42/pruned/> a prov:Location;
+rdfs:label "pruned batch 42 location".
+
+uc:B42_e1 a audit:ResultElement ;
+audit:element uc:operator ; prov:value "Muster Mann" ;
+uc:isNull "false"^^xsd:boolean ;
+a audit:Score ;
+    audit:scoreType audit:Confidence ;
+    audit:scoreValue  "0.81"^^xsd:double ;
+uc:changeStatus uc:Initial .
+  
+uc:B42_e2 a audit:ResultElement ;
+audit:element uc:issuingAuthority;
+uc:isNull "true"^^xsd:boolean ; 
+uc:changeStatus uc:Initial .
+  
+uc:NER_Predictions_Batch42_initial prov:hadMember uc:B42_e1, uc:B42_e2 .
+
+uc:B42_f1 a audit:ResultElement ;
+audit:element uc:operator; prov:value "Muster Mann OG GLN0987654321" ;
+uc:isNull "false"^^xsd:boolean; 
+uc:changeStatus uc:Pruned ;
+prov:wasDerivedFrom uc:B42_e1;
+prov:wasGeneratedBy uc:Transform_B042_prune.
+
+
+uc:B42_f2 a audit:ResultElement ;
+audit:element uc:issuingAuthority;
+uc:isNull "true"^^xsd:boolean ; 
+uc:changeStatus uc:Unchanged;
+prov:wasDerivedFrom uc:B42_e2;
+prov:wasGeneratedBy uc:Transform_B042_prune.
+
+uc:NER_Predictions_Batch42_pruned prov:hadMember uc:B42_f1, uc:B42_f2 .
+
+uc:Inference_B42_initial a audit:Inference ;
+rdfs:label "Inference – Batch 42 (initial)" ;
+audit:executionStatus uc:Succeeded;
+audit:lifecyclePhase audit:Operation;
+pplan:correspondsToStep ucplan:Step_Inference_Initial;
+prov:startedAtTime "2025-08-12T12:30:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-12T12:31:17Z"^^xsd:dateTime ;
+prov:used uc:Permit_NER_FT_v1_3_0, uc:PermitApplications_Batch42 .
+  
+
+uc:Transform_B42_prune a audit:Transformation ;
+rdfs:label "Transform – Batch 42 (pruning)" ;
+audit:executionStatus uc:Succeeded;
+audit:lifecyclePhase audit:Operation;
+pplan:correspondsToStep ucplan:Step_Transformation;
+prov:startedAtTime "2025-08-10T12:48:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-10T12:48:07Z"^^xsd:dateTime ;
+prov:used uc:KG ;
+prov:used uc:NER_Predictions_Batch42_initial .

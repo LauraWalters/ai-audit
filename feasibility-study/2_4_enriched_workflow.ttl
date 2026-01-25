@@ -1,0 +1,222 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix audit: <https://w3id.org/ai-audit#> .
+@prefix infra: <https://w3id.org/ai-audit/infrastructure#> .
+@prefix question: <https://w3id.org/ai-audit/question#> .
+@prefix uc:    <https://example.org/uc/permit-ner/> .
+@prefix pplan: <http://purl.org/net/pplan#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ucplan: <https://example.org/uc/permit-ner/plan/> . 
+@prefix :       <https://example.org/uc/permit-ner/artifacts/> .
+@base <https://example.org/uc/permit-ner/plan/>.
+
+:enriched_workflow
+  a prov:Entity ;
+  dcterms:title "Enriched Permit NER workflow"@en ;
+  dcterms:description
+    "This files describes the semantic enrichment of the expanded workflow, adding detailed AI lifecycle steps and audit-relevant variables. This file does not restate all elements of the expanded workflow."@en ;
+  dcterms:type "workflow-enrichment" ;
+  prov:wasDerivedFrom :expanded_workflow ;
+  dcterms:created "2026-01-25"^^xsd:date .
+
+
+
+
+ucplan:PermitNERPlan a pplan:Plan, owl:NamedIndividual. 
+ucplan:ObarisSystem a owl:NamedIndividual, audit:AuditableAISystem;
+question:hasQuestion uc:Q1, uc:Q2, uc:Q3, uc:Q4, uc:Q5,
+                    uc:Q6, uc:Q7, uc:Q8, uc:Q9, uc:Q10, uc:Q11, uc:Q12 .  
+
+###  https://example.org/uc/permit-ner/plan/Step_Engineering
+ucplan:Step_Engineering rdf:type owl:NamedIndividual ,
+                                 pplan:Step ;
+                        pplan:hasInputVar ucplan:BaseOntologies ,
+                                          ucplan:SpecificationData ;
+                        pplan:hasOutputVar ucplan:Var_EntityKG ;
+                        pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                        rdfs:label "engineer: create KG" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Inference_Eval
+ucplan:Step_Inference_Eval rdf:type owl:NamedIndividual ,
+                                    pplan:Step ;
+                           pplan:hasInputVar ucplan:Var_FineTunedLM ,
+                                             ucplan:Var_ValidationData ;
+                           pplan:hasOutputVar ucplan:Eval_Result ;
+                           pplan:isPrecededBy ucplan:Step_Training ;
+                           pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                           rdfs:label "infer: evaluate (ML model)" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Inference_Initial
+ucplan:Step_Inference_Initial rdf:type owl:NamedIndividual ,
+                                       pplan:Step ;
+                              pplan:hasInputVar ucplan:Var_FineTunedLM ,
+                                                ucplan:Var_PermitApplications ;
+                              pplan:hasOutputVar ucplan:Var_PredictionsInitial ;
+                              pplan:isPrecededBy ucplan:Step_Training ;
+                              pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                              rdfs:label "infer: classify" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Training
+ucplan:Step_Training rdf:type owl:NamedIndividual ,
+                              pplan:Step ;
+                     pplan:hasInputVar ucplan:Var_BaseLM ,
+                                       ucplan:Var_HyperParamSettings ,
+                                       ucplan:Var_TrainingData ;
+                     pplan:hasOutputVar ucplan:Var_FineTunedLM ;
+                     pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                     rdfs:label "train: fine-tune" .
+
+
+###  https://example.org/uc/permit-ner/plan/Step_Transformation
+ucplan:Step_Transformation rdf:type owl:NamedIndividual ,
+                                    pplan:Step ;
+                           pplan:hasInputVar ucplan:Var_EntityKG ,
+                                             ucplan:Var_PredictionsInitial ;
+                           pplan:hasOutputVar ucplan:Var_PredictionsFinal ;
+                           pplan:isPrecededBy ucplan:Step_Inference_Initial ;
+                           pplan:isStepOfPlan ucplan:PermitNERPlan ;
+                           rdfs:label "transform: prune results (KG-based)" .
+
+
+ucplan:BaseOntologies
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:SpecificationData
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Eval_Result
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_BaseLM
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_EntityKG
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_FineTunedLM
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_HyperParamSettings
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_PermitApplications
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_PredictionsInitial
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_PredictionsFinal
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_TrainingData
+  a pplan:Variable, owl:NamedIndividual .
+
+ucplan:Var_ValidationData
+  a pplan:Variable, owl:NamedIndividual .
+
+uc:Q1 question:requiresTraceTemplate uc:TT_Training .
+uc:Q2 question:requiresTraceTemplate uc:TT_Training .
+uc:Q3 question:requiresTraceTemplate uc:TT_Training .
+uc:Q4 question:requiresTraceTemplate uc:TT_Training .
+uc:Q5 question:requiresTraceTemplate uc:TT_Training .
+uc:Q6 question:requiresTraceTemplate uc:TT_Training .
+uc:Q7 question:requiresTraceTemplate uc:TT_Training .
+uc:Q8 question:requiresTraceTemplate uc:TT_Engineering .
+uc:Q9 question:requiresTraceTemplate uc:TT_Inference_Initial .
+uc:Q10 question:requiresTraceTemplate uc:TT_Transformation .
+
+
+# Questions 
+uc:Q1 a question:AuditQuestion ;
+  rdfs:label "Which dataset was used for the model training?" ;
+  question:questionType question:Lineage_Input;
+  question:appliesToStep ucplan:Step_Training ;
+   question:queryLocalPath "query/Q1.sparql".
+
+ uc:Q2 a question:AuditQuestion;
+  rdfs:label "Who created the training datasets?" ;
+   question:questionType question:Accountability;
+  question:appliesToStep ucplan:Step_Training ;
+   question:queryLocalPath "query/Q2.sparql".
+  
+  uc:Q3 a question:AuditQuestion ;
+  rdfs:label "What model was produced by the training process?" ;
+   question:questionType question:Lineage_Output;
+  question:appliesToStep ucplan:Step_Training;
+   question:queryLocalPath "query/Q3.sparql".
+  
+  uc:Q4 a question:AuditQuestion ;
+  rdfs:label "When did the model training start and finish?" ;
+   question:questionType question:Temporal;
+  question:appliesToStep ucplan:Step_Training ;
+   question:queryLocalPath "query/Q4.sparql".
+
+uc:Q5 a question:AuditQuestion ;
+  rdfs:label "Where are the datasets for the training stored?" ;
+   question:questionType question:Location;
+  question:appliesToStep ucplan:Step_Training;
+   question:queryLocalPath "query/Q5.sparql".
+
+uc:Q6 a question:AuditQuestion ;
+  rdfs:label "What is the license of the training data?" ;
+   question:questionType question:Attribute_Entity;
+  question:appliesToStep ucplan:Step_Training;
+   question:queryLocalPath "query/Q6.sparql". 
+
+uc:Q7 a question:AuditQuestion ;
+  rdfs:label "What hyperparameters were used in training?" ;
+   question:questionType question:Attribute_Activity;
+  question:appliesToStep ucplan:Step_Training ;
+   question:queryLocalPath "query/Q7.sparql".
+
+ uc:Q8 a question:AuditQuestion ;
+  rdfs:label "How many datasets were used for creating the KG?" ;
+  question:questionType question:Lineage_Input;
+  question:appliesToStep ucplan:Step_Engineering ;
+  question:queryLocalPath "query/Q8.sparql".
+  
+  uc:Q9 a question:AuditQuestion ;
+  rdfs:label "What is the confidence of a specific result element?" ;
+   question:questionType question:Attribute_Entity;
+  question:appliesToStep ucplan:Step_Inference_Initial ;
+   question:queryLocalPath "query/Q9.sparql".  
+
+uc:Q10 a question:AuditQuestion ;
+rdfs:label "How often were result elements changed" ;
+question:questionType question:Aggregation;
+question:appliesToStep ucplan:Step_Inference_Initial;
+question:queryLocalPath "query/Q10.sparql".
+
+uc:Q11 a question:AuditQuestion ;
+rdfs:label "What is the average confidence of the operator predictions?" ;
+question:questionType question:Aggregation;
+question:appliesToStep ucplan:Step_Inference_Initial;
+question:queryLocalPath "query/Q11.sparql".
+  
+
+uc:Q12 a question:AuditQuestion ;
+rdfs:label "What is the total success rate of the workflow?" ;
+question:questionType question:Aggregation;
+question:appliesToPlan ucplan:PermitNERPlan;
+question:queryLocalPath "query/Q12.sparql".     
+
+
+uc:TT_Training
+  a question:TraceTemplate ;
+  question:path "Training_Template.json" .
+
+uc:TT_Inference_Initial
+  a question:TraceTemplate ;
+  question:path "Inference_Template.json" .
+
+uc:TT_Engineering
+  a question:TraceTemplate ;
+  question:path "Engineering_Template.json" .   
+
+ uc:TT_Transformation
+  a question:TraceTemplate ;
+  question:path "Transformation_Template.json" . 
+
