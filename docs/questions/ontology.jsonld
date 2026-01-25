@@ -1,4 +1,7 @@
 [ {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -25,6 +28,10 @@
 }, {
   "@id" : "https://w3id.org/ai-audit/question#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "This ontology describes audit questions and their relationships to audit criteria, and evidence. \n  It supports the structured formulation and reuse of questions across different audit contexts. "
+  } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Fajar J. Ekaputra"
   }, {

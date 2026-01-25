@@ -33,6 +33,11 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
+        "value" : "Marta Sabou",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
         "value" : "Gregor Käfer",
         "type" : "label"
       }, {
@@ -40,16 +45,17 @@
         "language" : "undefined",
         "value" : "Fajar J. Ekaputra",
         "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Marta Sabou",
-        "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "This ontology describes audit questions and their relationships to audit criteria, and evidence. \n  It supports the structured formulation and reuse of questions across different audit contexts. ",
         "type" : "label"
       } ],
       "title" : [ {
@@ -137,13 +143,6 @@
         "undefined" : "Aggregation Entity"
       }
     }, {
-      "iri" : "https://w3id.org/ai-audit/question#Accountability",
-      "baseIri" : "https://w3id.org/ai-audit/question",
-      "labels" : {
-        "IRI-based" : "Accountability",
-        "undefined" : "Accountability"
-      }
-    }, {
       "iri" : "https://w3id.org/ai-audit/question#Attribute_Entity",
       "baseIri" : "https://w3id.org/ai-audit/question",
       "labels" : {
@@ -156,6 +155,13 @@
       "labels" : {
         "IRI-based" : "Temporal",
         "undefined" : "Temporal"
+      }
+    }, {
+      "iri" : "https://w3id.org/ai-audit/question#Accountability",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Accountability",
+        "undefined" : "Accountability"
       }
     }, {
       "iri" : "https://w3id.org/ai-audit/question#Lineage_Input",

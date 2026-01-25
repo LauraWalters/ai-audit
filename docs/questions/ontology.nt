@@ -1,4 +1,5 @@
 <https://w3id.org/ai-audit/question#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/abstract> "This ontology describes audit questions and their relationships to audit criteria, and evidence. \n  It supports the structured formulation and reuse of questions across different audit contexts. "@en .
 <https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/contributor> "Fajar J. Ekaputra" .
 <https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/contributor> "Gregor Käfer" .
 <https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/contributor> "Marta Sabou" .
@@ -16,6 +17,9 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

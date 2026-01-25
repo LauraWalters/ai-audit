@@ -8,6 +8,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/ai-audit/question#">
+        <terms:abstract xml:lang="en">This ontology describes audit questions and their relationships to audit criteria, and evidence. 
+  It supports the structured formulation and reuse of questions across different audit contexts. </terms:abstract>
         <terms:contributor>Fajar J. Ekaputra</terms:contributor>
         <terms:contributor>Gregor Käfer</terms:contributor>
         <terms:contributor>Marta Sabou</terms:contributor>
@@ -30,6 +32,13 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
     
 
 

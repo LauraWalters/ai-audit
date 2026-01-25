@@ -7,6 +7,8 @@
 @base <https://w3id.org/ai-audit/question#> .
 
 <https://w3id.org/ai-audit/question#> rdf:type owl:Ontology ;
+                                       <http://purl.org/dc/terms/abstract> """This ontology describes audit questions and their relationships to audit criteria, and evidence. 
+  It supports the structured formulation and reuse of questions across different audit contexts. """@en ;
                                        <http://purl.org/dc/terms/contributor> "Fajar J. Ekaputra" ,
                                                                               "Gregor Käfer" ,
                                                                               "Marta Sabou" ,
@@ -20,6 +22,10 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
