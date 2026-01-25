@@ -7,7 +7,6 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
-@prefix vann:  <http://purl.org/vocab/vann/> .
 @base <https://w3id.org/ai-audit/infrastructure#> .
 
 
@@ -91,11 +90,11 @@ infra: a owl:Ontology ;
 
 
 ###  https://w3id.org/ep-plan#hasTraceElement
-<https://w3id.org/ep-plan#hasTraceElement> rdf:type owl:ObjectProperty ;
+<https://w3id.org/ai-audit#hasAuditBundle> rdf:type owl:ObjectProperty ;
                                            rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
                                            rdfs:range audit:AuditBundle ;
                                            rdfs:comment "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle" ;
-                                           rdfs:label "hasTraceElement" .
+                                           rdfs:label "hasAuditBundle" .
 
 
 #################################################################
