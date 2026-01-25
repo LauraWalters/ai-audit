@@ -23,6 +23,12 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Install Apache Jena (for Turtle validation)
+        run: |
+          curl -L https://archive.apache.org/dist/jena/binaries/apache-jena-4.10.0.tar.gz | tar xz
+          echo "$PWD/apache-jena-4.10.0/bin" >> $GITHUB_PATH
+
+
       - name: Download WIDOCO
         run: |
           mkdir -p tools
@@ -33,6 +39,13 @@ jobs:
           ls -lah tools/widoco.jar
           file tools/widoco.jar || true
           unzip -t tools/widoco.jar >/dev/null
+          
+      - name: Validate ontologies (Turtle syntax)
+        run: |
+          riot --validate ontologies/ai-audit-workflow.ttl
+          riot --validate ontologies/ai-audit-questions.ttl
+          riot --validate ontologies/ai-audit-infrastructure.ttl
+
 
       - name: Build documentation
         run: |
@@ -44,5 +57,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add docs/
-          git commit -m "Regenerate WIDOCO documentation" || echo "No changes"
-          git push
+          git commit -m "Regenerate WIDOCO documentation" || exit 0
+          # Integrate any upstream changes (manual pushes, other workflows)
+          git pull --rebase origin main
+          git push origin main
