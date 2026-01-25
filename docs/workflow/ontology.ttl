@@ -7,8 +7,7 @@
 @base <https://w3id.org/ai-audit#> .
 
 <https://w3id.org/ai-audit#> rdf:type owl:Ontology ;
-                              <http://purl.org/dc/terms/abstract> """This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. 
-  It supports the representation and comparison of different workflow processes."""@en ;
+                              <http://purl.org/dc/terms/abstract> "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. It supports the representation and comparison of different workflow processes."@en ;
                               <http://purl.org/dc/terms/contributor> "Fajar J. Ekaputra" ,
                                                                      "Gregor Käfer" ,
                                                                      "Marta Sabou" ,

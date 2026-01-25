@@ -9,8 +9,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#">
     <owl:Ontology rdf:about="https://w3id.org/ai-audit#">
-        <terms:abstract xml:lang="en">This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. 
-  It supports the representation and comparison of different workflow processes.</terms:abstract>
+        <terms:abstract xml:lang="en">This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. It supports the representation and comparison of different workflow processes.</terms:abstract>
         <terms:contributor>Fajar J. Ekaputra</terms:contributor>
         <terms:contributor>Gregor Käfer</terms:contributor>
         <terms:contributor>Marta Sabou</terms:contributor>

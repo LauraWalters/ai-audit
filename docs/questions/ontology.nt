@@ -9,6 +9,7 @@
 <https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/ai-audit/question#> <http://purl.org/dc/terms/title> "AuditOps – Questions Module"@en .
 <https://w3id.org/ai-audit/question#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://w3id.org/ai-audit/question#> <https://w3id.org/widoco/vocab#introduction> "This section introduces the audit question ontology and its scope. "@en .
 # 
 # 
 # #################################################################
@@ -35,6 +36,9 @@
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/widoco/vocab#introduction
+<https://w3id.org/widoco/vocab#introduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 

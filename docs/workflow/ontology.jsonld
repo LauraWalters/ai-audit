@@ -44,7 +44,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
-    "@value" : "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. \n  It supports the representation and comparison of different workflow processes."
+    "@value" : "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. It supports the representation and comparison of different workflow processes."
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Fajar J. Ekaputra"

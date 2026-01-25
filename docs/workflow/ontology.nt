@@ -1,5 +1,5 @@
 <https://w3id.org/ai-audit#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/abstract> "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. \n  It supports the representation and comparison of different workflow processes."@en .
+<https://w3id.org/ai-audit#> <http://purl.org/dc/terms/abstract> "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. It supports the representation and comparison of different workflow processes."@en .
 <https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Fajar J. Ekaputra" .
 <https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Gregor Käfer" .
 <https://w3id.org/ai-audit#> <http://purl.org/dc/terms/contributor> "Marta Sabou" .
