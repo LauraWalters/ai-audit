@@ -148,7 +148,7 @@
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "46",
+    "id" : "45",
     "type" : "owl:Class"
   }, {
     "id" : "1",
@@ -187,13 +187,13 @@
     "id" : "90",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "57",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "83",
+    "id" : "56",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "33",
@@ -205,10 +205,10 @@
     "id" : "87",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "53",
+    "id" : "81",
     "type" : "owl:Class"
   }, {
-    "id" : "81",
+    "id" : "53",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -415,7 +415,7 @@
       "IRI-based" : "Acquire",
       "undefined" : "Acquire"
     },
-    "subClasses" : [ "46", "12" ],
+    "subClasses" : [ "45", "12" ],
     "comment" : {
       "undefined" : "Service with the purpose to retrieve data from another program or application"
     },
@@ -451,7 +451,7 @@
     "comment" : {
       "undefined" : "Service to receive data from another program or application"
     },
-    "id" : "46",
+    "id" : "45",
     "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Bundle",
@@ -583,14 +583,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "57",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "83",
+    "id" : "56",
     "label" : {
       "IRI-based" : "string"
     }
@@ -598,6 +591,13 @@
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "85",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
     "label" : {
       "IRI-based" : "string"
     }
@@ -623,6 +623,15 @@
       "IRI-based" : "string"
     }
   }, {
+    "iri" : "http://purl.org/net/p-plan#Plan",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Plan"
+    },
+    "attributes" : [ "external" ],
+    "id" : "81"
+  }, {
     "iri" : "http://www.w3.org/ns/prov#Plan",
     "baseIri" : "http://www.w3.org/ns/prov",
     "instances" : 0,
@@ -632,15 +641,6 @@
     "subClasses" : [ "51" ],
     "attributes" : [ "external" ],
     "id" : "53"
-  }, {
-    "iri" : "http://purl.org/net/p-plan#Plan",
-    "baseIri" : "http://purl.org/net/p-plan",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Plan"
-    },
-    "attributes" : [ "external" ],
-    "id" : "81"
   } ],
   "property" : [ {
     "id" : "0",
@@ -683,10 +683,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "44",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "45",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "48",
     "type" : "owl:datatypeProperty"
@@ -700,7 +700,7 @@
     "id" : "55",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "56",
+    "id" : "57",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "58",
@@ -931,6 +931,20 @@
     "attributes" : [ "object" ],
     "id" : "42"
   }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasCorrespondingFetch",
+      "undefined" : "hasCorrespondingFetch"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Relation between Receive and Fetch, a Receive can have 0..N Fetch"
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasQueryLocalPath",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
     "range" : "38",
@@ -943,21 +957,7 @@
       "undefined" : "Datatype properties to link query into its local file form"
     },
     "attributes" : [ "datatype" ],
-    "id" : "44"
-  }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "12",
-    "label" : {
-      "IRI-based" : "hasCorrespondingFetch",
-      "undefined" : "hasCorrespondingFetch"
-    },
-    "domain" : "46",
-    "comment" : {
-      "undefined" : "Relation between Receive and Fetch, a Receive can have 0..N Fetch"
-    },
-    "attributes" : [ "object" ],
-    "id" : "45"
+    "id" : "46"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasMappingString",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
@@ -1001,6 +1001,20 @@
     "attributes" : [ "object", "external" ],
     "id" : "54"
   }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintType",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "hasConstraintType",
+      "undefined" : "hasConstraintType"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Datatype properties to set the type of validation"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasType",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
     "range" : "36",
@@ -1013,21 +1027,7 @@
       "undefined" : "Datatype properties to set fetch type"
     },
     "attributes" : [ "datatype" ],
-    "id" : "55"
-  }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintType",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "57",
-    "label" : {
-      "IRI-based" : "hasConstraintType",
-      "undefined" : "hasConstraintType"
-    },
-    "domain" : "50",
-    "comment" : {
-      "undefined" : "Datatype properties to set the type of validation"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "56"
+    "id" : "57"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -1045,7 +1045,7 @@
     "id" : "59"
   }, {
     "range" : "9",
-    "domain" : "46",
+    "domain" : "45",
     "attributes" : [ "object", "anonymous" ],
     "id" : "60"
   }, {
@@ -1198,7 +1198,7 @@
       "IRI-based" : "hasReceiveApiPath",
       "undefined" : "hasReceiveApiPath"
     },
-    "domain" : "46",
+    "domain" : "45",
     "comment" : {
       "undefined" : "Datatype properties to set api path where the post receive can be found"
     },
@@ -1219,23 +1219,9 @@
     "attributes" : [ "object" ],
     "id" : "80"
   }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "83",
-    "label" : {
-      "IRI-based" : "hasConstraintUriPath",
-      "undefined" : "hasConstraintUriPath"
-    },
-    "domain" : "50",
-    "comment" : {
-      "undefined" : "Datatype properties to retrieve constraint from external sources"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "82"
-  }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "85",
+    "range" : "83",
     "label" : {
       "IRI-based" : "hasJsonSchemaLocalPath",
       "undefined" : "hasJsonSchemaLocalPath"
@@ -1243,6 +1229,20 @@
     "domain" : "24",
     "comment" : {
       "undefined" : "Datatype properties to retrieve json schema from local file"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "hasConstraintUriPath",
+      "undefined" : "hasConstraintUriPath"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Datatype properties to retrieve constraint from external sources"
     },
     "attributes" : [ "datatype" ],
     "id" : "84"
