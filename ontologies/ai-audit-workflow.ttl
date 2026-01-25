@@ -6,6 +6,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
+@prefix widoco: <https://w3id.org/widoco/vocab#> .
 @base <https://w3id.org/ai-audit#>.
 
 
@@ -14,6 +15,7 @@ audit: a owl:Ontology ;
   dcterms:description "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan."@en ;
   dcterms:abstract "This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. 
   It supports the representation and comparison of different workflow processes."@en;
+  widoco:introduction "This section introduces the audit workflow ontology and its scope. "@en ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:creator "Laura Waltersdorfer" ;
   dcterms:contributor "Gregor Käfer", "Fajar J. Ekaputra", "Marta Sabou", "Tomasz Miksa";
