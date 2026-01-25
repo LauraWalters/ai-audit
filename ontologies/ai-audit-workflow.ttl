@@ -200,7 +200,7 @@ audit:paramFor a owl:ObjectProperty ;
 
 ###  https://w3id.org/ai-audit#lifecyclePhase
 audit:lifecyclePhase a owl:ObjectProperty ;
-  rdfs:domain prov:Activity, pplan:Step;
+  rdfs:domain prov:Activity;
   rdfs:range audit:LifecyclePhase .
 
 ###  https://w3id.org/ai-audit#hasScore
