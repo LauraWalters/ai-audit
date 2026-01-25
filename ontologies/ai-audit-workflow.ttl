@@ -6,14 +6,12 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
-@prefix mls:   <http://www.w3.org/ns/mls#> .
-@prefix vann:  <http://purl.org/vocab/vann/> .
 @base <https://w3id.org/ai-audit#>.
 
 
 audit: a owl:Ontology ;
   dcterms:title "AuditOps – Workflow Module"@en ;
-  dcterms:description "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan, and ML-Schema."@en ;
+  dcterms:description "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan."@en ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:creator "Laura Waltersdorfer" ;
   dcterms:contributor "Gregor Käfer", "Fajar J. Ekaputra", "Marta Sabou", "Tomasz Miksa";
