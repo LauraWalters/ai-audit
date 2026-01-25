@@ -1,0 +1,165 @@
+source;question;category;source_category
+RAINS;Who is the creator/supplier of this AI system?;wh_who; system
+RAINS;What are the intended use cases or domains of this AI system?;wh_general; system
+RAINS;Who are the intended users of this AI system?;wh_who; system
+RAINS;Who defined the intended use cases and users of this AI system?;wh_who; system
+RAINS;What are the compliance requirements of this AI system?;wh_general; system
+RAINS;Who defined the compliance requirements of this AI system?;wh_who; system
+RAINS;Who produced the dataset design specification and on behalf of whom or which organisation?;wh_who; dataset
+RAINS;Who realized the dataset and on behalf on whom?;wh_who; dataset
+RAINS;Was the dataset realization different from its design specification and if yes, why?;yesno_followup; dataset
+RAINS;What is the dataset to build the ML model?;wh_general; dataset
+RAINS;What is the version or date of the dataset?;wh_general; dataset
+RAINS;Was the dataset created specifically for this AI system or was it reused?;yesno_reuse; dataset
+RAINS;If the dataset was reused, who is its creator or manager?;wh_general; dataset
+RAINS;What are the intended use cases of dataset?;wh_general; dataset
+RAINS;What are incorrect use cases for dataset?;wh_general; dataset
+RAINS;What is the funding associated for dataset?;wh_general; dataset
+RAINS;What are the licenses associated with dataset?;wh_general; dataset
+RAINS;What are the limitations of the dataset?;wh_general; dataset
+RAINS;What are the risks, including biases of the dataset?;wh_general; dataset
+RAINS;What risk and bias software was used to analyse the dataset?;wh_general; dataset
+RAINS;What are the mitigation strategies to address the risks and biases of the dataset?;wh_general; dataset
+RAINS;What are the risks, including biases estimates before and after mitigation of the dataset?;wh_general; dataset
+RAINS;What are the trade-offs between risks, including biases and the effects of using the dataset on humans or others?;wh_general; dataset
+RAINS;Who collected data contained in the dataset?;wh_who; dataset
+RAINS;What were the data collection methods and timeframes?;wh_general; dataset
+RAINS;What data collection software was used?;wh_general; dataset
+RAINS;What considerations were applied to collection of data relating to people?;wh_general; dataset
+RAINS;Who pre-processed the data in the dataset?;wh_who; dataset
+RAINS;What were the methods for pre-processing the dataset?;wh_general; dataset
+RAINS;What software was used for pre-processing the dataset?;wh_general; dataset
+RAINS;What characteristics of data set, including description of instances and errors/noise?;wh_general; dataset
+RAINS;What is the link to external sources about dataset or the raw dataset?;wh_general; dataset
+RAINS;Who performed merging/and or splitting of the dataset?;wh_who; dataset
+RAINS;How was the dataset split, including train-validate- evaluate ratio and the class representation percentage in each subset?;wh_general; dataset
+RAINS;What is the training subset of the dataset?;wh_general; dataset
+RAINS;What is the validation subset of the dataset?;wh_general; dataset
+RAINS;What is the evaluation subset of the dataset?;wh_general; dataset
+RAINS;Who produced the supporting infrastructure and on behalf of whom or which organisation?;wh_who; infrastructure
+RAINS;Who realized the supporting infrastructure and on behalf on whom?;wh_who; infrastructure
+RAINS;Was the supporting infrastructure different from its design specification and if yes, why?;yesno_followup; infrastructure
+RAINS;What is the supporting infrastructure, i.e., the non-core AI components of this system?;wh_general; infrastructure
+RAINS;Was the supporting infrastructure created specifically for this AI system or was it reused?;yesno_reuse; infrastructure
+RAINS;If the supporting infrastructure was reused, who is its creator or manager?;wh_general; infrastructure
+RAINS;What is the version or date of the supporting infrastructure?;wh_general; infrastructure
+RAINS;What are the limitations of the supporting infrastructure?;wh_general; infrastructure
+RAINS;What are the risks, including biases of the supporting infrastructure (e.g., sensors tuned to reconize different skin colors)?;wh_general; infrastructure
+RAINS;What risk and bias software was used to analyse the supporting infrastructure?;wh_general; infrastructure
+RAINS;What are the mitigation strategies to address the risks and biases of the supporting infrastructure?;wh_general; infrastructure
+RAINS;What are the risks, including bias, estimates of the supporting infrastructure before and after mitigation?;wh_general; infrastructure
+RAINS;What are the human oversight and human-in-control mechanisms of the AI system?;wh_general; infrastructure
+RAINS;What are the security mechanisms of this AI system?;wh_general;infrastructure
+RAINS;What are the audit mechanisms of this AI system?;wh_general;infrastructure
+RAINS;What are the explanation mechanisms provided by this AI system?;wh_general;infrastructure
+RAINS;Who produced the ML design specification and on behalf of whom or which organisation?;wh_who;ml
+RAINS;Who realized ML model and on behalf on whom or which organisation?;wh_who;ml
+RAINS;Was the ML realization different from its design specification and if yes, why?;yesno_followup;ml
+RAINS;What is the ML model?;wh_general;ml       
+RAINS;What is the version or date of the ML model?;wh_general;ml
+RAINS;Was the ML model created specifically for this AI system or was it reused?;yesno_reuse;ml
+RAINS; If the ML model was reused, who is its creator or manager?;wh_general;ml
+RAINS;What are the intended use cases of ML model?;wh_general;ml
+RAINS;What are the incorrect use cases for the ML model?;wh_general;ml
+RAINS; What is the funding associated for ML model?;wh_general;ml
+RAINS;What are the licenses associated with the ML model?;wh_general;ml
+RAINS;What are the limitations of the ML model?;wh_general;ml
+RAINS;What are the risks, including biases of the ML model?;wh_general;ml
+RAINS;What are the risks and bias software was used to analyse the ML model?;wh_general;ml
+RAINS;What are the mitigation strategies to address the risks and biases of the ML model?;wh_general;ml
+RAINS;What are the risks, including biases estimates before and after mitigation of the ML model?;wh_general;ml
+RAINS;What are the trade-offs between risks, including biases and the effects of using the ML model on humans or others?;wh_general;ml
+RAINS;What are the characteristics of the ML model relating to emphasized or excluded features, decision thresholds and basis of prioritisation as well as its inputs and outputs and programming methods?;wh_general;ml
+RAINS;What algorithm is used by ML model?;wh_general;ml
+RAINS;What are the ML model's parameters and hyperparameters?;wh_general;ml
+RAINS;What are the sources of additional information and citation details describing the ML model?;wh_general;ml
+RAINS;Who produced the ML evaluation specification and on behalf of whom or which organisation?;wh_who;ml
+RAINS;Who evaluated the ML model and on behalf on whom or which organisation?;wh_who;ml
+RAINS;Was the ML model evaluation different from its design specification and if yes why?;yesno_followup;ml
+RAINS;What was the evaluation procedure, including evaluation factors and scenarios?;wh_general;ml
+RAINS;How were the evaluation results measured?;wh_general;ml
+RAINS;What are the evaluation results?;wh_general;ml
+RAINS;What are the changes in performance metric values before and after mitigation of risks and biases?;wh_general;ml
+RAINS;Who produced the system evaluation specification and on behalf of whom or which organisation?;wh_who;evaluation
+RAINS;Who evaluated system and on behalf on whom?;wh_who;evaluation
+RAINS;Was the system evaluation different from its design specification and if yes why?;yesno_followup;evaluation
+RAINS;Was the system evaluated by a third party and if yes by whom?;yesno_followup;evaluation
+RAINS;What was the evaluation procedure, including evaluation factors, domains and applications, key performance indicators tests and non-functional tests?;wh_general;evaluation
+RAINS;How were the evaluation results measured?;wh_general;evaluation
+RAINS;What are the evaluation results with respect to each evaluation factor?;wh_general;evaluation
+RAINS;What was the result of certification process?;wh_general;certificate
+RAINS;Who granted the certificate?;wh_who;certificate
+RAINS;Who produced the deployment guidelines for installing the AI system and integrating it (e.g within a larger IT ecosystem) and on behalf of whom or which organisation?;wh_who;guidelines
+RAINS;What is the guidance for installing this ai system and integrating it (e.g within a larger IT ecosystem)?;wh_general;guidelines
+RAINS;Who produced the deployment guidelines for training users to use and maintain this AI system?;wh_who;guidelines
+RAINS;What is the guidancefor training users to use and maintain this AI system?;wh_general;guidelines
+RAINS;Who produced the operational guidelines for how to use this AI system and on behalf of whom or which organisation?;wh_who;guidelines
+RAINS;What is the guidance for using this AI system?;wh_general;guidelines
+RAINS;Who produced the operational guidelines for how to maintain this AI system and on behalf of whom or which organisation?;wh_who;guidelines
+RAINS;What is the guidance for maintenance of this AI system?;wh_general;guidelines
+RAINS;What hard and soft laws does the dataset comply with?;wh_general;compliance
+RAINS;What hard and soft laws does the ML model comply with?;wh_general;compliance
+RAINS;What hard and soft laws does the ML model evaluation comply with?;wh_general;compliance
+RAINS;What hard and soft laws does the supporting infrastructure comply with?;wh_general;compliance
+RAINS;What hard and soft laws does the system evaluation comply with?;wh_general;compliance
+RAINS;What hard and soft laws does the deployment guidelines for installing and integrating this AI system comply with?;wh_general;compliance
+RAINS;What hard and soft laws does the deployment guidelines for training users the users and maintainers of this AI system comply with?;wh_general;compliance
+RAINS;What hard and soft laws does the operational guidelines for how to use this AI system comply with?;wh_general;compliance
+RAINS;What hard and soft laws does the operational guidelines for how to maintain this AI system comply with?;wh_general;compliance
+RAINS;Who confirmed the fitness of the dataset for the use cases indciated by the AI system's purpose specification?;wh_who;approval
+RAINS;Who assured the fitness of the dataset to the hard and soft laws as indicated by the AI system compliance requirements?;wh_who;approval
+RAINS;Who approved the dataset?;wh_who;approval
+RAINS;Who confirmed the fitness of the ML model for the use cases indicated by the AI system's purpose specification?;wh_who;approval
+RAINS;Who assured the compliance of the ML model to the hard and soft laws as indicated by the AI system compliance requirements?;wh_who;approval
+RAINS;Who approved the ML model?;wh_who;approval
+RAINS;Who confirmed the fitness of the ML evaluation for the use cases indicated by the AI system's purpose specification?;wh_who;approval
+RAINS;Who assured the compliance of the ML model evaluation to the hard and soft laws as indicated by the AI system compliance requirements?;wh_who;approval
+RAINS;Who approved the ML model evaluation?;wh_who;approval
+RAINS;Who confirmed the fitness of the supporting infrastructure for the use cases indicated by the AI system's purpose specification?;wh_who;approval
+RAINS;Who assured the compliance of the supporting infrastructure to the hard and soft laws as indicated by the AI system compliance requirements?;wh_who;approval
+RAINS;Who approved the supporting infrastructure?;wh_who;approval
+RAINS;Who confirmed the fitness of the system evaluation for the use cases indicated by the AI system's purpose specification?;wh_who;approval
+RAINS;Who assured the compliance of the system evaluation to the hard and soft laws as indicated by the AI system compliance requirements?;wh_who;approval
+RAINS;Who approved the system evaluation?;wh_who;approval
+RAINS;Who assured the compliance of the deployment guidelines to the hard and soft laws as indicated by the AI system compliance requirements?;wh_who;approval
+RAINS;Who approved the deployment guidelines?;wh_who;approval
+RAINS;Who assured the compliance of the operational guidelines to the hard and soft laws as indicated by the AI system compliance requirements?;wh_who;approval
+RAINS;Who approved the operational guidelines?;wh_who;approval
+RAINS;Who approved the implementation of the whole AI system for deployment?;wh_who;approval
+FIDES;Which is the development framework?;wh_general;development
+FIDES;Which is the development framework’s version?;wh_general;development
+FIDES;Which is the Operating System (OS) of the development environment?;wh_general;development
+FIDES;Who developed the model and which is their contact email?;wh_who;development
+FIDES;When was the model developed?;wh_time_place;development
+FIDES;Where is the source code stored? (Repository);wh_time_place;development
+FIDES;Where is the Docker container that could reproduce the model stored and its associated commit? (if any);wh_time_place;development
+FIDES;Where is the script that generated the model stored and its associated commit?;wh_time_place;development
+FIDES;Where is the model stored and its associated commit?;wh_time_place;model
+FIDES;Which is the base algorithm of the ML-based model?;wh_general;model
+FIDES;Which is the package that implements the algorithm?;wh_general;model
+FIDES;Which is the version of the package?;wh_general;model
+FIDES;Which are the hyperparameter values of the ML-based model?;wh_general;model
+FIDES;Which are the optimal values for each parameter of the algorithm?;wh_general;model
+FIDES;Which is the validation method?;wh_general;model
+FIDES;Which is the validation metric used and its value?;wh_general;model
+FIDES;Which is the objective of the model?;wh_general;model
+FIDES;In case of classification problems, which are the values of the type class?;wh_general;model
+FIDES;Where is the data stored?;wh_time_place;dataset
+FIDES;(If the data is tracked with version control) Which is the framework used and the commit for version controlling of a specific set of data?;wh_general;dataset
+FIDES;Which is the number of observations used for the training of a given model?;wh_general;model
+FIDES;When was the first data point collected within a given model’s training data?;wh_time_place;dataset
+FIDES;When was the last data point collected within a given model’s training data?;wh_time_place;dataset
+FIDES;Which are the names of the training data variables?;wh_general;dataset
+FIDES;Which are the names of the training data predictor variables?;wh_general;dataset
+FIDES;Which is the name of the training data response variable?;wh_general;dataset
+FIDES;Which is the frequency and quality of a given model training data?;wh_general;dataset
+FIDES;How is training data pre-processed?;wh_general;dataset
+FIDES;Which is the OS of the deployment server?;wh_general;deployment
+FIDES;How is the model triggered, on event or under request?;wh_general;deployment
+FIDES;Where are the estimations (derived from the ML-based model executions) stored?;wh_time_place;deployment
+FIDES;Is the error between the real and predicted values being stored?;yesno_question;deployment
+FIDES;When was the forecast made?;wh_time_place;execution
+FIDES;For what point in time is the forecast valid?;wh_general;execution
+FIDES;What is the forecast value?;wh_general;execution
+FIDES;What is the forecast’s error metric?;wh_general;execution
+FIDES;What is the forecast’s error value?;wh_general;execution
