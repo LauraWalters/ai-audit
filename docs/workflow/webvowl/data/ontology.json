@@ -28,12 +28,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Fajar J. Ekaputra",
+        "value" : "Marta Sabou",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Gregor Käfer",
+        "value" : "Fajar J. Ekaputra",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -43,20 +43,8 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Marta Sabou",
+        "value" : "Gregor Käfer",
         "type" : "label"
-      } ],
-      "preferredNamespacePrefix" : [ {
-        "identifier" : "preferredNamespacePrefix",
-        "language" : "undefined",
-        "value" : "audit",
-        "type" : "label"
-      } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/ai-audit/",
-        "type" : "iri"
       } ],
       "abstract" : [ {
         "identifier" : "abstract",
@@ -140,10 +128,10 @@
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
     "id" : "43",
@@ -415,6 +403,18 @@
     "id" : "14",
     "superClasses" : [ "13" ]
   }, {
+    "iri" : "https://w3id.org/ai-audit#HyperparameterConfiguration",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HyperparameterConfiguration",
+      "undefined" : "Hyperparameter Configuration"
+    },
+    "comment" : {
+      "undefined" : "A reusable collection of hyperparameter settings used in a training activity."
+    },
+    "id" : "10"
+  }, {
     "iri" : "https://w3id.org/ai-audit#AuditBundle",
     "baseIri" : "https://w3id.org/ai-audit",
     "instances" : 0,
@@ -427,18 +427,6 @@
     },
     "id" : "30",
     "superClasses" : [ "31" ]
-  }, {
-    "iri" : "https://w3id.org/ai-audit#HyperparameterConfiguration",
-    "baseIri" : "https://w3id.org/ai-audit",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "HyperparameterConfiguration",
-      "undefined" : "Hyperparameter Configuration"
-    },
-    "comment" : {
-      "undefined" : "A reusable collection of hyperparameter settings used in a training activity."
-    },
-    "id" : "10"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
