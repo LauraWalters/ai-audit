@@ -137,6 +137,13 @@
         "undefined" : "Aggregation Entity"
       }
     }, {
+      "iri" : "https://w3id.org/ai-audit/question#Attribute_Entity",
+      "baseIri" : "https://w3id.org/ai-audit/question",
+      "labels" : {
+        "IRI-based" : "Attribute_Entity",
+        "undefined" : "Attribute Entity"
+      }
+    }, {
       "iri" : "https://w3id.org/ai-audit/question#Temporal",
       "baseIri" : "https://w3id.org/ai-audit/question",
       "labels" : {
@@ -149,13 +156,6 @@
       "labels" : {
         "IRI-based" : "Accountability",
         "undefined" : "Accountability"
-      }
-    }, {
-      "iri" : "https://w3id.org/ai-audit/question#Attribute_Entity",
-      "baseIri" : "https://w3id.org/ai-audit/question",
-      "labels" : {
-        "IRI-based" : "Attribute_Entity",
-        "undefined" : "Attribute Entity"
       }
     }, {
       "iri" : "https://w3id.org/ai-audit/question#Lineage_Input",

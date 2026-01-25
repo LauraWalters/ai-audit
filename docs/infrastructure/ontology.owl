@@ -6,8 +6,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="https://w3id.org/widoco/vocab#">
     <owl:Ontology rdf:about="https://w3id.org/ai-audit/infrastructure#">
+        <terms:abstract xml:lang="en">   This ontology describes the infrastructure that supports the execution and
+  management of audits, including systems, services, data sources, and artifacts.  </terms:abstract>
         <terms:contributor>Marta Sabou</terms:contributor>
         <terms:contributor>Tomasz Miksa</terms:contributor>
         <terms:creator>Fajar J. Ekaputra</terms:creator>
@@ -17,6 +20,8 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">AuditOps – Audit Infrastructure Module</terms:title>
         <owl:versionInfo>1.0.0</owl:versionInfo>
+        <vocab:introduction xml:lang="en">
+  This section introduces the audit infrastructure ontology and its scope.  </vocab:introduction>
     </owl:Ontology>
     
 
@@ -30,6 +35,13 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
     
 
 
@@ -65,6 +77,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- https://w3id.org/widoco/vocab#introduction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#introduction"/>
     
 
 

@@ -1,4 +1,7 @@
 [ {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -85,6 +88,10 @@
 }, {
   "@id" : "https://w3id.org/ai-audit/infrastructure#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "   This ontology describes the infrastructure that supports the execution and\n  management of audits, including systems, services, data sources, and artifacts.  "
+  } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Marta Sabou"
   }, {
@@ -110,6 +117,10 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.0.0"
+  } ],
+  "https://w3id.org/widoco/vocab#introduction" : [ {
+    "@language" : "en",
+    "@value" : "\n  This section introduces the audit infrastructure ontology and its scope.  "
   } ]
 }, {
   "@id" : "https://w3id.org/ai-audit/infrastructure#Acquire",
@@ -717,6 +728,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
+}, {
+  "@id" : "https://w3id.org/widoco/vocab#introduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "urn:absolute:h/hasQueryUriPath",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
