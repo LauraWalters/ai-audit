@@ -29,7 +29,9 @@ ucplan:PermitNERPlan a pplan:Plan.
 ucplan:ObarisSystem a audit:AuditableAISystem.
 
 uc:isNull       a owl:DatatypeProperty ; rdfs:domain audit:ResultElement ; rdfs:range xsd:boolean .
-uc:changeStatus a owl:DatatypeProperty ; rdfs:domain audit:ResultElement ; rdfs:range xsd:string .
+uc:changeStatus a owl:ObjectProperty ;
+  rdfs:domain audit:ResultElement ;
+  rdfs:range  uc:ChangeStatus .
 uc:Succeeded a audit:ExecutionStatus .
 uc:Failed    a audit:ExecutionStatus .
 
