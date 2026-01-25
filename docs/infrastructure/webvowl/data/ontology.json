@@ -23,12 +23,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Fajar J. Ekaputra",
+        "value" : "Gregor Käfer, Laura Waltersdorfer",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Gregor Käfer, Laura Waltersdorfer",
+        "value" : "Fajar J. Ekaputra",
         "type" : "label"
       } ],
       "contributor" : [ {
@@ -136,7 +136,7 @@
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "46",
+    "id" : "45",
     "type" : "owl:Class"
   }, {
     "id" : "1",
@@ -403,7 +403,7 @@
       "IRI-based" : "Acquire",
       "undefined" : "Acquire"
     },
-    "subClasses" : [ "46", "12" ],
+    "subClasses" : [ "45", "12" ],
     "comment" : {
       "undefined" : "Service with the purpose to retrieve data from another program or application"
     },
@@ -439,7 +439,7 @@
     "comment" : {
       "undefined" : "Service to receive data from another program or application"
     },
-    "id" : "46",
+    "id" : "45",
     "superClasses" : [ "10" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Bundle",
@@ -671,10 +671,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "44",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "45",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "48",
     "type" : "owl:datatypeProperty"
@@ -789,7 +789,7 @@
     "comment" : {
       "undefined" : "Datatype value to get query value from external sources"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "3"
   }, {
     "iri" : "h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath",
@@ -803,7 +803,7 @@
     "comment" : {
       "undefined" : "Datatype properties to set where the query can be found"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "6"
   }, {
     "range" : "9",
@@ -919,6 +919,20 @@
     "attributes" : [ "object" ],
     "id" : "42"
   }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasCorrespondingFetch",
+      "undefined" : "hasCorrespondingFetch"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Relation between Receive and Fetch, a Receive can have 0..N Fetch"
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasQueryLocalPath",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
     "range" : "38",
@@ -931,21 +945,7 @@
       "undefined" : "Datatype properties to link query into its local file form"
     },
     "attributes" : [ "datatype" ],
-    "id" : "44"
-  }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "12",
-    "label" : {
-      "IRI-based" : "hasCorrespondingFetch",
-      "undefined" : "hasCorrespondingFetch"
-    },
-    "domain" : "46",
-    "comment" : {
-      "undefined" : "Relation between Receive and Fetch, a Receive can have 0..N Fetch"
-    },
-    "attributes" : [ "object" ],
-    "id" : "45"
+    "id" : "46"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasMappingString",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
@@ -1010,7 +1010,7 @@
       "IRI-based" : "topDataProperty"
     },
     "domain" : "15",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "57"
   }, {
     "range" : "10",
@@ -1019,7 +1019,7 @@
     "id" : "58"
   }, {
     "range" : "10",
-    "domain" : "46",
+    "domain" : "45",
     "attributes" : [ "object", "anonymous" ],
     "id" : "59"
   }, {
@@ -1172,7 +1172,7 @@
       "IRI-based" : "hasReceiveApiPath",
       "undefined" : "hasReceiveApiPath"
     },
-    "domain" : "46",
+    "domain" : "45",
     "comment" : {
       "undefined" : "Datatype properties to set api path where the post receive can be found"
     },
@@ -1288,7 +1288,7 @@
     "comment" : {
       "undefined" : "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "91"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintString",
