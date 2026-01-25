@@ -16,6 +16,8 @@
                               <http://purl.org/dc/terms/description> "Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan."@en ;
                               <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                               <http://purl.org/dc/terms/title> "AuditOps – Workflow Module"@en ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "audit" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/ai-audit/> ;
                               owl:versionInfo "1.0.0" ;
                               <https://w3id.org/widoco/vocab#introduction> "This section introduces the audit workflow ontology and its scope. "@en .
 
@@ -45,6 +47,14 @@
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/widoco/vocab#introduction

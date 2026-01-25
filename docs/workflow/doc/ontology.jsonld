@@ -28,6 +28,12 @@
     "@id" : "http://www.w3.org/ns/prov#Plan"
   } ]
 }, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/ns/prov#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -68,6 +74,12 @@
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
     "@value" : "AuditOps – Workflow Module"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "audit"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/ai-audit/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.0.0"

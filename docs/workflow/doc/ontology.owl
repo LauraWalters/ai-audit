@@ -6,6 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#">
     <owl:Ontology rdf:about="https://w3id.org/ai-audit#">
@@ -18,6 +19,8 @@
         <terms:description xml:lang="en">Core vocabulary for representing auditable AI system workflows and runtime audit evidence (activities, entities, bundles). Reuses PROV-O, P-Plan.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">AuditOps – Workflow Module</terms:title>
+        <vann:preferredNamespacePrefix>audit</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/ai-audit/"/>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <vocab:introduction xml:lang="en">This section introduces the audit workflow ontology and its scope. </vocab:introduction>
     </owl:Ontology>
@@ -75,6 +78,20 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
