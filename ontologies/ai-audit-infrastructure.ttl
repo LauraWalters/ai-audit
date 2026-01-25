@@ -7,6 +7,7 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix widoco: <https://w3id.org/widoco/vocab#> .
 @base <https://w3id.org/ai-audit/infrastructure#> .
 
@@ -21,7 +22,9 @@ infra: a owl:Ontology ;
   dcterms:creator "Gregor Käfer, Laura Waltersdorfer","Fajar J. Ekaputra"  ;
   dcterms:contributor "Marta Sabou", "Tomasz Miksa";
   dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
-  dcterms:description "An ontology to support AI auditability".
+  dcterms:description "An ontology to support AI auditability";
+  vann:preferredNamespacePrefix "infra" ;
+  vann:preferredNamespaceUri <https://w3id.org/ai-audit/infrastructure/> .
 
 
 #################################################################
