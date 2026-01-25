@@ -380,9 +380,10 @@ rdfs:label "pruned batch 42 location".
 uc:B42_e1 a audit:ResultElement ;
 audit:element uc:operator ; prov:value "Muster Mann" ;
 uc:isNull "false"^^xsd:boolean ;
+audit:hasScore [
 a audit:Score ;
     audit:scoreType audit:Confidence ;
-    audit:scoreValue  "0.81"^^xsd:double ;
+    audit:scoreValue  "0.81"^^xsd:double ] ;
 uc:changeStatus uc:Initial .
   
 uc:B42_e2 a audit:ResultElement ;
