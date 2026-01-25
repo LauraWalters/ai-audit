@@ -23,35 +23,35 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Gregor Käfer, Laura Waltersdorfer",
+        "value" : "Fajar J. Ekaputra",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Fajar J. Ekaputra",
+        "value" : "Gregor Käfer, Laura Waltersdorfer",
         "type" : "label"
       } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Marta Sabou",
+        "value" : "Tomasz Miksa",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Tomasz Miksa",
-        "type" : "label"
-      } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "   This ontology describes the infrastructure that supports the execution and\n  management of audits, including systems, services, data sources, and artifacts.  ",
+        "value" : "Marta Sabou",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "   This ontology describes the infrastructure that supports the execution and\n  management of audits, including systems, services, data sources, and artifacts.  ",
         "type" : "label"
       } ],
       "title" : [ {
@@ -187,7 +187,7 @@
     "id" : "90",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "56",
+    "id" : "57",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "85",
@@ -583,7 +583,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "56",
+    "id" : "57",
     "label" : {
       "IRI-based" : "string"
     }
@@ -700,7 +700,7 @@
     "id" : "55",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "57",
+    "id" : "56",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "58",
@@ -787,7 +787,7 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
     "iri" : "urn:absolute:h/hasQueryUriPath",
@@ -820,17 +820,17 @@
   }, {
     "range" : "8",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
     "range" : "8",
     "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "14"
   }, {
     "range" : "12",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasMappingUriPath",
@@ -998,22 +998,8 @@
     "comment" : {
       "undefined" : "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "54"
-  }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintType",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "56",
-    "label" : {
-      "IRI-based" : "hasConstraintType",
-      "undefined" : "hasConstraintType"
-    },
-    "domain" : "50",
-    "comment" : {
-      "undefined" : "Datatype properties to set the type of validation"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "55"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasType",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
@@ -1027,7 +1013,21 @@
       "undefined" : "Datatype properties to set fetch type"
     },
     "attributes" : [ "datatype" ],
-    "id" : "57"
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintType",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasConstraintType",
+      "undefined" : "hasConstraintType"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Datatype properties to set the type of validation"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "56"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -1041,12 +1041,12 @@
   }, {
     "range" : "9",
     "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "59"
   }, {
     "range" : "9",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "60"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasURI",
@@ -1065,17 +1065,17 @@
   }, {
     "range" : "53",
     "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "62"
   }, {
     "range" : "1",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "63"
   }, {
     "range" : "4",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "65"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#type",
@@ -1094,17 +1094,17 @@
   }, {
     "range" : "52",
     "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "68"
   }, {
     "range" : "64",
     "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "69"
   }, {
     "range" : "64",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "70"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasBackupTimer",
