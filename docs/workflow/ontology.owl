@@ -6,7 +6,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="https://w3id.org/widoco/vocab#">
     <owl:Ontology rdf:about="https://w3id.org/ai-audit#">
         <terms:abstract xml:lang="en">This ontology describes concepts for AI workflows to model the sequence of activities, roles, and dependencies involved for conducting audits. 
   It supports the representation and comparison of different workflow processes.</terms:abstract>
@@ -19,6 +20,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">AuditOps – Workflow Module</terms:title>
         <owl:versionInfo>1.0.0</owl:versionInfo>
+        <vocab:introduction xml:lang="en">This section introduces the audit workflow ontology and its scope. </vocab:introduction>
     </owl:Ontology>
     
 
@@ -74,6 +76,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- https://w3id.org/widoco/vocab#introduction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#introduction"/>
     
 
 

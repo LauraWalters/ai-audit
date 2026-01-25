@@ -73,7 +73,7 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "11",
@@ -139,7 +139,7 @@
     "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "51",
@@ -187,13 +187,13 @@
     "id" : "90",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "57",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "85",
+    "id" : "56",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "33",
@@ -212,19 +212,6 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#AuditBoxService",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AuditBoxService",
-      "undefined" : "AuditboxService"
-    },
-    "subClasses" : [ "9", "4" ],
-    "comment" : {
-      "undefined" : "Service inside a program or application"
-    },
-    "id" : "8"
-  }, {
     "iri" : "https://w3id.org/ai-audit#AuditableAISystem",
     "baseIri" : "https://w3id.org/ai-audit",
     "instances" : 0,
@@ -236,7 +223,20 @@
       "en" : "A software system (or deployed AI service) for which audit evidence (traces) is collected."
     },
     "attributes" : [ "external" ],
-    "id" : "10"
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#AuditBoxService",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuditBoxService",
+      "undefined" : "AuditboxService"
+    },
+    "subClasses" : [ "10", "4" ],
+    "comment" : {
+      "undefined" : "Service inside a program or application"
+    },
+    "id" : "9"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#TimerFetch",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
@@ -294,7 +294,7 @@
       "undefined" : "Service to query data from a database"
     },
     "id" : "4",
-    "superClasses" : [ "8" ]
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -419,8 +419,8 @@
     "comment" : {
       "undefined" : "Service with the purpose to retrieve data from another program or application"
     },
-    "id" : "9",
-    "superClasses" : [ "8" ]
+    "id" : "10",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://purl.org/net/p-plan#Step",
     "baseIri" : "http://purl.org/net/p-plan",
@@ -452,7 +452,7 @@
       "undefined" : "Service to receive data from another program or application"
     },
     "id" : "45",
-    "superClasses" : [ "9" ]
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Bundle",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -502,7 +502,7 @@
       "undefined" : "Service to get data from another program or application"
     },
     "id" : "12",
-    "superClasses" : [ "9" ]
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#TransformationFunction",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
@@ -583,14 +583,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "57",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "85",
+    "id" : "56",
     "label" : {
       "IRI-based" : "string"
     }
@@ -598,6 +591,13 @@
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "83",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
     "label" : {
       "IRI-based" : "string"
     }
@@ -700,7 +700,7 @@
     "id" : "55",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "56",
+    "id" : "57",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "58",
@@ -818,13 +818,13 @@
     "attributes" : [ "datatype", "external" ],
     "id" : "6"
   }, {
-    "range" : "8",
+    "range" : "9",
     "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
-    "range" : "8",
-    "domain" : "9",
+    "range" : "9",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
     "id" : "14"
   }, {
@@ -882,7 +882,7 @@
       "IRI-based" : "hasBackupType",
       "undefined" : "hasBackupType"
     },
-    "domain" : "10",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Datatype property to set the type of the system backup"
     },
@@ -910,7 +910,7 @@
       "IRI-based" : "hasTransformationFunction",
       "undefined" : "hasTransformationFunction"
     },
-    "domain" : "9",
+    "domain" : "10",
     "comment" : {
       "undefined" : "Relation between Acquire and TransformationFunction, an Acquire can have 1..1 TransformationFunction"
     },
@@ -924,7 +924,7 @@
       "IRI-based" : "hasPlan",
       "undefined" : "hasPlan"
     },
-    "domain" : "10",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Relation between Auditable AI System and Plan, a System can have 1..N Plan"
     },
@@ -980,7 +980,7 @@
       "IRI-based" : "hasValidationFunction",
       "undefined" : "hasValidationFunction"
     },
-    "domain" : "9",
+    "domain" : "10",
     "comment" : {
       "undefined" : "Relation between Acquire and Validation, an Acquire can have 0..1 Validation"
     },
@@ -994,12 +994,26 @@
       "IRI-based" : "hasAuditBundle",
       "undefined" : "hasAuditBundle"
     },
-    "domain" : "10",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle"
     },
     "attributes" : [ "object", "external" ],
     "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintType",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "hasConstraintType",
+      "undefined" : "hasConstraintType"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Datatype properties to set the type of validation"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasType",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
@@ -1013,21 +1027,7 @@
       "undefined" : "Datatype properties to set fetch type"
     },
     "attributes" : [ "datatype" ],
-    "id" : "55"
-  }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintType",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "57",
-    "label" : {
-      "IRI-based" : "hasConstraintType",
-      "undefined" : "hasConstraintType"
-    },
-    "domain" : "50",
-    "comment" : {
-      "undefined" : "Datatype properties to set the type of validation"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "56"
+    "id" : "57"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -1039,12 +1039,12 @@
     "attributes" : [ "datatype", "external" ],
     "id" : "58"
   }, {
-    "range" : "9",
+    "range" : "10",
     "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
     "id" : "59"
   }, {
-    "range" : "9",
+    "range" : "10",
     "domain" : "45",
     "attributes" : [ "anonymous", "object" ],
     "id" : "60"
@@ -1114,7 +1114,7 @@
       "IRI-based" : "hasBackupTimer",
       "undefined" : "hasBackupTimer"
     },
-    "domain" : "10",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Datatype properties to set a timer for system backup"
     },
@@ -1170,7 +1170,7 @@
       "IRI-based" : "isBasedOnStep",
       "undefined" : "isBasedOnStep"
     },
-    "domain" : "9",
+    "domain" : "10",
     "comment" : {
       "undefined" : "Relation between Acquire and Step, an Acquire correspond to 1..1 Step"
     },
@@ -1212,30 +1212,16 @@
       "IRI-based" : "hasCorrespondingPlan",
       "undefined" : "hasCorrespondingPlan"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "undefined" : "Relation between Service and Plan, a Service can have 1..1 Plan"
     },
     "attributes" : [ "object" ],
     "id" : "80"
   }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "83",
-    "label" : {
-      "IRI-based" : "hasJsonSchemaLocalPath",
-      "undefined" : "hasJsonSchemaLocalPath"
-    },
-    "domain" : "24",
-    "comment" : {
-      "undefined" : "Datatype properties to retrieve json schema from local file"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "82"
-  }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "85",
+    "range" : "83",
     "label" : {
       "IRI-based" : "hasConstraintUriPath",
       "undefined" : "hasConstraintUriPath"
@@ -1243,6 +1229,20 @@
     "domain" : "50",
     "comment" : {
       "undefined" : "Datatype properties to retrieve constraint from external sources"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "hasJsonSchemaLocalPath",
+      "undefined" : "hasJsonSchemaLocalPath"
+    },
+    "domain" : "24",
+    "comment" : {
+      "undefined" : "Datatype properties to retrieve json schema from local file"
     },
     "attributes" : [ "datatype" ],
     "id" : "84"
@@ -1282,7 +1282,7 @@
       "IRI-based" : "hasSourceType",
       "undefined" : "hasSourceType"
     },
-    "domain" : "9",
+    "domain" : "10",
     "comment" : {
       "undefined" : "Datatype properties to set what type of data can be expected for the post api"
     },
@@ -1291,12 +1291,12 @@
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasService",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "8",
+    "range" : "9",
     "label" : {
       "IRI-based" : "hasService",
       "undefined" : "hasService"
     },
-    "domain" : "10",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Relation between Auditable AI System and Service, a System can have 1..N Service"
     },
