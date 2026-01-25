@@ -11,6 +11,8 @@
 : a owl:Ontology ;
   dcterms:title "AuditOps – Questions Module"@en ;
   dcterms:description "Vocabulary for representing audit questions, their types, and mappings to workflow steps and trace templates. "@en ;
+  dcterms:abstract "This ontology describes audit questions and their relationships to audit criteria, and evidence. 
+  It supports the structured formulation and reuse of questions across different audit contexts."; @en
   dcterms:creator "Laura Waltersdorfer" ;
   dcterms:contributor "Gregor Käfer", "Fajar J. Ekaputra", "Marta Sabou", "Tomasz Miksa";
   dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
