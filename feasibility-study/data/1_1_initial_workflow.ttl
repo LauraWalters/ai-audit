@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix audit: <https://w3id.org/ai-audit#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix infra: <https://w3id.org/ai-audit/infrastructure#> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix ucplan: <https://example.org/uc/permit-ner/plan/> .
