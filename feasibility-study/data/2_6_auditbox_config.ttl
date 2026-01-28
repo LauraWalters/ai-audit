@@ -4,6 +4,7 @@
 @prefix infra: <https://w3id.org/ai-audit/infrastructure#> .
 @prefix pplan: <http://purl.org/net/p-plan#> .
 @prefix question: <https://w3id.org/ai-audit/question#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
@@ -76,28 +77,34 @@ uc:Validate_Transformation a infra:ValidationFunction ;
 
 uc:TrainingTransformation a infra:TransformationFunction ;
   rdfs:label "TrainingTransformation"@en ;
-  infra:hasMappingType "RML" ;
-  infra:hasMappingLocalPath "mapping/Training.rml" .
+  infra:hasJsonSchemaLocalPath "source/Training.json";
+  infra:hasMappingLocalPath "mapping/Training.rml" ;
+  infra:hasMappingType "RML" .
 
 uc:EngineeringTransformation a infra:TransformationFunction ;
   rdfs:label "EngineeringTransformation"@en ;
-  infra:hasMappingType "RML" ;
-  infra:hasMappingLocalPath "mapping/Engineering.rml" .
+  infra:hasJsonSchemaLocalPath "source/Engineering.json";
+  infra:hasMappingLocalPath "mapping/Engineering.rml";
+  infra:hasMappingType "RML" .
 
 uc:Inference_Initial_Transformation a infra:TransformationFunction ;
   rdfs:label "InferenceInitialTransformation"@en ;
-  infra:hasMappingType "RML" ;
-  infra:hasMappingLocalPath "mapping/Inference.rml" .
+  infra:hasJsonSchemaLocalPath "source/Inference_Inital.json";
+  infra:hasMappingLocalPath "mapping/Inference_Initial.rml";
+  infra:hasMappingType "RML" .
 
 uc:Inference_Eval_Transformation a infra:TransformationFunction ;
   rdfs:label "InferenceEvalTransformation"@en ;
-  infra:hasMappingType "RML" ;
-  infra:hasMappingLocalPath "mapping/Inference_Eval.rml" .
+  infra:hasJsonSchemaLocalPath "source/Inference_Eval.json";
+  infra:hasMappingLocalPath "mapping/Inference_Eval.rml" ;
+  infra:hasMappingType "RML" .
 
 uc:Transformation_Transformation a infra:TransformationFunction ;
   rdfs:label "TransformationTransformation"@en ;
+  infra:hasJsonSchemaLocalPath "source/Transformation.json";
+  infra:hasMappingLocalPath "mapping/Transformation.rml" ;
   infra:hasMappingType "RML" ;
-  infra:hasMappingLocalPath "mapping/Transformation.rml" .
+
 
 
 #################################################################
