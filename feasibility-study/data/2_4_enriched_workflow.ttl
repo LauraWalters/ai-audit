@@ -188,13 +188,13 @@ uc:Q7 a question:AuditQuestion ;
    question:queryLocalPath "query/Q9.sparql".  
 
 uc:Q10 a question:AuditQuestion ;
-rdfs:label "How often were result elements changed" ;
+rdfs:label "How often were extracted field types pruned?";
 question:questionType question:Aggregation;
-question:appliesToStep ucplan:Step_Inference_Initial;
+question:appliesToStep ucplan:Step_Transformation;
 question:queryLocalPath "query/Q10.sparql".
 
 uc:Q11 a question:AuditQuestion ;
-rdfs:label "What is the average confidence of the operator predictions?" ;
+rdfs:label "What is the average confidence per element type?" ;
 question:questionType question:Aggregation;
 question:appliesToStep ucplan:Step_Inference_Initial;
 question:queryLocalPath "query/Q11.sparql".
