@@ -32,8 +32,8 @@ uc:isNull       a owl:DatatypeProperty ; rdfs:domain audit:ResultElement ; rdfs:
 uc:changeStatus a owl:ObjectProperty ;
   rdfs:domain audit:ResultElement ;
   rdfs:range  uc:ChangeStatus .
-uc:Succeeded a audit:ExecutionStatus .
-uc:Failed    a audit:ExecutionStatus .
+uc:Succeeded a audit:BundleStatus, audit:ActivityStatus .
+uc:Failed    a audit:BundleStatus, audit:ActivityStatus .
 
 uc:Initial a uc:ChangeStatus ; rdfs:comment "First output for an element in this trace."@en .
 uc:Pruned a uc:ChangeStatus ; rdfs:comment "Transformation changed content by pruning/normalizing."@en .
@@ -68,7 +68,7 @@ rdfs:label "Issuing Authority" .
 
 
 uc:Trace_Batch06 prov:wasGeneratedBy uc:Inference_B06_initial;
-audit:executionStatus uc:Failed.
+audit:bundleStatus uc:Failed.
 
 uc:Trace_Batch07 prov:wasGeneratedBy   uc:Transform_B07_prune;
 prov:hadMember uc:PermitApplications_Batch07 ,
@@ -76,7 +76,7 @@ prov:hadMember uc:PermitApplications_Batch07 ,
                    uc:NER_Predictions_Batch07_pruned ,
                    uc:B07_e1 , uc:B07_e2,
                    uc:B07_f1 , uc:B07_f2 ;
-audit:executionStatus uc:Succeeded.
+audit:bundleStatus uc:Succeeded.
 
 uc:Trace_Batch42 prov:wasGeneratedBy uc:Transform_B42_prune;
 prov:hadMember uc:PermitApplications_Batch42 ,
@@ -84,7 +84,7 @@ prov:hadMember uc:PermitApplications_Batch42 ,
                    uc:NER_Predictions_Batch42_pruned ,
                    uc:B42_e1 , uc:B42_e2 ,
                    uc:B42_f1 , uc:B42_f2 ;
-audit:executionStatus uc:Succeeded.
+audit:bundleStatus uc:Succeeded.
 
 uc:KG a audit:SymbolicModel ;
 rdfs:label "KG for Entity Matching" ;
@@ -152,7 +152,7 @@ uc:Engineering_2025_08_11
 a audit:Engineering ;
 rdfs:label "Engineering – KG v1.0" ;
 prov:wasAssociatedWith uc:Engineer_H;
-audit:executionStatus uc:Succeeded;
+audit:activityStatus uc:Succeeded;
 audit:lifecyclePhase audit:Design;
 prov:used uc:GeoDataset,
 uc:LegalPersonDataset,
@@ -167,7 +167,7 @@ uc:Training_2025_08_12
 a audit:Training ;
 rdfs:label "Training – Permit NER v1.3.0" ;
 prov:wasAssociatedWith uc:Trainer_A ;
-audit:executionStatus uc:Succeeded;
+audit:activityStatus uc:Succeeded;
 audit:lifecyclePhase audit:Design;
 pplan:correspondsToStep ucplan:Step_Training;
 prov:startedAtTime "2025-08-12T08:10:00Z"^^xsd:dateTime ;
@@ -178,7 +178,7 @@ uc:Training_Config, uc:TrainData_q3.
 uc:Infer_eval_2025_08_12 a audit:Inference ;
 rdfs:label "Evaluation Stat Model – Permit NER v1.3.0" ;
 prov:wasAssociatedWith uc:Trainer_A ;
-audit:executionStatus uc:Succeeded;
+audit:activityStatus uc:Succeeded;
 audit:lifecyclePhase audit:Evaluation;
 pplan:correspondsToStep ucplan:Step_Inference_Eval;
 prov:startedAtTime "2025-08-12T13:10:00Z"^^xsd:dateTime ;
@@ -314,7 +314,7 @@ uc:NER_Predictions_Batch42_pruned prov:wasGeneratedBy uc:Transform_B42_prune  .
 
 uc:Inference_B06_initial a audit:Inference ;
 rdfs:label "Inference – 06 (initial)" ;
-audit:executionStatus uc:Failed;
+audit:activityStatus uc:Failed;
 audit:lifecyclePhase audit:Operation;
 pplan:correspondsToStep ucplan:Step_Inference_Initial;
 prov:startedAtTime "2025-08-16T09:30:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-16T09:30:39Z"^^xsd:dateTime ;
@@ -324,7 +324,7 @@ uc:PermitApplications_Batch06 a audit:Dataset.
 
 uc:Inference_B07_initial a audit:Inference ;
 rdfs:label "Inference – Batch 07 (initial)" ;
-audit:executionStatus uc:Succeeded;
+audit:activityStatus uc:Succeeded;
 audit:lifecyclePhase audit:Operation;
 pplan:correspondsToStep ucplan:Step_Inference_Initial;
 prov:startedAtTime "2025-08-15T09:30:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-15T09:30:39Z"^^xsd:dateTime ;
@@ -333,7 +333,7 @@ prov:used uc:Permit_NER_FT_v1_3_0, uc:PermitApplications_Batch07 .
 
 uc:Transform_B07_prune a audit:Transformation ;
 rdfs:label "Transform – Batch 07 (pruning)" ;
-audit:executionStatus uc:Succeeded;
+audit:activityStatus uc:Succeeded;
 audit:lifecyclePhase audit:Operation;
 pplan:correspondsToStep ucplan:Step_Transformation;
 prov:startedAtTime "2025-08-15T09:45:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-15T09:45:08Z"^^xsd:dateTime ;
@@ -403,7 +403,7 @@ uc:NER_Predictions_Batch42_pruned prov:hadMember uc:B42_f1, uc:B42_f2 .
 
 uc:Inference_B42_initial a audit:Inference ;
 rdfs:label "Inference – Batch 42 (initial)" ;
-audit:executionStatus uc:Succeeded;
+audit:activityStatus uc:Succeeded;
 audit:lifecyclePhase audit:Operation;
 pplan:correspondsToStep ucplan:Step_Inference_Initial;
 prov:startedAtTime "2025-08-12T12:30:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-12T12:31:17Z"^^xsd:dateTime ;
@@ -412,7 +412,7 @@ prov:used uc:Permit_NER_FT_v1_3_0, uc:PermitApplications_Batch42 .
 
 uc:Transform_B42_prune a audit:Transformation ;
 rdfs:label "Transform – Batch 42 (pruning)" ;
-audit:executionStatus uc:Succeeded;
+audit:activityStatus uc:Succeeded;
 audit:lifecyclePhase audit:Operation;
 pplan:correspondsToStep ucplan:Step_Transformation;
 prov:startedAtTime "2025-08-10T12:48:00Z"^^xsd:dateTime ; prov:endedAtTime "2025-08-10T12:48:07Z"^^xsd:dateTime ;
