@@ -103,7 +103,7 @@ uc:Transformation_Transformation a infra:TransformationFunction ;
   rdfs:label "TransformationTransformation"@en ;
   infra:hasJsonSchemaLocalPath "source/Transformation.json";
   infra:hasMappingLocalPath "mapping/Transformation.rml" ;
-  infra:hasMappingType "RML" ;
+  infra:hasMappingType "RML" .
 
 
 
