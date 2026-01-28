@@ -40,15 +40,27 @@ audit: a owl:Ontology ;
   rdfs:domain audit:AuditableAISystem ;
   rdfs:range audit:AuditBundle .
 
-###  https://w3id.org/ai-audit#ExecutionStatus
-<https://w3id.org/ai-audit#ExecutionStatus> a owl:Class ;
-  rdfs:label "Execution status"@en .
+###  https://w3id.org/ai-audit#BundleStatus
+<https://w3id.org/ai-audit#BundleStatus> a owl:Class ;
+  rdfs:comment "Status indicating bundle completion or failure."@en ;
+  rdfs:label "Bundle status"@en .
 
-###  https://w3id.org/ai-audit#executionStatus
-<https://w3id.org/ai-audit#executionStatus> a owl:ObjectProperty ;
+###  https://w3id.org/ai-audit#ActivityStatus
+<https://w3id.org/ai-audit#ActivityStatus> a owl:Class ;
+  rdfs:comment "Status indicating activity completion or failure."@en ;
+  rdfs:label "Activity status"@en .
+
+###  https://w3id.org/ai-audit#bundleStatus
+<https://w3id.org/ai-audit#bundleStatus> a owl:ObjectProperty ;
   rdfs:label "execution status"@en ;
   rdfs:domain audit:AuditBundle ;
-  rdfs:range audit:ExecutionStatus .
+  rdfs:range audit:BundleStatus .
+
+###  https://w3id.org/ai-audit#activityStatus
+<https://w3id.org/ai-audit#activityStatus> a owl:ObjectProperty ;
+  rdfs:label "execution status"@en ;
+  rdfs:domain audit:Activity ;
+  rdfs:range audit:ActivityStatus .
 
 ###  https://w3id.org/ai-audit#Engineering
 <https://w3id.org/ai-audit#Engineering> a owl:Class ;
