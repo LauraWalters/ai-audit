@@ -44,11 +44,6 @@ uc:Trace_Batch07 a audit:AuditBundle, prov:Collection .
 uc:Trace_Batch42 a audit:AuditBundle, prov:Collection .
 uc:Trace_Batch06 a audit:AuditBundle, prov:Collection.
 
-uc:Trace_Batch06 prov:hadMember uc:Inference_B06_initial .
-
-uc:Trace_Batch07 prov:hadMember uc:Inference_B07_initial, uc:Transform_B07_prune .
-
-uc:Trace_Batch42 prov:hadMember uc:Inference_B42_initial, uc:Transform_B42_prune .
 
 ucplan:Step_Training a pplan:Step ; 
 rdfs:label "Training Step" .
