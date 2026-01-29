@@ -1,0 +1,19 @@
+# Q9 — Confidence level of a specific ResultElement
+
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX uc:    <https://example.org/uc/permit-ner/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?result ?confidence
+WHERE {
+  VALUES ?result { uc:B07_e1 }
+
+  ?result a audit:ResultElement ;
+          audit:hasScore ?score .
+
+  ?score  a audit:Score ;
+          audit:scoreType audit:Confidence ;
+          audit:scoreValue ?confidence .
+
+  FILTER(datatype(?confidence) IN (xsd:decimal, xsd:float, xsd:double))
+  }

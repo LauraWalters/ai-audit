@@ -1,0 +1,21 @@
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+PREFIX uc:    <https://example.org/uc/permit-ner/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?element (COUNT(DISTINCT ?initial) AS ?numInitial)
+       (COUNT(DISTINCT ?changed) AS ?numChanged)
+       (xsd:decimal(COUNT(DISTINCT ?changed)) / xsd:decimal(COUNT(DISTINCT ?initial)) AS ?changeRate)
+WHERE {
+  ?initial a audit:ResultElement ;
+           uc:changeStatus uc:Initial ;
+           audit:element ?element .
+
+  OPTIONAL {
+    ?changed a audit:ResultElement ;
+             (prov:wasDerivedFrom)+ ?initial ;
+             uc:changeStatus ?status .
+    FILTER(?status != uc:Unchanged)
+  }
+}
+GROUP BY ?element
+ORDER BY DESC(?changeRate) ?element

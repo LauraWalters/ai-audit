@@ -1,0 +1,16 @@
+# Q7 — Hyperparameter values used in training
+
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?trainingActivity ?param ?value
+WHERE {
+  ?trainingActivity a audit:Training ;
+                    prov:used ?config .
+  ?config a audit:HyperparameterConfiguration ;
+          audit:hyperparameter ?hp .
+  ?hp a audit:HyperparameterSetting ;
+      audit:paramFor ?param ;
+      audit:paramValue ?value .
+}
+ORDER BY ?trainingActivity ?param

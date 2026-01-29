@@ -1,0 +1,13 @@
+# Q2 — Who created datasets used in model training
+
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?dataset ?creator
+WHERE {
+  ?trainingActivity a audit:Training ;
+                    prov:used ?dataset .
+  ?dataset a audit:Dataset ;
+           prov:wasAttributedTo ?creator .
+}
+ORDER BY ?dataset ?creator

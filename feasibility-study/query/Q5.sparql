@@ -1,0 +1,11 @@
+# Q5 — Locations of datasets
+
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?dataset ?location
+WHERE {
+  ?dataset a audit:Dataset ;
+           prov:atLocation ?location .
+}
+ORDER BY ?dataset

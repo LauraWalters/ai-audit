@@ -1,0 +1,12 @@
+# Q1 — Datasets used for the model training process
+
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?trainingActivity ?dataset
+WHERE {
+  ?trainingActivity a audit:Training ;
+                    prov:used ?dataset .
+  ?dataset a audit:Dataset .
+}
+ORDER BY ?trainingActivity ?dataset

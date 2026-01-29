@@ -1,0 +1,11 @@
+# Q8 — Number of datasets used to create the Knowledge Graph
+
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+
+SELECT (COUNT(DISTINCT ?dataset) AS ?kgDatasetCount)
+WHERE {
+  ?activity a audit:Engineering ;
+            prov:used ?dataset .
+  ?dataset a audit:Dataset .
+}

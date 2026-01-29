@@ -1,0 +1,22 @@
+# Q12 — Total success rate of the workflow (computed at AuditBundle level)
+
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX uc:    <https://example.org/uc/permit-ner/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (IF(?total = 0, 0,
+      xsd:decimal(?successes) / xsd:decimal(?total)) AS ?successRate)
+  ?successes
+  ?total
+WHERE {
+  {
+    SELECT
+      (COUNT(DISTINCT ?bundle) AS ?total)
+      (SUM(IF(?status = uc:Succeeded, 1, 0)) AS ?successes)
+    WHERE {
+      ?bundle a audit:AuditBundle ;
+              audit:bundleStatus ?status .
+    }
+  }
+}

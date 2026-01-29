@@ -1,0 +1,18 @@
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+
+SELECT ?activity ?type ?start ?end
+WHERE {
+  ?activity a ?type .
+
+  VALUES ?type {
+    audit:Engineering
+    audit:Training
+    audit:Inference
+    audit:Transformation
+  }
+
+  OPTIONAL { ?activity prov:startedAtTime ?start }
+  OPTIONAL { ?activity prov:endedAtTime   ?end }
+}
+ORDER BY ?type ?activity

@@ -1,0 +1,19 @@
+# Q11 — Average confidence score per element type (e.g., operator, issuingAuthority)
+
+PREFIX audit: <https://w3id.org/ai-audit#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?element (AVG(?scoreValue) AS ?avgConfidence)
+WHERE {
+  ?result a audit:ResultElement ;
+          audit:element ?element ;
+          audit:hasScore ?score .
+
+  ?score  a audit:Score ;
+          audit:scoreType audit:Confidence ;
+          audit:scoreValue ?scoreValue .
+
+  FILTER(datatype(?scoreValue) IN (xsd:decimal, xsd:float, xsd:double))
+}
+GROUP BY ?element
+ORDER BY ?element
