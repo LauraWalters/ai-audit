@@ -3,3 +3,6 @@ Ontologies and documentation for auditing and assessing AI systems. The project 
 
 ## contact
 Laura Waltersdorfer (laura.waltersdorfer[at]gmail.com)
+
+## DOI
+https://doi.org/10.5281/zenodo.18417338
