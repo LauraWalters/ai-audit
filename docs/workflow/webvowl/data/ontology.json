@@ -155,10 +155,10 @@
     "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "55",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "8",
     "type" : "owl:Class"
   }, {
     "id" : "54",
@@ -507,6 +507,18 @@
     },
     "id" : "19"
   }, {
+    "iri" : "https://w3id.org/ai-audit#Hyperparameter",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hyperparameter",
+      "undefined" : "Hyperparameter"
+    },
+    "comment" : {
+      "undefined" : "An abstract parameter that controls some aspect of model training or optimization."
+    },
+    "id" : "55"
+  }, {
     "iri" : "https://w3id.org/ai-audit#Inference",
     "baseIri" : "https://w3id.org/ai-audit",
     "instances" : 0,
@@ -519,18 +531,6 @@
     },
     "id" : "8",
     "superClasses" : [ "3" ]
-  }, {
-    "iri" : "https://w3id.org/ai-audit#Hyperparameter",
-    "baseIri" : "https://w3id.org/ai-audit",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Hyperparameter",
-      "undefined" : "Hyperparameter"
-    },
-    "comment" : {
-      "undefined" : "An abstract parameter that controls some aspect of model training or optimization."
-    },
-    "id" : "55"
   }, {
     "iri" : "https://w3id.org/ai-audit#ActivityStatus",
     "baseIri" : "https://w3id.org/ai-audit",
@@ -695,62 +695,62 @@
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "29"
   }, {
     "range" : "31",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "30"
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
     "range" : "5",
     "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "33"
   }, {
     "range" : "13",
     "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "35"
   }, {
     "range" : "37",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "36"
   }, {
     "range" : "13",
     "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
     "range" : "3",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "39"
   }, {
     "range" : "3",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "40"
   }, {
     "range" : "3",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "41"
   }, {
     "range" : "3",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "42"
   }, {
     "range" : "14",
     "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "43"
   }, {
     "iri" : "https://w3id.org/ai-audit#paramName",
@@ -769,17 +769,17 @@
   }, {
     "range" : "14",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "46"
   }, {
     "range" : "14",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "47"
   }, {
     "range" : "16",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "48"
   }, {
     "iri" : "https://w3id.org/ai-audit#usesMetric",

@@ -145,7 +145,7 @@
     "id" : "51",
     "type" : "owl:Class"
   }, {
-    "id" : "45",
+    "id" : "44",
     "type" : "owl:Class"
   }, {
     "id" : "1",
@@ -184,10 +184,10 @@
     "id" : "56",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "82",
+    "id" : "84",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "84",
+    "id" : "82",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "33",
@@ -202,10 +202,10 @@
     "id" : "72",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "42",
+    "id" : "53",
     "type" : "owl:Class"
   }, {
-    "id" : "53",
+    "id" : "42",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -412,7 +412,7 @@
       "IRI-based" : "Acquire",
       "undefined" : "Acquire"
     },
-    "subClasses" : [ "45", "10" ],
+    "subClasses" : [ "44", "10" ],
     "comment" : {
       "undefined" : "Service with the purpose to retrieve data from another program or application"
     },
@@ -439,7 +439,7 @@
     "comment" : {
       "undefined" : "Service to receive data from another program or application"
     },
-    "id" : "45",
+    "id" : "44",
     "superClasses" : [ "8" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Bundle",
@@ -571,14 +571,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "82",
+    "id" : "84",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "84",
+    "id" : "82",
     "label" : {
       "IRI-based" : "string"
     }
@@ -611,15 +611,6 @@
       "IRI-based" : "integer"
     }
   }, {
-    "iri" : "http://purl.org/net/p-plan#Plan",
-    "baseIri" : "http://purl.org/net/p-plan",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Plan"
-    },
-    "attributes" : [ "external" ],
-    "id" : "42"
-  }, {
     "iri" : "http://www.w3.org/ns/prov#Plan",
     "baseIri" : "http://www.w3.org/ns/prov",
     "instances" : 0,
@@ -629,6 +620,15 @@
     "subClasses" : [ "51" ],
     "attributes" : [ "external" ],
     "id" : "53"
+  }, {
+    "iri" : "http://purl.org/net/p-plan#Plan",
+    "baseIri" : "http://purl.org/net/p-plan",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Plan"
+    },
+    "attributes" : [ "external" ],
+    "id" : "42"
   } ],
   "property" : [ {
     "id" : "0",
@@ -671,10 +671,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "43",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "44",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "47",
     "type" : "owl:datatypeProperty"
@@ -919,6 +919,20 @@
     "attributes" : [ "object" ],
     "id" : "41"
   }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasCorrespondingFetch",
+      "undefined" : "hasCorrespondingFetch"
+    },
+    "domain" : "44",
+    "comment" : {
+      "undefined" : "Relation between Receive and Fetch, a Receive can have 0..N Fetch"
+    },
+    "attributes" : [ "object" ],
+    "id" : "43"
+  }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasQueryLocalPath",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
     "range" : "38",
@@ -931,21 +945,7 @@
       "undefined" : "Datatype properties to link query into its local file form"
     },
     "attributes" : [ "datatype" ],
-    "id" : "43"
-  }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasCorrespondingFetch",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "10",
-    "label" : {
-      "IRI-based" : "hasCorrespondingFetch",
-      "undefined" : "hasCorrespondingFetch"
-    },
-    "domain" : "45",
-    "comment" : {
-      "undefined" : "Relation between Receive and Fetch, a Receive can have 0..N Fetch"
-    },
-    "attributes" : [ "object" ],
-    "id" : "44"
+    "id" : "45"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasMappingString",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
@@ -1033,7 +1033,7 @@
     "id" : "59"
   }, {
     "range" : "8",
-    "domain" : "45",
+    "domain" : "44",
     "attributes" : [ "anonymous", "object" ],
     "id" : "60"
   }, {
@@ -1186,7 +1186,7 @@
       "IRI-based" : "hasReceiveApiPath",
       "undefined" : "hasReceiveApiPath"
     },
-    "domain" : "45",
+    "domain" : "44",
     "comment" : {
       "undefined" : "Datatype properties to set api path where the post receive can be found"
     },
@@ -1207,23 +1207,9 @@
     "attributes" : [ "object" ],
     "id" : "80"
   }, {
-    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath",
-    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "82",
-    "label" : {
-      "IRI-based" : "hasConstraintUriPath",
-      "undefined" : "hasConstraintUriPath"
-    },
-    "domain" : "50",
-    "comment" : {
-      "undefined" : "Datatype properties to retrieve constraint from external sources"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "81"
-  }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasJsonSchemaLocalPath",
     "baseIri" : "https://w3id.org/ai-audit/infrastructure",
-    "range" : "84",
+    "range" : "82",
     "label" : {
       "IRI-based" : "hasJsonSchemaLocalPath",
       "undefined" : "hasJsonSchemaLocalPath"
@@ -1231,6 +1217,20 @@
     "domain" : "24",
     "comment" : {
       "undefined" : "Datatype properties to retrieve json schema from local file"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintUriPath",
+    "baseIri" : "https://w3id.org/ai-audit/infrastructure",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "hasConstraintUriPath",
+      "undefined" : "hasConstraintUriPath"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Datatype properties to retrieve constraint from external sources"
     },
     "attributes" : [ "datatype" ],
     "id" : "83"
