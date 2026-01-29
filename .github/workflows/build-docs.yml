@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # important so pull --rebase works correctly
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -28,7 +30,6 @@ jobs:
           curl -L https://archive.apache.org/dist/jena/binaries/apache-jena-4.10.0.tar.gz | tar xz
           echo "$PWD/apache-jena-4.10.0/bin" >> $GITHUB_PATH
 
-
       - name: Download WIDOCO
         run: |
           mkdir -p tools
@@ -39,13 +40,12 @@ jobs:
           ls -lah tools/widoco.jar
           file tools/widoco.jar || true
           unzip -t tools/widoco.jar >/dev/null
-          
+
       - name: Validate ontologies (Turtle syntax)
         run: |
           riot --validate ontologies/ai-audit-workflow.ttl
           riot --validate ontologies/ai-audit-questions.ttl
           riot --validate ontologies/ai-audit-infrastructure.ttl
-
 
       - name: Build documentation
         run: |
@@ -56,8 +56,13 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
+          # First sync with remote to avoid rebase errors
+          git pull --rebase origin main
+
+          # Then commit generated documentation
           git add docs/
           git commit -m "Regenerate WIDOCO documentation" || exit 0
-          # Integrate any upstream changes (manual pushes, other workflows)
-          git pull --rebase origin main
+
+          # Finally push the changes
           git push origin main
