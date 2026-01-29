@@ -17,9 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # needed so pull --rebase works properly
+          fetch-depth: 0   # required so rebase works correctly
 
-      # IMPORTANT: pull immediately, before anything modifies files
+      # Sync immediately while working tree is still clean
       - name: Sync with main branch
         run: |
           git pull --rebase origin main
@@ -37,4 +37,31 @@ jobs:
 
       - name: Download WIDOCO
         run: |
-          mkdir
+          mkdir -p tools
+          curl -fL -o tools/widoco.jar \
+            https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar
+
+          echo "Downloaded:"
+          ls -lah tools/widoco.jar
+          file tools/widoco.jar || true
+          unzip -t tools/widoco.jar >/dev/null
+
+      - name: Validate ontologies (Turtle syntax)
+        run: |
+          riot --validate ontologies/ai-audit-workflow.ttl
+          riot --validate ontologies/ai-audit-questions.ttl
+          riot --validate ontologies/ai-audit-infrastructure.ttl
+
+      - name: Build documentation
+        run: |
+          chmod +x scripts/build-widoco.sh
+          ./scripts/build-widoco.sh
+
+      - name: Commit and push generated docs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add docs/
+          git commit -m "Regenerate WIDOCO documentation" || exit 0
+          git push origin main
