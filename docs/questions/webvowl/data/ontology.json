@@ -28,12 +28,7 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Tomasz Miksa",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Gregor Käfer",
+        "value" : "Marta Sabou",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -43,19 +38,24 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Marta Sabou",
+        "value" : "Tomasz Miksa",
         "type" : "label"
-      } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
+      }, {
+        "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "1.0.0",
+        "value" : "Gregor Käfer",
         "type" : "label"
       } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "en",
         "value" : "This ontology describes audit questions and their relationships to audit criteria, and evidence. It supports the structured formulation and reuse of questions across different audit contexts. ",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
         "type" : "label"
       } ],
       "title" : [ {

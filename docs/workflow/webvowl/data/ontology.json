@@ -28,12 +28,7 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Gregor Käfer",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Tomasz Miksa",
+        "value" : "Fajar J. Ekaputra",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -43,7 +38,12 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Fajar J. Ekaputra",
+        "value" : "Gregor Käfer",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Tomasz Miksa",
         "type" : "label"
       } ],
       "versionInfo" : [ {

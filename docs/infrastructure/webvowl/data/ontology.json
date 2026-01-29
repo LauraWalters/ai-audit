@@ -34,24 +34,24 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Marta Sabou",
+        "value" : "Tomasz Miksa",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Tomasz Miksa",
-        "type" : "label"
-      } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "This ontology describes the infrastructure that supports the execution and management of audits, including systems, services, data sources, and artifacts. ",
+        "value" : "Marta Sabou",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "This ontology describes the infrastructure that supports the execution and management of audits, including systems, services, data sources, and artifacts. ",
         "type" : "label"
       } ],
       "title" : [ {
@@ -986,7 +986,7 @@
     "comment" : {
       "undefined" : "Relation between Auditable AI System and AuditBundle, a Auditable AI System can have 0..N AuditBundle"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "54"
   }, {
     "iri" : "https://w3id.org/ai-audit/infrastructure#hasConstraintType",
