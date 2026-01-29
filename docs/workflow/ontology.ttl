@@ -59,14 +59,14 @@
 :activityStatus rdf:type owl:ObjectProperty ;
                 rdfs:domain :Activity ;
                 rdfs:range :ActivityStatus ;
-                rdfs:label "execution status"@en .
+                rdfs:label "activity status"@en .
 
 
 ###  https://w3id.org/ai-audit#bundleStatus
 :bundleStatus rdf:type owl:ObjectProperty ;
               rdfs:domain :AuditBundle ;
               rdfs:range :BundleStatus ;
-              rdfs:label "execution status"@en .
+              rdfs:label "bundle status"@en .
 
 
 ###  https://w3id.org/ai-audit#hasAuditBundle

@@ -103,7 +103,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/ai-audit#activityStatus">
         <rdfs:domain rdf:resource="https://w3id.org/ai-audit#Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/ai-audit#ActivityStatus"/>
-        <rdfs:label xml:lang="en">execution status</rdfs:label>
+        <rdfs:label xml:lang="en">activity status</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -114,7 +114,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/ai-audit#bundleStatus">
         <rdfs:domain rdf:resource="https://w3id.org/ai-audit#AuditBundle"/>
         <rdfs:range rdf:resource="https://w3id.org/ai-audit#BundleStatus"/>
-        <rdfs:label xml:lang="en">execution status</rdfs:label>
+        <rdfs:label xml:lang="en">bundle status</rdfs:label>
     </owl:ObjectProperty>
     
 
