@@ -81,8 +81,7 @@
 # https://w3id.org/ai-audit/infrastructure#hasPlan
 <https://w3id.org/ai-audit/infrastructure#hasPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ai-audit/infrastructure#hasPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#AuditableAISystem> .
-<https://w3id.org/ai-audit/infrastructure#hasPlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Pla> .
-<http://purl.org/net/p-plan#Pla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit/infrastructure#hasPlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/p-plan#Plan> .
 <https://w3id.org/ai-audit/infrastructure#hasPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between Auditable AI System and Plan, a System can have 1..N Plan" .
 <https://w3id.org/ai-audit/infrastructure#hasPlan> <http://www.w3.org/2000/01/rdf-schema#label> "hasPlan" .
 # 
@@ -122,13 +121,6 @@
 # #
 # #################################################################
 # 
-# 
-# h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath
-<https://w3id.org/ai-audit/infrastructure#h%20https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/ai-audit/infrastructure#h%20https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/infrastructure#Query> .
-<https://w3id.org/ai-audit/infrastructure#h%20https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/ai-audit/infrastructure#h%20https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/2000/01/rdf-schema#comment> "Datatype properties to set where the query can be found" .
-<https://w3id.org/ai-audit/infrastructure#h%20https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/2000/01/rdf-schema#label> "hasQueryApiPath" .
 # 
 # https://w3id.org/ai-audit/infrastructure#description
 <https://w3id.org/ai-audit/infrastructure#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -213,6 +205,13 @@
 <https://w3id.org/ai-audit/infrastructure#hasMappingUriPath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/ai-audit/infrastructure#hasMappingUriPath> <http://www.w3.org/2000/01/rdf-schema#comment> "Datatype properties to retrieve mapping from external sources" .
 <https://w3id.org/ai-audit/infrastructure#hasMappingUriPath> <http://www.w3.org/2000/01/rdf-schema#label> "hasMappingUriPath" .
+# 
+# https://w3id.org/ai-audit/infrastructure#hasQueryApiPath
+<https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit/infrastructure#Query> .
+<https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/2000/01/rdf-schema#comment> "Datatype properties to set where the query can be found" .
+<https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> <http://www.w3.org/2000/01/rdf-schema#label> "hasQueryApiPath" .
 # 
 # https://w3id.org/ai-audit/infrastructure#hasQueryBinding
 <https://w3id.org/ai-audit/infrastructure#hasQueryBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -310,8 +309,6 @@
 # 
 # http://purl.org/net/p-plan#Entity
 <http://purl.org/net/p-plan#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# http://purl.org/net/p-plan#Pla
 # 
 # http://purl.org/net/p-plan#Plan
 # 

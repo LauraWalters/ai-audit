@@ -97,12 +97,23 @@
     
 
 
-    <!-- https://w3id.org/ai-audit#executionStatus -->
+    <!-- https://w3id.org/ai-audit#activityStatus -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/ai-audit#executionStatus">
+    <owl:ObjectProperty rdf:about="https://w3id.org/ai-audit#activityStatus">
+        <rdfs:domain rdf:resource="https://w3id.org/ai-audit#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/ai-audit#ActivityStatus"/>
+        <rdfs:label xml:lang="en">execution status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ai-audit#bundleStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ai-audit#bundleStatus">
         <rdfs:domain rdf:resource="https://w3id.org/ai-audit#AuditBundle"/>
-        <rdfs:range rdf:resource="https://w3id.org/ai-audit#ExecutionStatus"/>
+        <rdfs:range rdf:resource="https://w3id.org/ai-audit#BundleStatus"/>
         <rdfs:label xml:lang="en">execution status</rdfs:label>
     </owl:ObjectProperty>
     
@@ -148,7 +159,6 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ai-audit#lifecyclePhase">
-        <rdfs:domain rdf:resource="http://purl.org/net/p-plan#Step"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/ai-audit#LifecyclePhase"/>
     </owl:ObjectProperty>
@@ -284,6 +294,23 @@
     
 
 
+    <!-- https://w3id.org/ai-audit#Activity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ai-audit#Activity"/>
+    
+
+
+    <!-- https://w3id.org/ai-audit#ActivityStatus -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ai-audit#ActivityStatus">
+        <rdfs:comment xml:lang="en">Status indicating activity completion or failure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity status</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ai-audit#AuditBundle -->
 
 
@@ -301,6 +328,16 @@
     <owl:Class rdf:about="https://w3id.org/ai-audit#AuditableAISystem">
         <rdfs:comment xml:lang="en">A software system (or deployed AI service) for which audit evidence (traces) is collected.</rdfs:comment>
         <rdfs:label xml:lang="en">Auditable AI System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ai-audit#BundleStatus -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ai-audit#BundleStatus">
+        <rdfs:comment xml:lang="en">Status indicating bundle completion or failure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bundle status</rdfs:label>
     </owl:Class>
     
 
@@ -345,15 +382,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/ai-audit#Metric"/>
         <rdfs:comment xml:lang="en">A metric used specifically for evaluation in an audit context.</rdfs:comment>
         <rdfs:label xml:lang="en">Evaluation metric</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/ai-audit#ExecutionStatus -->
-
-
-    <owl:Class rdf:about="https://w3id.org/ai-audit#ExecutionStatus">
-        <rdfs:label xml:lang="en">Execution status</rdfs:label>
     </owl:Class>
     
 

@@ -90,7 +90,7 @@
 ###  https://w3id.org/ai-audit/infrastructure#hasPlan
 :hasPlan rdf:type owl:ObjectProperty ;
          rdfs:domain <https://w3id.org/ai-audit#AuditableAISystem> ;
-         rdfs:range <http://purl.org/net/p-plan#Pla> ;
+         rdfs:range <http://purl.org/net/p-plan#Plan> ;
          rdfs:comment "Relation between Auditable AI System and Plan, a System can have 1..N Plan" ;
          rdfs:label "hasPlan" .
 
@@ -130,14 +130,6 @@
 #################################################################
 #    Data properties
 #################################################################
-
-###  h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath
-<h https://w3id.org/ai-audit/infrastructure#hasQueryApiPath> rdf:type owl:DatatypeProperty ;
-                                                             rdfs:domain :Query ;
-                                                             rdfs:range xsd:string ;
-                                                             rdfs:comment "Datatype properties to set where the query can be found" ;
-                                                             rdfs:label "hasQueryApiPath" .
-
 
 ###  https://w3id.org/ai-audit/infrastructure#description
 :description rdf:type owl:DatatypeProperty ;
@@ -233,6 +225,14 @@
                    rdfs:range xsd:string ;
                    rdfs:comment "Datatype properties to retrieve mapping from external sources" ;
                    rdfs:label "hasMappingUriPath" .
+
+
+###  https://w3id.org/ai-audit/infrastructure#hasQueryApiPath
+:hasQueryApiPath rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Query ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Datatype properties to set where the query can be found" ;
+                 rdfs:label "hasQueryApiPath" .
 
 
 ###  https://w3id.org/ai-audit/infrastructure#hasQueryBinding
@@ -338,10 +338,6 @@
 
 ###  http://purl.org/net/p-plan#Entity
 <http://purl.org/net/p-plan#Entity> rdf:type owl:Class .
-
-
-###  http://purl.org/net/p-plan#Pla
-<http://purl.org/net/p-plan#Pla> rdf:type owl:Class .
 
 
 ###  http://purl.org/net/p-plan#Plan

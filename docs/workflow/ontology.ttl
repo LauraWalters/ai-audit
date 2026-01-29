@@ -55,11 +55,18 @@
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/ai-audit#executionStatus
-:executionStatus rdf:type owl:ObjectProperty ;
-                 rdfs:domain :AuditBundle ;
-                 rdfs:range :ExecutionStatus ;
-                 rdfs:label "execution status"@en .
+###  https://w3id.org/ai-audit#activityStatus
+:activityStatus rdf:type owl:ObjectProperty ;
+                rdfs:domain :Activity ;
+                rdfs:range :ActivityStatus ;
+                rdfs:label "execution status"@en .
+
+
+###  https://w3id.org/ai-audit#bundleStatus
+:bundleStatus rdf:type owl:ObjectProperty ;
+              rdfs:domain :AuditBundle ;
+              rdfs:range :BundleStatus ;
+              rdfs:label "execution status"@en .
 
 
 ###  https://w3id.org/ai-audit#hasAuditBundle
@@ -88,8 +95,7 @@
 
 ###  https://w3id.org/ai-audit#lifecyclePhase
 :lifecyclePhase rdf:type owl:ObjectProperty ;
-                rdfs:domain <http://purl.org/net/p-plan#Step> ,
-                            <http://www.w3.org/ns/prov#Activity> ;
+                rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
                 rdfs:range :LifecyclePhase .
 
 
@@ -167,6 +173,16 @@
 <http://www.w3.org/ns/prov#Plan> rdf:type owl:Class .
 
 
+###  https://w3id.org/ai-audit#Activity
+:Activity rdf:type owl:Class .
+
+
+###  https://w3id.org/ai-audit#ActivityStatus
+:ActivityStatus rdf:type owl:Class ;
+                rdfs:comment "Status indicating activity completion or failure."@en ;
+                rdfs:label "Activity status"@en .
+
+
 ###  https://w3id.org/ai-audit#AuditBundle
 :AuditBundle rdf:type owl:Class ;
              rdfs:subClassOf <http://www.w3.org/ns/prov#Bundle> ;
@@ -178,6 +194,12 @@
 :AuditableAISystem rdf:type owl:Class ;
                    rdfs:comment "A software system (or deployed AI service) for which audit evidence (traces) is collected."@en ;
                    rdfs:label "Auditable AI System"@en .
+
+
+###  https://w3id.org/ai-audit#BundleStatus
+:BundleStatus rdf:type owl:Class ;
+              rdfs:comment "Status indicating bundle completion or failure."@en ;
+              rdfs:label "Bundle status"@en .
 
 
 ###  https://w3id.org/ai-audit#DataInstance
@@ -206,11 +228,6 @@
                   rdfs:subClassOf :Metric ;
                   rdfs:comment "A metric used specifically for evaluation in an audit context."@en ;
                   rdfs:label "Evaluation metric"@en .
-
-
-###  https://w3id.org/ai-audit#ExecutionStatus
-:ExecutionStatus rdf:type owl:Class ;
-                 rdfs:label "Execution status"@en .
 
 
 ###  https://w3id.org/ai-audit#Hyperparameter

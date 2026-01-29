@@ -77,6 +77,20 @@
     "@value" : "This section introduces the audit workflow ontology and its scope. "
   } ]
 }, {
+  "@id" : "https://w3id.org/ai-audit#Activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/ai-audit#ActivityStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Status indicating activity completion or failure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Activity status"
+  } ]
+}, {
   "@id" : "https://w3id.org/ai-audit#AuditBundle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -100,6 +114,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Auditable AI System"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ai-audit#BundleStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Status indicating bundle completion or failure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bundle status"
   } ]
 }, {
   "@id" : "https://w3id.org/ai-audit#DataInstance",
@@ -168,13 +193,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ai-audit#Metric"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ai-audit#ExecutionStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Execution status"
   } ]
 }, {
   "@id" : "https://w3id.org/ai-audit#Hyperparameter",
@@ -366,7 +384,20 @@
     "@id" : "http://www.w3.org/ns/prov#Activity"
   } ]
 }, {
-  "@id" : "https://w3id.org/ai-audit#executionStatus",
+  "@id" : "https://w3id.org/ai-audit#activityStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ai-audit#Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "execution status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ai-audit#ActivityStatus"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ai-audit#bundleStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/ai-audit#AuditBundle"
@@ -376,7 +407,7 @@
     "@value" : "execution status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ai-audit#ExecutionStatus"
+    "@id" : "https://w3id.org/ai-audit#BundleStatus"
   } ]
 }, {
   "@id" : "https://w3id.org/ai-audit#hasAuditBundle",
@@ -431,8 +462,6 @@
   "@id" : "https://w3id.org/ai-audit#lifecyclePhase",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/p-plan#Step"
-  }, {
     "@id" : "http://www.w3.org/ns/prov#Activity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {

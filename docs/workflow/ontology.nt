@@ -49,11 +49,18 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/ai-audit#executionStatus
-<https://w3id.org/ai-audit#executionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/ai-audit#executionStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#AuditBundle> .
-<https://w3id.org/ai-audit#executionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#ExecutionStatus> .
-<https://w3id.org/ai-audit#executionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "execution status"@en .
+# https://w3id.org/ai-audit#activityStatus
+<https://w3id.org/ai-audit#activityStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#activityStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#Activity> .
+<https://w3id.org/ai-audit#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#activityStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#ActivityStatus> .
+<https://w3id.org/ai-audit#activityStatus> <http://www.w3.org/2000/01/rdf-schema#label> "execution status"@en .
+# 
+# https://w3id.org/ai-audit#bundleStatus
+<https://w3id.org/ai-audit#bundleStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ai-audit#bundleStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ai-audit#AuditBundle> .
+<https://w3id.org/ai-audit#bundleStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#BundleStatus> .
+<https://w3id.org/ai-audit#bundleStatus> <http://www.w3.org/2000/01/rdf-schema#label> "execution status"@en .
 # 
 # https://w3id.org/ai-audit#hasAuditBundle
 <https://w3id.org/ai-audit#hasAuditBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -78,7 +85,6 @@
 # 
 # https://w3id.org/ai-audit#lifecyclePhase
 <https://w3id.org/ai-audit#lifecyclePhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/ai-audit#lifecyclePhase> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/p-plan#Step> .
 <https://w3id.org/ai-audit#lifecyclePhase> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Activity> .
 <http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ai-audit#lifecyclePhase> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ai-audit#LifecyclePhase> .
@@ -155,6 +161,13 @@
 # 
 # http://www.w3.org/ns/prov#Plan
 # 
+# https://w3id.org/ai-audit#Activity
+# 
+# https://w3id.org/ai-audit#ActivityStatus
+<https://w3id.org/ai-audit#ActivityStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#ActivityStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Status indicating activity completion or failure."@en .
+<https://w3id.org/ai-audit#ActivityStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Activity status"@en .
+# 
 # https://w3id.org/ai-audit#AuditBundle
 <https://w3id.org/ai-audit#AuditBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ai-audit#AuditBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Bundle> .
@@ -165,6 +178,11 @@
 <https://w3id.org/ai-audit#AuditableAISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ai-audit#AuditableAISystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A software system (or deployed AI service) for which audit evidence (traces) is collected."@en .
 <https://w3id.org/ai-audit#AuditableAISystem> <http://www.w3.org/2000/01/rdf-schema#label> "Auditable AI System"@en .
+# 
+# https://w3id.org/ai-audit#BundleStatus
+<https://w3id.org/ai-audit#BundleStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ai-audit#BundleStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Status indicating bundle completion or failure."@en .
+<https://w3id.org/ai-audit#BundleStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Bundle status"@en .
 # 
 # https://w3id.org/ai-audit#DataInstance
 <https://w3id.org/ai-audit#DataInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -189,10 +207,6 @@
 <https://w3id.org/ai-audit#EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ai-audit#Metric> .
 <https://w3id.org/ai-audit#EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "A metric used specifically for evaluation in an audit context."@en .
 <https://w3id.org/ai-audit#EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation metric"@en .
-# 
-# https://w3id.org/ai-audit#ExecutionStatus
-<https://w3id.org/ai-audit#ExecutionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ai-audit#ExecutionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Execution status"@en .
 # 
 # https://w3id.org/ai-audit#Hyperparameter
 <https://w3id.org/ai-audit#Hyperparameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

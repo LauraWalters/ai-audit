@@ -3,13 +3,14 @@ This section provides details for each class and property defined by AuditOps â€
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
+  <li><a href="#ActivityStatus" title="https://w3id.org/ai-audit#ActivityStatus">Activity status</a></li>
   <li><a href="#AuditBundle" title="https://w3id.org/ai-audit#AuditBundle">Audit Bundle</a></li>
   <li><a href="#AuditableAISystem" title="https://w3id.org/ai-audit#AuditableAISystem">Auditable AI System</a></li>
+  <li><a href="#BundleStatus" title="https://w3id.org/ai-audit#BundleStatus">Bundle status</a></li>
   <li><a href="#DataInstance" title="https://w3id.org/ai-audit#DataInstance">Data Instance</a></li>
   <li><a href="#Dataset" title="https://w3id.org/ai-audit#Dataset">Dataset</a></li>
   <li><a href="#Engineering" title="https://w3id.org/ai-audit#Engineering">Engineering Activity</a></li>
   <li><a href="#EvaluationMetric" title="https://w3id.org/ai-audit#EvaluationMetric">Evaluation metric</a></li>
-  <li><a href="#ExecutionStatus" title="https://w3id.org/ai-audit#ExecutionStatus">Execution status</a></li>
   <li><a href="#Hyperparameter" title="https://w3id.org/ai-audit#Hyperparameter">Hyperparameter</a></li>
   <li><a href="#HyperparameterConfiguration" title="https://w3id.org/ai-audit#HyperparameterConfiguration">Hyperparameter Configuration</a></li>
   <li><a href="#HyperparameterSetting" title="https://w3id.org/ai-audit#HyperparameterSetting">Hyperparameter Setting</a></li>
@@ -27,6 +28,21 @@ This section provides details for each class and property defined by AuditOps â€
   <li><a href="#Training" title="https://w3id.org/ai-audit#Training">Training Activity</a></li>
   <li><a href="#Transformation" title="https://w3id.org/ai-audit#Transformation">Transformation Activity</a></li>
  </ul>
+ <div class="entity" id="ActivityStatus">
+  <h3>Activity status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit#ActivityStatus</p>
+  <div class="comment">
+   <span class="markdown">Status indicating activity completion or failure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#activityStatus" title="https://w3id.org/ai-audit#activityStatus">execution status</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="AuditBundle">
   <h3>Audit Bundle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ai-audit#AuditBundle</p>
@@ -44,7 +60,7 @@ This section provides details for each class and property defined by AuditOps â€
     is in domain of
    </dt>
    <dd>
-    <a href="#executionStatus" title="https://w3id.org/ai-audit#executionStatus">execution status</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#bundleStatus" title="https://w3id.org/ai-audit#bundleStatus">execution status</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -66,6 +82,21 @@ This section provides details for each class and property defined by AuditOps â€
    </dt>
    <dd>
     <a href="#hasAuditBundle" title="https://w3id.org/ai-audit#hasAuditBundle">has audit bundle</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BundleStatus">
+  <h3>Bundle status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit#BundleStatus</p>
+  <div class="comment">
+   <span class="markdown">Status indicating bundle completion or failure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#bundleStatus" title="https://w3id.org/ai-audit#bundleStatus">execution status</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -132,18 +163,6 @@ This section provides details for each class and property defined by AuditOps â€
    </dt>
    <dd>
     <a href="#Metric" title="https://w3id.org/ai-audit#Metric">Metric</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="ExecutionStatus">
-  <h3>Execution status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ai-audit#ExecutionStatus</p>
-  <dl class="description">
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#executionStatus" title="https://w3id.org/ai-audit#executionStatus">execution status</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -373,12 +392,6 @@ This section provides details for each class and property defined by AuditOps â€
    <dd>
     <a href="http://purl.org/net/p-plan#Entity" target="_blank" title="http://purl.org/net/p-plan#Entity">Entity</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/prov#Plan" target="_blank" title="http://www.w3.org/ns/prov#Plan">Plan</a> <sup class="type-c" title="class">c</sup>
    </dd>
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#lifecyclePhase" title="https://w3id.org/ai-audit#lifecyclePhase">lifecycle Phase</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
   </dl>
  </div>
  <div class="entity" id="SymbolicModel">
@@ -429,7 +442,8 @@ This section provides details for each class and property defined by AuditOps â€
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#executionStatus" title="https://w3id.org/ai-audit#executionStatus">execution status</a></li>
+  <li><a href="#activityStatus" title="https://w3id.org/ai-audit#activityStatus">execution status</a></li>
+  <li><a href="#bundleStatus" title="https://w3id.org/ai-audit#bundleStatus">execution status</a></li>
   <li><a href="#hasAuditBundle" title="https://w3id.org/ai-audit#hasAuditBundle">has audit bundle</a></li>
   <li><a href="#hasScore" title="https://w3id.org/ai-audit#hasScore">has score</a></li>
   <li><a href="#hyperparameter" title="https://w3id.org/ai-audit#hyperparameter">hyperparameter</a></li>
@@ -438,9 +452,29 @@ This section provides details for each class and property defined by AuditOps â€
   <li><a href="#scoreType" title="https://w3id.org/ai-audit#scoreType">score type</a></li>
   <li><a href="#usesMetric" title="https://w3id.org/ai-audit#usesMetric">uses metric</a></li>
  </ul>
- <div class="entity" id="executionStatus">
+ <div class="entity" id="activityStatus">
   <h3>execution status<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ai-audit#executionStatus</p>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit#activityStatus</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/ai-audit#Activity" target="_blank" title="https://w3id.org/ai-audit#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ActivityStatus" title="https://w3id.org/ai-audit#ActivityStatus">Activity status</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="bundleStatus">
+  <h3>execution status<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ai-audit#bundleStatus</p>
   <div class="description">
    <dl>
     <dt>
@@ -453,7 +487,7 @@ This section provides details for each class and property defined by AuditOps â€
      has range
     </dt>
     <dd>
-     <a href="#ExecutionStatus" title="https://w3id.org/ai-audit#ExecutionStatus">Execution status</a> <sup class="type-c" title="class">c</sup>
+     <a href="#BundleStatus" title="https://w3id.org/ai-audit#BundleStatus">Bundle status</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -535,9 +569,6 @@ This section provides details for each class and property defined by AuditOps â€
     <dt>
      has domain
     </dt>
-    <dd>
-     <a href="#http://purl.org/net/p-plan#Step" title="http://purl.org/net/p-plan#Step">Step</a> <sup class="type-c" title="class">c</sup>
-    </dd>
     <dd>
      <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
     </dd>
