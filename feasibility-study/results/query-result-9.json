@@ -1,0 +1,56 @@
+{
+  "head" : {
+    "vars" : [
+      "element",
+      "numInitial",
+      "numChanged",
+      "changeRate"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "element" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/operator"
+        },
+        "numInitial" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "2"
+        },
+        "numChanged" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "2"
+        },
+        "changeRate" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "1"
+        }
+      },
+      {
+        "element" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/issuingAuthority"
+        },
+        "numInitial" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "2"
+        },
+        "numChanged" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "1"
+        },
+        "changeRate" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.5"
+        }
+      }
+    ]
+  }
+}

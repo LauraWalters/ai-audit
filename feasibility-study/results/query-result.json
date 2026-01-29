@@ -1,0 +1,32 @@
+{
+  "head" : {
+    "vars" : [
+      "trainingActivity",
+      "dataset"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "trainingActivity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Training_2025_08_12"
+        },
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitCorpus_Annotated_v1"
+        }
+      },
+      {
+        "trainingActivity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Training_2025_08_12"
+        },
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/TrainData_q3"
+        }
+      }
+    ]
+  }
+}

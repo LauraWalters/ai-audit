@@ -1,0 +1,18 @@
+{
+  "head" : {
+    "vars" : [
+      "avgConfidence"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "avgConfidence" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#double",
+          "type" : "literal",
+          "value" : "0.0"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "head" : {
+    "vars" : [
+      "dataset",
+      "creator"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitCorpus_Annotated_v1"
+        },
+        "creator" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/External_Person"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/TrainData_q3"
+        },
+        "creator" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Trainer_A"
+        }
+      }
+    ]
+  }
+}

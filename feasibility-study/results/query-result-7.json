@@ -1,0 +1,43 @@
+{
+  "head" : {
+    "vars" : [
+      "trainingActivity",
+      "param",
+      "value"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "trainingActivity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Training_2025_08_12"
+        },
+        "param" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/epochs"
+        },
+        "value" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "5"
+        }
+      },
+      {
+        "trainingActivity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Training_2025_08_12"
+        },
+        "param" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/learningRate"
+        },
+        "value" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#float",
+          "type" : "literal",
+          "value" : "0.01"
+        }
+      }
+    ]
+  }
+}

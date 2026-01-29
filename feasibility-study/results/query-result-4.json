@@ -1,0 +1,174 @@
+{
+  "head" : {
+    "vars" : [
+      "activity",
+      "type",
+      "start",
+      "end"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "activity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Engineering_2025_08_11"
+        },
+        "type" : {
+          "type" : "uri",
+          "value" : "https://w3id.org/ai-audit#Engineering"
+        },
+        "start" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-01T08:10:00Z"
+        },
+        "end" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-11T09:05:00Z"
+        }
+      },
+      {
+        "activity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Infer_eval_2025_08_12"
+        },
+        "type" : {
+          "type" : "uri",
+          "value" : "https://w3id.org/ai-audit#Inference"
+        },
+        "start" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-12T13:10:00Z"
+        },
+        "end" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-12T13:25:00Z"
+        }
+      },
+      {
+        "activity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Inference_B06_initial"
+        },
+        "type" : {
+          "type" : "uri",
+          "value" : "https://w3id.org/ai-audit#Inference"
+        },
+        "start" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-16T09:30:00Z"
+        },
+        "end" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-16T09:30:39Z"
+        }
+      },
+      {
+        "activity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Inference_B07_initial"
+        },
+        "type" : {
+          "type" : "uri",
+          "value" : "https://w3id.org/ai-audit#Inference"
+        },
+        "start" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-15T09:30:00Z"
+        },
+        "end" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-15T09:30:39Z"
+        }
+      },
+      {
+        "activity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Inference_B42_initial"
+        },
+        "type" : {
+          "type" : "uri",
+          "value" : "https://w3id.org/ai-audit#Inference"
+        },
+        "start" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-12T12:30:00Z"
+        },
+        "end" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-12T12:31:17Z"
+        }
+      },
+      {
+        "activity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Training_2025_08_12"
+        },
+        "type" : {
+          "type" : "uri",
+          "value" : "https://w3id.org/ai-audit#Training"
+        },
+        "start" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-12T08:10:00Z"
+        },
+        "end" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-12T11:05:00Z"
+        }
+      },
+      {
+        "activity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Transform_B07_prune"
+        },
+        "type" : {
+          "type" : "uri",
+          "value" : "https://w3id.org/ai-audit#Transformation"
+        },
+        "start" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-15T09:45:00Z"
+        },
+        "end" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-15T09:45:08Z"
+        }
+      },
+      {
+        "activity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Transform_B42_prune"
+        },
+        "type" : {
+          "type" : "uri",
+          "value" : "https://w3id.org/ai-audit#Transformation"
+        },
+        "start" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-10T12:48:00Z"
+        },
+        "end" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type" : "literal",
+          "value" : "2025-08-10T12:48:07Z"
+        }
+      }
+    ]
+  }
+}

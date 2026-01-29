@@ -1,0 +1,22 @@
+{
+  "head" : {
+    "vars" : [
+      "trainingActivity",
+      "model"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "trainingActivity" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Training_2025_08_12"
+        },
+        "model" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/Permit_NER_FT_v1_3_0"
+        }
+      }
+    ]
+  }
+}

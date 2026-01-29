@@ -1,0 +1,102 @@
+{
+  "head" : {
+    "vars" : [
+      "dataset",
+      "location"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/EvalData_q3"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "s3://training/data/eval_dataLM/"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/NER_Predictions_Batch07_initial"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "s3://pred/b07/initial/"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/NER_Predictions_Batch07_pruned"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "s3://pred/b07/pruned/"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/NER_Predictions_Batch42_initial"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "s3://pred/b42/initial/"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/NER_Predictions_Batch42_pruned"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "s3://pred/b42/pruned/"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitApplications_Batch07"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "s3://gov-permit-data/raw/batch07/"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitApplications_Batch42"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "s3://gov-permit-data/raw/batch42/"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitCorpus_Annotated_v1"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "https://huggingface.co/datasets/elenanereiss/german-ler"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/TrainData_q3"
+        },
+        "location" : {
+          "type" : "uri",
+          "value" : "s3://training/data/training_dataLM/"
+        }
+      }
+    ]
+  }
+}

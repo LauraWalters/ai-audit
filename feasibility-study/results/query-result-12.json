@@ -1,0 +1,25 @@
+{
+  "head" : {
+    "vars" : [
+      "totalBundles",
+      "successBundles",
+      "successRate"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "totalBundles" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "0"
+        },
+        "successBundles" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "0"
+        }
+      }
+    ]
+  }
+}

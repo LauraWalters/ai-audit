@@ -1,0 +1,30 @@
+{
+  "head" : {
+    "vars" : [
+      "successRate",
+      "successes",
+      "total"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "successRate" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.666666666666666666666667"
+        },
+        "successes" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "2"
+        },
+        "total" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "3"
+        }
+      }
+    ]
+  }
+}

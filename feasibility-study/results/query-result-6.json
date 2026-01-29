@@ -1,0 +1,106 @@
+{
+  "head" : {
+    "vars" : [
+      "dataset",
+      "license"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/AuthoritiesDataset"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/EvalData_q3"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/GeoDataset"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/LegalPersonDataset"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/NER_Predictions_Batch07_initial"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/NER_Predictions_Batch07_pruned"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/NER_Predictions_Batch42_initial"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/NER_Predictions_Batch42_pruned"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitApplications_Batch06"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitApplications_Batch07"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitApplications_Batch42"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitCorpus_Annotated_v1"
+        },
+        "license" : {
+          "type" : "uri",
+          "value" : "https://spdx.org/licenses/CC-BY-4.0.html"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/PermitTypesDataset"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/RegulationsDataset_AT"
+        }
+      },
+      {
+        "dataset" : {
+          "type" : "uri",
+          "value" : "https://example.org/uc/permit-ner/TrainData_q3"
+        }
+      }
+    ]
+  }
+}
