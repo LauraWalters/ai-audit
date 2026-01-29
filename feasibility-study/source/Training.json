@@ -1,0 +1,17 @@
+{
+  "activityUUID": "xsd:string",
+  "startedAtTime": "xsd:dateTime",
+  "endedAtTime": "xsd:dateTime",
+
+  "used": [ { "id": "xsd:string", "type": "xsd:string", "version": "xsd:string", "atLocation": "xsd:string" } ],
+  "generated": [ { "id": "xsd:string", "type": "xsd:string", "version": "xsd:string", "atLocation": "xsd:string" } ],
+
+  "wasAssociatedWith": ["xsd:string"],
+  "wasDerivedFrom": ["xsd:string"],
+
+  "hyperparameters": {
+    "learningRate": "xsd:float",
+    "batchSize": "xsd:int",
+    "epochs": "xsd:int"
+  }
+}
