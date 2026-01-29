@@ -14,6 +14,4 @@ WHERE {
   ?score  a audit:Score ;
           audit:scoreType audit:Confidence ;
           audit:scoreValue ?confidence .
-
-  FILTER(datatype(?confidence) IN (xsd:decimal, xsd:float, xsd:double))
   }
