@@ -28,7 +28,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Fajar J. Ekaputra",
+        "value" : "Gregor Käfer",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Tomasz Miksa",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -38,12 +43,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Gregor Käfer",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Tomasz Miksa",
+        "value" : "Fajar J. Ekaputra",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -131,10 +131,10 @@
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "28",
     "type" : "owl:Class"
   }, {
-    "id" : "28",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "45",
@@ -421,18 +421,6 @@
     "id" : "15",
     "superClasses" : [ "14" ]
   }, {
-    "iri" : "https://w3id.org/ai-audit#HyperparameterConfiguration",
-    "baseIri" : "https://w3id.org/ai-audit",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "HyperparameterConfiguration",
-      "undefined" : "Hyperparameter Configuration"
-    },
-    "comment" : {
-      "undefined" : "A reusable collection of hyperparameter settings used in a training activity."
-    },
-    "id" : "11"
-  }, {
     "iri" : "https://w3id.org/ai-audit#AuditBundle",
     "baseIri" : "https://w3id.org/ai-audit",
     "instances" : 0,
@@ -445,6 +433,18 @@
     },
     "id" : "28",
     "superClasses" : [ "37" ]
+  }, {
+    "iri" : "https://w3id.org/ai-audit#HyperparameterConfiguration",
+    "baseIri" : "https://w3id.org/ai-audit",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HyperparameterConfiguration",
+      "undefined" : "Hyperparameter Configuration"
+    },
+    "comment" : {
+      "undefined" : "A reusable collection of hyperparameter settings used in a training activity."
+    },
+    "id" : "11"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -695,62 +695,62 @@
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "29"
   }, {
     "range" : "31",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "30"
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
     "range" : "5",
     "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "33"
   }, {
     "range" : "13",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
     "range" : "37",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
     "range" : "13",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
     "range" : "3",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
     "range" : "3",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
     "range" : "3",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
     "range" : "3",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
     "range" : "14",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "iri" : "https://w3id.org/ai-audit#paramName",
@@ -769,17 +769,17 @@
   }, {
     "range" : "14",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
     "range" : "14",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "47"
   }, {
     "range" : "16",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
     "iri" : "https://w3id.org/ai-audit#usesMetric",
