@@ -209,17 +209,17 @@ question:queryLocalPath "query/Q12.sparql".
 
 uc:TT_Training
   a question:TraceTemplate ;
-  question:path "Training_Template.json" .
+  question:path "source/Training.json" .
 
 uc:TT_Inference_Initial
   a question:TraceTemplate ;
-  question:path "Inference_Template.json" .
+  question:path "source/Inference_Initial.json" .
 
 uc:TT_Engineering
   a question:TraceTemplate ;
-  question:path "Engineering_Template.json" .   
+  question:path "source/Engineering.json" .   
 
  uc:TT_Transformation
   a question:TraceTemplate ;
-  question:path "Transformation_Template.json" . 
+  question:path "source/Transformation.json" . 
 
